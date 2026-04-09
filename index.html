@@ -3,533 +3,177 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adaptogen Reset Starter — Natürliche Energie & Fokus</title>
+<title>Adaptogen Reset — Natürliche Energie ohne Crash</title>
+
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Georgia', serif; background: #fff; color: #1a1a1a; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: #fff; color: #1a1a1a; }
 
-  /* HERO */
-  .hero {
-    background: linear-gradient(135deg, #1a3a2a 0%, #2D6A4F 60%, #40916C 100%);
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-  }
-  .hero-badge {
-    display: inline-block;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
-    padding: 8px 20px;
-    border-radius: 50px;
-    font-size: 13px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-  }
-  .hero h1 {
-    font-size: clamp(32px, 5vw, 58px);
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .hero h1 span { color: #95D5B2; }
-  .hero p {
-    font-size: clamp(16px, 2.5vw, 20px);
-    opacity: 0.9;
-    max-width: 600px;
-    margin: 0 auto 40px;
-    line-height: 1.7;
-    font-family: 'Arial', sans-serif;
-  }
-  .btn-primary {
-    display: inline-block;
-    background: #95D5B2;
-    color: #1a3a2a;
-    padding: 18px 45px;
-    border-radius: 50px;
-    font-size: 18px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s;
-    font-family: 'Arial', sans-serif;
-  }
-  .btn-primary:hover { background: #B7E4C7; transform: translateY(-2px); }
-  .price-tag {
-    margin-top: 15px;
-    font-size: 14px;
-    opacity: 0.8;
-    font-family: 'Arial', sans-serif;
-  }
-  .price-tag span {
-    text-decoration: line-through;
-    opacity: 0.6;
-    margin-right: 8px;
-  }
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #1a3a2a 0%, #2D6A4F 60%, #40916C 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+.hero h1 {
+  font-size: clamp(32px, 5vw, 54px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.hero h1 span { color: #95D5B2; }
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 35px;
+  line-height: 1.7;
+  font-family: Arial;
+}
+.btn {
+  background: #95D5B2;
+  color: #1a3a2a;
+  padding: 18px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn:hover { background: #B7E4C7; }
 
-  /* TRUST BAR */
-  .trust-bar {
-    background: #F9F3E8;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 1px solid #e8dcc8;
-  }
-  .trust-bar-inner {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .trust-item {
-    font-size: 13px;
-    color: #2D6A4F;
-    font-weight: 600;
-    font-family: 'Arial', sans-serif;
-  }
+.price { margin-top: 15px; font-size: 14px; opacity: 0.8; }
+.price span { text-decoration: line-through; margin-right: 8px; }
 
-  /* SECTION */
-  .section { padding: 70px 20px; max-width: 900px; margin: 0 auto; }
-  .section-title {
-    font-size: clamp(24px, 4vw, 38px);
-    text-align: center;
-    margin-bottom: 50px;
-    color: #1a3a2a;
-  }
-  .section-title span { color: #2D6A4F; }
+/* SECTION */
+.section { padding: 70px 20px; max-width: 900px; margin: 0 auto; }
+.section h2 { text-align: center; margin-bottom: 40px; }
 
-  /* PAIN POINTS */
-  .pain-section { background: #f8f8f8; padding: 60px 20px; }
-  .pain-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .pain-card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    border-left: 4px solid #2D6A4F;
-  }
-  .pain-card h3 {
-    font-size: 16px;
-    margin-bottom: 8px;
-    color: #1a3a2a;
-    font-family: 'Arial', sans-serif;
-  }
-  .pain-card p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.6;
-    font-family: 'Arial', sans-serif;
-  }
+/* CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #f8f8f8;
+  padding: 25px;
+  border-radius: 12px;
+}
+.card h3 { margin-bottom: 10px; }
 
-  /* WHAT YOU GET */
-  .get-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
-    margin-top: 20px;
-  }
-  .get-card {
-    background: #F9F3E8;
-    border-radius: 12px;
-    padding: 30px 20px;
-    text-align: center;
-  }
-  .get-icon { font-size: 36px; margin-bottom: 12px; }
-  .get-card h3 {
-    font-size: 16px;
-    font-weight: 700;
-    color: #1a3a2a;
-    margin-bottom: 8px;
-    font-family: 'Arial', sans-serif;
-  }
-  .get-card p {
-    font-size: 13px;
-    color: #555;
-    line-height: 1.5;
-    font-family: 'Arial', sans-serif;
-  }
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, #2D6A4F, #40916C);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+.cta h2 { margin-bottom: 20px; }
+.cta p { margin-bottom: 30px; }
 
-  /* PLANTS */
-  .plants-section { background: #1a3a2a; padding: 70px 20px; }
-  .plants-title {
-    color: white;
-    font-size: clamp(24px, 4vw, 36px);
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  .plants-title span { color: #95D5B2; }
-  .plants-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 15px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .plant-card {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 12px;
-    padding: 20px 15px;
-    text-align: center;
-    color: white;
-  }
-  .plant-name {
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 5px;
-    color: #95D5B2;
-    font-family: 'Arial', sans-serif;
-  }
-  .plant-desc {
-    font-size: 12px;
-    opacity: 0.8;
-    font-family: 'Arial', sans-serif;
-  }
+/* FOOTER */
+footer {
+  background: #1a1a1a;
+  color: #888;
+  text-align: center;
+  padding: 30px 20px;
+}
+footer a { color: #95D5B2; margin: 0 10px; text-decoration: none; }
 
-  /* CTA SECTION */
-  .cta-section {
-    background: linear-gradient(135deg, #2D6A4F, #40916C);
-    padding: 80px 20px;
-    text-align: center;
-    color: white;
-  }
-  .cta-section h2 {
-    font-size: clamp(28px, 4vw, 44px);
-    margin-bottom: 20px;
-  }
-  .cta-section p {
-    font-size: 18px;
-    opacity: 0.9;
-    margin-bottom: 40px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Arial', sans-serif;
-  }
-  .price-box {
-    background: rgba(255,255,255,0.1);
-    border: 2px solid rgba(255,255,255,0.3);
-    border-radius: 16px;
-    padding: 30px;
-    max-width: 380px;
-    margin: 0 auto 30px;
-  }
-  .price-box .old-price {
-    font-size: 18px;
-    text-decoration: line-through;
-    opacity: 0.6;
-    font-family: 'Arial', sans-serif;
-  }
-  .price-box .new-price {
-    font-size: 56px;
-    font-weight: 700;
-    color: #95D5B2;
-    line-height: 1;
-  }
-  .price-box .price-label {
-    font-size: 14px;
-    opacity: 0.8;
-    margin-top: 5px;
-    font-family: 'Arial', sans-serif;
-  }
-  .features-list {
-    list-style: none;
-    margin: 15px 0;
-    text-align: left;
-  }
-  .features-list li {
-    padding: 6px 0;
-    font-size: 14px;
-    font-family: 'Arial', sans-serif;
-  }
-  .features-list li::before {
-    content: '✓ ';
-    color: #95D5B2;
-    font-weight: 700;
-  }
-  .btn-buy {
-    display: inline-block;
-    background: white;
-    color: #2D6A4F;
-    padding: 20px 50px;
-    border-radius: 50px;
-    font-size: 20px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s;
-    font-family: 'Arial', sans-serif;
-    width: 100%;
-    text-align: center;
-  }
-  .btn-buy:hover { background: #95D5B2; transform: translateY(-2px); }
-  .security-text {
-    margin-top: 20px;
-    font-size: 13px;
-    opacity: 0.7;
-    font-family: 'Arial', sans-serif;
-  }
-
-  /* FAQ */
-  .faq-item {
-    border-bottom: 1px solid #e8e8e8;
-    padding: 20px 0;
-  }
-  .faq-q {
-    font-size: 16px;
-    font-weight: 700;
-    color: #1a3a2a;
-    margin-bottom: 8px;
-    font-family: 'Arial', sans-serif;
-  }
-  .faq-a {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.7;
-    font-family: 'Arial', sans-serif;
-  }
-
-  /* FOOTER */
-  footer {
-    background: #1a1a1a;
-    color: #888;
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 13px;
-    font-family: 'Arial', sans-serif;
-  }
-  footer a { color: #95D5B2; text-decoration: none; margin: 0 10px; }
 </style>
 </head>
+
 <body>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-badge">🌿 Natürliche Heilpflanzen</div>
-  <h1>Fühlst du dich ständig gestresst, leer und <span>unfokussiert?</span></h1>
-  <p>Lerne 17 Adaptogene kennen — Heilpflanzen, die seit Jahrtausenden für Energie, Fokus und weniger Stress eingesetzt werden.</p>
-  <a href="https://www.digistore24.com/product/683534" class="btn-primary">Jetzt Guide holen →</a>
-  <div class="price-tag"><span>29€</span> Heute nur 27€ · Sofort-Download</div>
+  <div class="hero-badge">🌿 Natürliche Alternative zu Koffein</div>
+  <h1>Kein Koffein-Crash mehr — <span>ruhiger Kopf, klarer Fokus</span></h1>
+  <p>
+    Kaffee pusht dich kurz — und zieht dich später wieder runter.  
+    Immer mehr Menschen setzen stattdessen auf natürliche Wege, um Energie, Fokus und innere Ruhe stabil zu halten.
+  </p>
+  <a href="https://www.digistore24.com/product/683534" class="btn">Jetzt entdecken →</a>
+  <div class="price"><span>29€</span> Heute 27€ · Sofort-Download</div>
 </div>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-bar-inner">
-    <div class="trust-item">🔒 Sicherer Kauf</div>
-    <div class="trust-item">📥 Sofort-Download</div>
-    <div class="trust-item">📄 PDF Format</div>
-    <div class="trust-item">✅ Kein Abo</div>
-    <div class="trust-item">🌿 17 Adaptogene</div>
-  </div>
-</div>
-
-<!-- PAIN POINTS -->
-<div class="pain-section">
-  <div style="max-width:900px; margin:0 auto;">
-    <h2 style="text-align:center; font-size:clamp(22px,4vw,34px); color:#1a3a2a; margin-bottom:40px;">Kennst du das?</h2>
-    <div class="pain-grid">
-      <div class="pain-card">
-        <h3>😮‍💨 Morgens schon müde</h3>
-        <p>Du wachst erschöpft auf, obwohl du geschlafen hast. Kein Kaffee hilft wirklich.</p>
-      </div>
-      <div class="pain-card">
-        <h3>🧠 Brain Fog & Konzentration</h3>
-        <p>Gedanken schwirren durcheinander. Fokus hält nur wenige Minuten an.</p>
-      </div>
-      <div class="pain-card">
-        <h3>⚡ Energie-Crash</h3>
-        <p>Nachmittags brichst du ein. Koffein hilft kurz, macht es langfristig aber schlimmer.</p>
-      </div>
-      <div class="pain-card">
-        <h3>😰 Dauerstress</h3>
-        <p>Dein Nervensystem läuft auf Hochtouren. Abschalten fällt schwer.</p>
-      </div>
-      <div class="pain-card">
-        <h3>😴 Schlechter Schlaf</h3>
-        <p>Einschlafen dauert lange, nächtliches Aufwachen, morgens nicht erholt.</p>
-      </div>
-      <div class="pain-card">
-        <h3>🤒 Oft krank</h3>
-        <p>Dein Immunsystem schwächelt. Jede Erkältung trifft dich stärker als andere.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- WHAT YOU GET -->
+<!-- PAIN -->
 <div class="section">
-  <h2 class="section-title">Was du im Guide bekommst</h2>
-  <div class="get-grid">
-    <div class="get-card">
-      <div class="get-icon">🌿</div>
-      <h3>17 Adaptogene</h3>
-      <p>Vollständige Profile aller wichtigen Heilpflanzen mit Wirkung und Anwendung</p>
+  <h2>Kommt dir das bekannt vor?</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>☕ Kaffee hilft nur kurz</h3>
+      <p>Du bekommst einen Push — und danach kommt der Absturz.</p>
     </div>
-    <div class="get-card">
-      <div class="get-icon">⚗️</div>
-      <h3>Dosierungen</h3>
-      <p>Genaue Dosierungsempfehlungen für jede Pflanze in jeder Einnahmeform</p>
+    <div class="card">
+      <h3>😮‍💨 Du bist oft erschöpft</h3>
+      <p>Selbst nach Schlaf fühlst du dich nicht wirklich aufgeladen.</p>
     </div>
-    <div class="get-card">
-      <div class="get-icon">🗓️</div>
-      <h3>4-Wochen-Plan</h3>
-      <p>Schritt-für-Schritt-Plan zum sofortigen Umsetzen im Alltag</p>
+    <div class="card">
+      <h3>🧠 Fokus fehlt</h3>
+      <p>Du willst klar denken, aber dein Kopf macht nicht mit.</p>
     </div>
-    <div class="get-card">
-      <div class="get-icon">🍵</div>
-      <h3>6 Rezepte</h3>
-      <p>Smoothies, Lattes, Tees und Suppen mit Adaptogenen zum Nachmachen</p>
-    </div>
-    <div class="get-card">
-      <div class="get-icon">⚠️</div>
-      <h3>Sicherheitshinweise</h3>
-      <p>Kontraindikationen und Wechselwirkungen für jede Pflanze</p>
-    </div>
-    <div class="get-card">
-      <div class="get-icon">📚</div>
-      <h3>Wissenschaft</h3>
-      <p>Basiert auf peer-reviewed Forschung und traditioneller Anwendung</p>
+    <div class="card">
+      <h3>😰 Innere Unruhe</h3>
+      <p>Selbst wenn alles ruhig ist, bist du es nicht.</p>
     </div>
   </div>
 </div>
 
-<!-- PLANTS -->
-<div class="plants-section">
-  <h2 class="plants-title">Die <span>17 Adaptogene</span> im Guide</h2>
-  <div class="plants-grid">
-    <div class="plant-card">
-      <div class="plant-name">Ashwagandha</div>
-      <div class="plant-desc">Stress & Schlaf</div>
-    </div>
-    <div class="plant-card">
-      <div class="plant-name">Rosenwurz</div>
-      <div class="plant-desc">Fokus & Energie</div>
-    </div>
-    <div class="plant-card">
-      <div class="plant-name">Panax Ginseng</div>
-      <div class="plant-desc">Vitalität & Kraft</div>
-    </div>
-    <div class="plant-card">
-      <div class="plant-name">Schisandra</div>
-      <div class="plant-desc">Leber & Ausdauer</div>
-    </div>
-    <div class="plant-card">
-      <div class="plant-name">Astragalus</div>
-      <div class="plant-desc">Immunsystem</div>
-    </div>
-    <div class="plant-card">
-      <div class="plant-name">Cordyceps</div>
-      <div class="plant-desc">Sport & Energie</div>
-    </div>
-    <div class="plant-card">
-      <div class="plant-name">Igel-Stachelbart</div>
-      <div class="plant-desc">Gehirn & Nerven</div>
-    </div>
-    <div class="plant-card">
-      <div class="plant-name">Süßholz</div>
-      <div class="plant-desc">Atemwege & Leber</div>
-    </div>
-    <div class="plant-card">
-      <div class="plant-name">Indisches Basilikum</div>
-      <div class="plant-desc">Cortisol & Stress</div>
-    </div>
-    <div class="plant-card">
-      <div class="plant-name">Shatavari</div>
-      <div class="plant-desc">Hormone & Frau</div>
-    </div>
-    <div class="plant-card">
-      <div class="plant-name">Kurkuma</div>
-      <div class="plant-desc">Entzündungen</div>
-    </div>
-    <div class="plant-card">
-      <div class="plant-name">Bacopa</div>
-      <div class="plant-desc">Gedächtnis</div>
-    </div>
-    <div class="plant-card">
-      <div class="plant-name">Brennnessel</div>
-      <div class="plant-desc">Energie & Nieren</div>
-    </div>
-    <div class="plant-card">
-      <div class="plant-name">Ginkgo</div>
-      <div class="plant-desc">Durchblutung</div>
-    </div>
-    <div class="plant-card">
-      <div class="plant-name">Johanniskraut</div>
-      <div class="plant-desc">Stimmung & Nerven</div>
-    </div>
-    <div class="plant-card">
-      <div class="plant-name">Lavendel</div>
-      <div class="plant-desc">Schlaf & Angst</div>
-    </div>
-    <div class="plant-card">
-      <div class="plant-name">Rosmarin</div>
-      <div class="plant-desc">Gedächtnis & Fokus</div>
-    </div>
-  </div>
-</div>
-
-<!-- CTA KAUFBOX -->
-<div class="cta-section">
-  <h2>Starte heute deinen Adaptogen Reset</h2>
-  <p>Sofort-Download nach Zahlung. Kein Warten, kein Versand.</p>
-  <div class="price-box">
-    <div class="old-price">Regulär 37€</div>
-    <div class="new-price">27€</div>
-    <div class="price-label">Einmalzahlung · Sofort-Download</div>
-    <ul class="features-list">
-      <li>17 Adaptogene komplett erklärt</li>
-      <li>Dosierungen & Warnhinweise</li>
-      <li>4-Wochen-Aktionsplan</li>
-      <li>6 Rezepte zum Nachmachen</li>
-      <li>Wissenschaftliche Quellen</li>
-      <li>Sofort als PDF verfügbar</li>
-    </ul>
-    <a href="https://www.digistore24.com/product/683534" class="btn-buy">Jetzt kaufen — 27€ →</a>
-    <div class="security-text">🔒 Sichere Zahlung über Digistore24 · Apple Pay · Google Pay · Kreditkarte</div>
-  </div>
-</div>
-
-<!-- FAQ -->
+<!-- SOLUTION -->
 <div class="section">
-  <h2 class="section-title">Häufige <span>Fragen</span></h2>
-  <div class="faq-item">
-    <div class="faq-q">Wie bekomme ich den Guide?</div>
-    <div class="faq-a">Sofort nach der Zahlung bekommst du eine E-Mail mit dem Download-Link. Das PDF kannst du auf allen Geräten öffnen.</div>
+  <h2>Vielleicht brauchst du nicht mehr Koffein…</h2>
+  <p style="text-align:center; max-width:650px; margin:0 auto; line-height:1.8;">
+    …sondern einen anderen Ansatz.  
+    Immer mehr Menschen entdecken pflanzliche Alternativen, die nicht nur kurzfristig pushen,
+    sondern langfristig unterstützen können — für mehr Ruhe, klareren Fokus und stabilere Energie.
+  </p>
+</div>
+
+<!-- VALUE -->
+<div class="section">
+  <h2>Was dich im Guide erwartet</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🌿 Natürliche Alternativen</h3>
+      <p>Was viele statt Kaffee & Energy Drinks nutzen.</p>
+    </div>
+    <div class="card">
+      <h3>🧠 Mehr Klarheit</h3>
+      <p>Verstehe, wie Fokus und Ruhe wirklich entstehen.</p>
+    </div>
+    <div class="card">
+      <h3>⚡ Stabile Energie</h3>
+      <p>Weniger Push & Crash — mehr Balance.</p>
+    </div>
+    <div class="card">
+      <h3>🗓️ Einfach umsetzbar</h3>
+      <p>Direkt verständlich und praktisch nutzbar.</p>
+    </div>
   </div>
-  <div class="faq-item">
-    <div class="faq-q">Ist das ein Abo?</div>
-    <div class="faq-a">Nein. Einmalige Zahlung von 27€ — kein Abo, keine versteckten Kosten.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-q">Wie schnell sehe ich Ergebnisse?</div>
-    <div class="faq-a">Die meisten Menschen bemerken erste Veränderungen nach 2–3 Wochen regelmäßiger Einnahme. Optimale Ergebnisse nach 4–8 Wochen.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-q">Ist das medizinische Beratung?</div>
-    <div class="faq-a">Nein. Der Guide dient ausschließlich zur Information. Bei Erkrankungen oder Medikamenteneinnahme bitte ärztliche Rücksprache halten.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-q">Für wen ist der Guide geeignet?</div>
-    <div class="faq-a">Für alle, die sich für natürliche Gesundheitsroutinen interessieren und mehr über Adaptogene lernen möchten. Kein Vorwissen nötig.</div>
-  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>Vielleicht ist es Zeit für eine andere Lösung</h2>
+  <p>Entdecke eine natürliche Alternative für Fokus, Ruhe und stabile Energie.</p>
+  <a href="https://www.digistore24.com/product/683534" class="btn">Jetzt ansehen →</a>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 Powerpromotion · David Arianfar · Frankfurt am Main</p>
+  <p>© 2025 Powerpromotion · David Arianfar</p>
   <p style="margin-top:10px;">
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html">Datenschutz</a>
+    <a href="impressum.html">Impressum</a> |
+    <a href="datenschutz.html">Datenschutz</a> |
     <a href="mailto:info@powerprom.de">Kontakt</a>
   </p>
-  <p style="margin-top:10px; font-size:11px;">Dieser Guide ist keine medizinische Beratung und ersetzt keinen Arztbesuch.</p>
 </footer>
 
 </body>
