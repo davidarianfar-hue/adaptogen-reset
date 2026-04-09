@@ -3,565 +3,248 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adaptogen Reset — Natürliche Energie & Fokus</title>
+<title>Adaptogen Reset — Natürliche Energie ohne Crash</title>
+
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+*{margin:0;padding:0;box-sizing:border-box;}
 
-  body {
-    font-family: Georgia, serif;
-    background: #faf9f6;
-    color: #1a1a1a;
-    font-size: 16px;
-    line-height: 1.75;
-  }
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  color:#111;
+  background:#fff;
+  line-height:1.6;
+}
 
-  .container {
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#163727,#2D6A4F);
+  color:white;
+  padding:120px 20px;
+  text-align:center;
+}
 
-  /* HERO */
-  .hero {
-    background: #1a3a2a;
-    color: white;
-    padding: 70px 24px 60px;
-    text-align: center;
-  }
-  .hero-badge {
-    font-family: Arial, sans-serif;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #95D5B2;
-    margin-bottom: 24px;
-  }
-  .hero h1 {
-    font-size: clamp(26px, 4.5vw, 44px);
-    font-weight: 700;
-    line-height: 1.25;
-    margin-bottom: 20px;
-    max-width: 560px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .hero h1 em { font-style: normal; color: #95D5B2; }
-  .hero p {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    opacity: 0.85;
-    max-width: 480px;
-    margin: 0 auto 36px;
-    line-height: 1.7;
-  }
-  .btn-hero {
-    display: inline-block;
-    background: #95D5B2;
-    color: #1a3a2a;
-    padding: 15px 40px;
-    border-radius: 4px;
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    text-decoration: none;
-    letter-spacing: 0.5px;
-    transition: background 0.2s;
-  }
-  .btn-hero:hover { background: #b7e4c7; }
-  .hero-sub {
-    margin-top: 14px;
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    opacity: 0.55;
-  }
-  .hero-sub s { opacity: 0.7; margin-right: 6px; }
+.hero h1{
+  font-size:clamp(40px,5vw,72px);
+  line-height:1.1;
+  max-width:900px;
+  margin:0 auto 20px;
+}
 
-  /* TRUST */
-  .trust {
-    background: #f0ede6;
-    border-bottom: 1px solid #e0dbd0;
-    padding: 14px 24px;
-  }
-  .trust-inner {
-    max-width: 640px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    gap: 28px;
-    flex-wrap: wrap;
-  }
-  .trust-item {
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    color: #2D6A4F;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-  }
+.hero span{color:#B7E4C7;}
 
-  /* SECTION */
-  .section {
-    padding: 60px 24px;
-  }
-  .section-inner { max-width: 640px; margin: 0 auto; }
+.hero p{
+  font-size:20px;
+  max-width:650px;
+  margin:0 auto 35px;
+  opacity:.9;
+}
 
-  .section-label {
-    font-family: Arial, sans-serif;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #2D6A4F;
-    margin-bottom: 12px;
-  }
-  .section h2 {
-    font-size: clamp(22px, 3.5vw, 32px);
-    color: #1a3a2a;
-    margin-bottom: 16px;
-    line-height: 1.3;
-  }
-  .section p.lead {
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    color: #555;
-    margin-bottom: 40px;
-    line-height: 1.7;
-  }
+.btn{
+  display:inline-block;
+  background:#B7E4C7;
+  color:#163727;
+  padding:18px 45px;
+  border-radius:50px;
+  font-weight:600;
+  text-decoration:none;
+  font-size:18px;
+}
 
-  /* PAIN */
-  .pain-bg { background: white; }
-  .pain-list { list-style: none; }
-  .pain-list li {
-    padding: 18px 0;
-    border-bottom: 1px solid #ede9e0;
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-  }
-  .pain-list li:last-child { border-bottom: none; }
-  .pain-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
-  .pain-text h3 {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    color: #1a3a2a;
-    margin-bottom: 4px;
-  }
-  .pain-text p {
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    color: #666;
-    line-height: 1.6;
-  }
+.price{margin-top:10px;font-size:14px;opacity:.7;}
 
-  /* WHAT YOU GET */
-  .get-bg { background: #faf9f6; }
-  .get-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: #e8e4da;
-    border: 1px solid #e8e4da;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .get-item {
-    background: white;
-    padding: 24px 20px;
-  }
-  .get-num {
-    font-family: Arial, sans-serif;
-    font-size: 11px;
-    letter-spacing: 2px;
-    color: #2D6A4F;
-    font-weight: 700;
-    margin-bottom: 8px;
-  }
-  .get-item h3 {
-    font-size: 15px;
-    color: #1a3a2a;
-    margin-bottom: 6px;
-  }
-  .get-item p {
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    color: #666;
-    line-height: 1.5;
-  }
+/* SECTION */
+.section{
+  padding:100px 20px;
+  max-width:1100px;
+  margin:0 auto;
+}
 
-  /* PLANTS TEASER */
-  .plants-bg { background: #1a3a2a; color: white; }
-  .plants-bg .section-label { color: #95D5B2; }
-  .plants-bg h2 { color: white; }
-  .plants-bg p.lead { color: rgba(255,255,255,0.6); }
+.section h2{
+  text-align:center;
+  font-size:42px;
+  margin-bottom:50px;
+}
 
-  .plant-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 12px;
-    margin-bottom: 12px;
-  }
-  .plant-card {
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 6px;
-    padding: 16px 14px;
-  }
-  .plant-name {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    color: #95D5B2;
-    margin-bottom: 4px;
-  }
-  .plant-hint {
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    color: rgba(255,255,255,0.5);
-    line-height: 1.4;
-  }
-  .plant-locked {
-    background: rgba(255,255,255,0.02);
-    border: 1px dashed rgba(255,255,255,0.1);
-    border-radius: 6px;
-    padding: 16px 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .plant-locked span {
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    color: rgba(255,255,255,0.2);
-  }
-  .plants-note {
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    color: rgba(255,255,255,0.45);
-    text-align: center;
-    margin-top: 8px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-  }
-  .plants-note strong { color: #95D5B2; }
+/* STORY */
+.story{
+  max-width:700px;
+  margin:0 auto;
+  font-size:19px;
+  line-height:1.9;
+  text-align:center;
+  color:#333;
+}
 
-  /* CTA */
-  .cta-bg { background: #2D6A4F; color: white; }
-  .cta-bg .section-label { color: #95D5B2; }
-  .cta-bg h2 { color: white; }
-  .cta-bg p.lead { color: rgba(255,255,255,0.7); }
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
 
-  .price-card {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 8px;
-    padding: 32px 28px;
-    max-width: 420px;
-  }
-  .price-old {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    text-decoration: line-through;
-    opacity: 0.45;
-    margin-bottom: 4px;
-  }
-  .price-new {
-    font-size: 52px;
-    font-weight: 700;
-    color: #95D5B2;
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-  .price-label {
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    opacity: 0.6;
-    margin-bottom: 24px;
-  }
-  .check-list {
-    list-style: none;
-    margin-bottom: 28px;
-  }
-  .check-list li {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    padding: 6px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    color: rgba(255,255,255,0.85);
-  }
-  .check-list li::before {
-    content: '✓ ';
-    color: #95D5B2;
-    font-weight: 700;
-  }
-  .btn-buy {
-    display: block;
-    background: white;
-    color: #2D6A4F;
-    padding: 16px 24px;
-    border-radius: 4px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none;
-    text-align: center;
-    letter-spacing: 0.3px;
-    transition: background 0.2s;
-  }
-  .btn-buy:hover { background: #95D5B2; }
-  .secure-note {
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    opacity: 0.45;
-    text-align: center;
-    margin-top: 14px;
-  }
+.card{
+  background:#f7f7f7;
+  padding:30px;
+  border-radius:18px;
+}
 
-  /* FAQ */
-  .faq-bg { background: white; }
-  .faq-item {
-    padding: 20px 0;
-    border-bottom: 1px solid #ede9e0;
-  }
-  .faq-item:last-child { border-bottom: none; }
-  .faq-q {
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: #1a3a2a;
-    margin-bottom: 8px;
-  }
-  .faq-a {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    color: #555;
-    line-height: 1.7;
-  }
+/* PLANTS */
+.plants{
+  background:#fafafa;
+  text-align:center;
+  padding:90px 20px;
+}
 
-  /* FOOTER */
-  footer {
-    background: #111;
-    color: #666;
-    text-align: center;
-    padding: 32px 24px;
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    line-height: 1.8;
-  }
-  footer a { color: #95D5B2; text-decoration: none; margin: 0 8px; }
+.plant-row{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
 
-  @media (max-width: 500px) {
-    .get-grid { grid-template-columns: 1fr; }
-    .plant-row { grid-template-columns: 1fr 1fr; }
-  }
+.plant{
+  background:white;
+  border:1px solid #eee;
+  padding:18px 24px;
+  border-radius:14px;
+  font-size:14px;
+  color:#333;
+}
+
+/* TESTIMONIALS */
+.testimonial{
+  background:#f7f7f7;
+  padding:25px;
+  border-radius:18px;
+  font-style:italic;
+}
+
+.testimonial b{
+  display:block;
+  margin-top:10px;
+  font-style:normal;
+}
+
+/* CTA */
+.cta{
+  background:linear-gradient(135deg,#2D6A4F,#40916C);
+  color:white;
+  text-align:center;
+  padding:110px 20px;
+}
+
+.cta h2{font-size:42px;margin-bottom:15px;}
+.cta p{margin-bottom:25px;font-size:18px;}
+
+/* FOOTER */
+footer{
+  background:#111;
+  color:#888;
+  text-align:center;
+  padding:30px;
+  font-size:13px;
+}
+
+footer a{
+  color:#B7E4C7;
+  margin:0 10px;
+  text-decoration:none;
+}
+
 </style>
 </head>
+
 <body>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="container">
-    <div class="hero-badge">🌿 Adaptogen Reset Guide</div>
-    <h1>Wach, fokussiert und ruhig —<br><em>ohne Koffein.</em></h1>
-    <p>17 uralte Heilpflanzen. Jahrtausende altes Wissen. Ein Guide der deinem Körper zeigt, was er wirklich braucht.</p>
-    <a href="https://www.digistore24.com/product/683534" class="btn-hero">Jetzt entdecken →</a>
-    <div class="hero-sub"><s>37€</s> Heute nur 27€ · Sofort-Download · Kein Abo</div>
-  </div>
+<h1>Warum Kaffee dich immer wieder <span>hochzieht — und danach leer zurücklässt</span></h1>
+<p>Du brauchst wahrscheinlich nicht mehr Energie… sondern einen besseren Ansatz.</p>
+<a href="https://www.digistore24.com/product/683534" class="btn">Guide ansehen</a>
+<div class="price"><span style="text-decoration:line-through;">29€</span> Heute 27€ · Sofort-Download</div>
 </div>
 
-<!-- TRUST -->
-<div class="trust">
-  <div class="trust-inner">
-    <span class="trust-item">🔒 Sicherer Kauf</span>
-    <span class="trust-item">📥 Sofort-Download</span>
-    <span class="trust-item">📄 PDF</span>
-    <span class="trust-item">✅ Einmalzahlung</span>
-    <span class="trust-item">🌿 17 Adaptogene</span>
-  </div>
+<!-- STORY -->
+<div class="section">
+<h2>Die meisten machen denselben Fehler</h2>
+<div class="story">
+<p>Morgens Kaffee. Dann noch einer.</p>
+<p>Kurz fühlst du dich besser — und dann kommt wieder der Einbruch.</p>
+<p>Das Problem ist nicht deine Energie.  
+Das Problem ist, wie du versuchst, sie zu erzeugen.</p>
+</div>
 </div>
 
 <!-- PAIN -->
-<div class="section pain-bg">
-  <div class="section-inner">
-    <div class="section-label">Kennst du das?</div>
-    <h2>Kaffee Nummer drei — und du bist immer noch müde.</h2>
-    <p class="lead">Das ist kein Willensproblem. Das ist ein Signal deines Körpers.</p>
-    <ul class="pain-list">
-      <li>
-        <span class="pain-icon">😮‍💨</span>
-        <div class="pain-text">
-          <h3>Morgens schon erschöpft</h3>
-          <p>Aufgewacht — und schon leer. Als ob der Schlaf nichts gebracht hätte.</p>
-        </div>
-      </li>
-      <li>
-        <span class="pain-icon">🧠</span>
-        <div class="pain-text">
-          <h3>Gedanken im Nebel</h3>
-          <p>Du liest denselben Satz dreimal. Fokus kommt nicht, egal wie sehr du es versuchst.</p>
-        </div>
-      </li>
-      <li>
-        <span class="pain-icon">⚡</span>
-        <div class="pain-text">
-          <h3>Der Nachmittags-Einbruch</h3>
-          <p>14 Uhr. Alles bricht zusammen. Koffein hilft kurz — und macht es morgen schlimmer.</p>
-        </div>
-      </li>
-      <li>
-        <span class="pain-icon">😰</span>
-        <div class="pain-text">
-          <h3>Nie wirklich abschalten</h3>
-          <p>Körper müde, Kopf läuft weiter. Das Nervensystem kennt keinen Aus-Knopf mehr.</p>
-        </div>
-      </li>
-      <li>
-        <span class="pain-icon">😴</span>
-        <div class="pain-text">
-          <h3>Schlafen ohne Erholung</h3>
-          <p>Stunden im Bett — und trotzdem nicht ausgeruht. Etwas stimmt nicht.</p>
-        </div>
-      </li>
-      <li>
-        <span class="pain-icon">🤒</span>
-        <div class="pain-text">
-          <h3>Dein Körper gibt nach</h3>
-          <p>Jede Erkältung trifft dich härter. Dein System ist im Dauerstress.</p>
-        </div>
-      </li>
-    </ul>
-  </div>
+<div class="section">
+<h2>Kommt dir das bekannt vor?</h2>
+<div class="grid">
+<div class="card"><h3>Push & Crash</h3><p>Kurz Energie — dann wieder leer.</p></div>
+<div class="card"><h3>Erschöpft</h3><p>Selbst nach Schlaf nicht wirklich fit.</p></div>
+<div class="card"><h3>Kein Fokus</h3><p>Gedanken unruhig oder träge.</p></div>
+<div class="card"><h3>Innere Unruhe</h3><p>Du kommst nicht richtig runter.</p></div>
+</div>
 </div>
 
-<!-- WHAT YOU GET -->
-<div class="section get-bg">
-  <div class="section-inner">
-    <div class="section-label">Was dich erwartet</div>
-    <h2>Kein Wellness-Bla-Bla. Nur Informationen die wirken.</h2>
-    <p class="lead">Alles was du brauchst — und nichts was du nicht brauchst.</p>
-    <div class="get-grid">
-      <div class="get-item">
-        <div class="get-num">01</div>
-        <h3>17 Adaptogene</h3>
-        <p>Jede Pflanze einzeln erklärt — was sie kann und für wen sie passt</p>
-      </div>
-      <div class="get-item">
-        <div class="get-num">02</div>
-        <h3>Genaue Dosierungen</h3>
-        <p>Konkrete Mengen, kein Rätselraten — für jede Einnahmeform</p>
-      </div>
-      <div class="get-item">
-        <div class="get-num">03</div>
-        <h3>Dein Startplan</h3>
-        <p>Wann womit anfangen? Der Guide nimmt dir jede Entscheidung ab</p>
-      </div>
-      <div class="get-item">
-        <div class="get-num">04</div>
-        <h3>Überraschende Rezepte</h3>
-        <p>Einfach, schnell — und Kombinationen die du noch nicht kennst</p>
-      </div>
-      <div class="get-item">
-        <div class="get-num">05</div>
-        <h3>Was niemand sagt</h3>
-        <p>Welche Kombination gefährlich sein kann — und was überdosiert wird</p>
-      </div>
-      <div class="get-item">
-        <div class="get-num">06</div>
-        <h3>Echte Wissenschaft</h3>
-        <p>Peer-reviewed Studien als Grundlage — keine Instagram-Weisheiten</p>
-      </div>
-    </div>
-  </div>
+<!-- SOLUTION -->
+<div class="section">
+<h2>Es gibt einen anderen Ansatz</h2>
+<div class="story">
+<p>Immer mehr Menschen setzen auf natürliche Wege.</p>
+<p>Weniger kurzfristiger Push — mehr Stabilität.</p>
+</div>
 </div>
 
-<!-- PLANTS TEASER -->
-<div class="section plants-bg">
-  <div class="section-inner">
-    <div class="section-label">Vorgeschmack</div>
-    <h2>3 von 17 — der Rest wartet im Guide.</h2>
-    <p class="lead">Darunter eine Pflanze die dein Cortisol in 2 Wochen messbar senkt.</p>
-    <div class="plant-row">
-      <div class="plant-card">
-        <div class="plant-name">Ashwagandha</div>
-        <div class="plant-hint">Das meistunterschätzte Schlafmittel der Welt</div>
-      </div>
-      <div class="plant-card">
-        <div class="plant-name">Rosenwurz</div>
-        <div class="plant-hint">Der Geheimtipp den Leistungssportler hüten</div>
-      </div>
-      <div class="plant-card">
-        <div class="plant-name">Cordyceps</div>
-        <div class="plant-hint">Aus dem Himalaya — wirksamer als jeder Energy Drink</div>
-      </div>
-    </div>
-    <div class="plant-row">
-      <div class="plant-locked"><span>Im Guide enthalten</span></div>
-      <div class="plant-locked"><span>Im Guide enthalten</span></div>
-      <div class="plant-locked"><span>Im Guide enthalten</span></div>
-    </div>
-    <p class="plants-note">+ <strong>14 weitere Adaptogene</strong> — darunter einige die du garantiert noch nicht kennst.</p>
-  </div>
+<!-- PLANTS -->
+<div class="plants">
+<h2>Ein kleiner Einblick</h2>
+<p>Nur ein Vorgeschmack — nicht alles wird sofort verraten.</p>
+<div class="plant-row">
+<div class="plant">Ashwagandha</div>
+<div class="plant">Rosenwurz</div>
+<div class="plant">Bacopa</div>
+<div class="plant">Ginseng</div>
+</div>
+</div>
+
+<!-- VALUE -->
+<div class="section">
+<h2>Was du im Guide entdeckst</h2>
+<div class="grid">
+<div class="card"><h3>Natürliche Alternativen</h3><p>Was viele statt Kaffee nutzen.</p></div>
+<div class="card"><h3>Verständnis</h3><p>Warum dein System so reagiert.</p></div>
+<div class="card"><h3>Stabilität</h3><p>Weniger Schwankungen.</p></div>
+<div class="card"><h3>Umsetzung</h3><p>Einfach nutzbar.</p></div>
+</div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="section">
+<h2>Erfahrungen</h2>
+<div class="grid">
+<div class="testimonial">„Ich brauche deutlich weniger Kaffee.“<b>Daniel</b></div>
+<div class="testimonial">„Fühle mich stabiler im Alltag.“<b>Sarah</b></div>
+<div class="testimonial">„Endlich verständlich erklärt.“<b>Mehmet</b></div>
+<div class="testimonial">„Hat mein Denken verändert.“<b>Laura</b></div>
+</div>
 </div>
 
 <!-- CTA -->
-<div class="section cta-bg">
-  <div class="section-inner">
-    <div class="section-label">Bereit?</div>
-    <h2>Starte heute deinen Adaptogen Reset.</h2>
-    <p class="lead">Sofort-Download nach Zahlung. Kein Warten, kein Versand.</p>
-    <div class="price-card">
-      <div class="price-old">Regulär 37€</div>
-      <div class="price-new">27€</div>
-      <div class="price-label">Einmalzahlung · Sofort als PDF verfügbar</div>
-      <ul class="check-list">
-        <li>17 Adaptogene komplett erklärt</li>
-        <li>Dosierungen & Warnhinweise</li>
-        <li>Strukturierter Startplan</li>
-        <li>Überraschende Rezepte</li>
-        <li>Wissenschaftliche Quellen</li>
-      </ul>
-      <a href="https://www.digistore24.com/product/683534" class="btn-buy">Jetzt kaufen — 27€ →</a>
-      <p class="secure-note">🔒 Digistore24 · Apple Pay · Google Pay · Kreditkarte</p>
-    </div>
-  </div>
-</div>
-
-<!-- FAQ -->
-<div class="section faq-bg">
-  <div class="section-inner">
-    <div class="section-label">Häufige Fragen</div>
-    <h2>Ehrliche Antworten.</h2>
-    <br>
-    <div class="faq-item">
-      <div class="faq-q">Wie bekomme ich den Guide?</div>
-      <div class="faq-a">Sofort nach der Zahlung per E-Mail mit Download-Link. Funktioniert auf allen Geräten.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Ist das ein Abo?</div>
-      <div class="faq-a">Nein. Einmalige Zahlung von 27€ — kein Abo, keine versteckten Kosten.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Muss ich Koffein komplett weglassen?</div>
-      <div class="faq-a">Nein. Der Guide zeigt dir wie du beides kombinierst — und wann Adaptogene Kaffee überflüssig machen könnten.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Wie schnell merke ich etwas?</div>
-      <div class="faq-a">Erste Veränderungen nach 2–3 Wochen. Die stärksten Effekte nach 4–6 Wochen konsequenter Anwendung.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Ist das medizinische Beratung?</div>
-      <div class="faq-a">Nein. Der Guide dient zur Information. Bei Erkrankungen oder Medikamenteneinnahme bitte Arzt konsultieren.</div>
-    </div>
-  </div>
+<div class="cta">
+<h2>Vielleicht brauchst du keinen weiteren Kaffee</h2>
+<p>Sondern einen besseren Ansatz.</p>
+<a href="https://www.digistore24.com/product/683534" class="btn">Jetzt ansehen</a>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 Powerpromotion · David Arianfar · Frankfurt am Main</p>
-  <p style="margin-top:8px;">
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html">Datenschutz</a>
-    <a href="mailto:info@powerprom.de">Kontakt</a>
-  </p>
-  <p style="margin-top:10px; font-size:11px; opacity:0.5;">Dieser Guide ist keine medizinische Beratung und ersetzt keinen Arztbesuch.</p>
+<p>© 2025 Powerpromotion · David Arianfar</p>
+<p>
+<a href="impressum.html">Impressum</a> |
+<a href="datenschutz.html">Datenschutz</a> |
+<a href="mailto:info@powerprom.de">Kontakt</a>
+</p>
 </footer>
 
 </body>
