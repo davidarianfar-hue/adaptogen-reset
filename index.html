@@ -1,341 +1,171 @@
-import React from "react";
-import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Leaf,
-  ShieldCheck,
-  BadgeCheck,
-  Brain,
-  Zap,
-  Moon,
-  ChevronRight,
-  CheckCircle2,
-  Award,
-  Sparkles,
-} from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adaptogen Reset Starter</title>
 
-const benefits = [
-  {
-    icon: Brain,
-    title: "Fokus im Alltag",
-    text: "Klare, einfache Orientierung für Menschen, die mental wieder strukturierter funktionieren wollen.",
-  },
-  {
-    icon: Zap,
-    title: "Mehr Energie",
-    text: "Routinen und Pflanzenprofile für mehr Stabilität statt ständiger Ups and Downs.",
-  },
-  {
-    icon: Moon,
-    title: "Weniger Stress",
-    text: "Ein ruhiger, seriöser Einstieg in natürliche Routinen ohne übertriebene Versprechen.",
-  },
-];
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-const guidePoints = [
-  "5 Adaptogene einfach erklärt",
-  "Auswahlhilfe nach Ziel",
-  "3 alltagstaugliche Routinen",
-  "Rezepte zum direkten Start",
-  "Sicherheits- und Hinweisbereich",
-];
-
-const seals = [
-  "Digitales PDF-Produkt",
-  "Strukturiert aufbereitet",
-  "Sofort verfügbar",
-  "Seriöser Einsteiger-Guide",
-];
-
-function NatureBlob({ className }: { className?: string }) {
-  return (
-    <div
-      className={`absolute rounded-full blur-3xl opacity-30 ${className}`}
-      style={{
-        background:
-          "radial-gradient(circle, rgba(110,231,183,0.55) 0%, rgba(163,230,53,0.28) 35%, rgba(255,255,255,0) 70%)",
-      }}
-    />
-  );
+<style>
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
 }
 
-export default function AdaptogenLandingPageUpgrade() {
-  return (
-    <div className="min-h-screen bg-stone-50 text-stone-900 overflow-x-hidden">
-      <section className="relative isolate border-b border-stone-200 bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.10),transparent_30%),linear-gradient(to_bottom,rgba(255,255,255,0.95),rgba(248,250,252,0.98))]">
-        <NatureBlob className="-top-20 -left-20 h-72 w-72" />
-        <NatureBlob className="top-10 right-0 h-96 w-96" />
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
 
-        <div className="mx-auto max-w-7xl px-6 py-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-stone-900 text-white shadow-sm">
-                <Leaf className="h-5 w-5" />
-              </div>
-              <div>
-                <p className="text-sm font-semibold tracking-[0.18em] uppercase text-stone-500">NeuroFuel DE</p>
-                <p className="text-sm text-stone-600">Natürliche Routinen für Fokus, Energie & weniger Stress</p>
-              </div>
-            </div>
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.1)),
+    url('https://images.unsplash.com/photo-1513125370-3460ebe3401b');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 20px;
+    padding: 80px 40px;
+}
 
-            <Button className="rounded-2xl px-5">Guide holen <ArrowRight className="ml-2 h-4 w-4" /></Button>
-          </div>
-        </div>
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
 
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 pb-16 pt-8 lg:grid-cols-2 lg:px-8 lg:pb-24 lg:pt-10">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65 }}
-            className="relative"
-          >
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/80 px-4 py-2 text-sm text-emerald-800 backdrop-blur">
-              <Sparkles className="h-4 w-4" />
-              Einfacher Einstieg in Adaptogene ohne Hype
-            </div>
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+}
 
-            <h1 className="max-w-2xl text-4xl font-semibold leading-tight tracking-tight text-stone-900 md:text-6xl">
-              Mehr Ruhe, <span className="text-emerald-700">klarerer Fokus</span> und stabilere Energie im Alltag.
-            </h1>
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 22px;
+    background: #16a34a;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+}
 
-            <p className="mt-6 max-w-xl text-lg leading-8 text-stone-600">
-              Ein seriöser Starter-Guide für Menschen, die sich gestresst, leer und unfokussiert fühlen und natürliche Routinen besser verstehen wollen.
-            </p>
+.section {
+    margin-top: 60px;
+}
 
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button size="lg" className="rounded-2xl px-6 py-6 text-base">
-                Jetzt für 19 € holen
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-2xl px-6 py-6 text-base bg-white/70">
-                Inhalt ansehen
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
 
-            <div className="mt-10 grid gap-3 sm:grid-cols-2">
-              {guidePoints.slice(0, 4).map((point, i) => (
-                <motion.div
-                  key={point}
-                  initial={{ opacity: 0, y: 14 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.4 }}
-                  transition={{ duration: 0.45, delay: i * 0.08 }}
-                  className="flex items-center gap-3 rounded-2xl border border-stone-200 bg-white/85 px-4 py-3 shadow-sm backdrop-blur"
-                >
-                  <CheckCircle2 className="h-5 w-5 text-emerald-700" />
-                  <span className="text-sm font-medium text-stone-700">{point}</span>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
 
-          <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="relative"
-          >
-            <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-emerald-100 via-lime-50 to-white blur-2xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-xl">
-              <div
-                className="h-[560px] w-full bg-cover bg-center"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(to top, rgba(17,24,39,0.40), rgba(17,24,39,0.08)), url('https://images.unsplash.com/photo-1513125370-3460ebe3401b?auto=format&fit=crop&w=1200&q=80')",
-                }}
-              >
-                <div className="flex h-full flex-col justify-between p-6 md:p-8">
-                  <div className="flex flex-wrap gap-3">
-                    <div className="rounded-full bg-white/85 px-3 py-2 text-xs font-semibold text-stone-700 backdrop-blur">
-                      Adaptogen Reset Starter
-                    </div>
-                    <div className="rounded-full bg-emerald-50/90 px-3 py-2 text-xs font-semibold text-emerald-800 backdrop-blur">
-                      Sofort als PDF
-                    </div>
-                  </div>
+.card:hover {
+    transform: translateY(-5px);
+}
 
-                  <div className="space-y-4">
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="rounded-2xl bg-white/82 p-4 backdrop-blur">
-                        <p className="text-xs uppercase tracking-[0.18em] text-stone-500">Wirkungsidee</p>
-                        <p className="mt-2 text-sm font-medium text-stone-800">Stressresistenz, Fokus & Energie visuell klar vermittelt</p>
-                      </div>
-                      <div className="rounded-2xl bg-white/82 p-4 backdrop-blur">
-                        <p className="text-xs uppercase tracking-[0.18em] text-stone-500">Stil</p>
-                        <p className="mt-2 text-sm font-medium text-stone-800">Seriös, ruhig, hochwertig</p>
-                      </div>
-                    </div>
+.icon {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
 
-                    <div className="rounded-3xl border border-white/50 bg-white/16 p-5 backdrop-blur-md">
-                      <p className="text-sm font-medium text-white/90">Natürliche Unterstützung für einen strukturierteren Alltag</p>
-                      <p className="mt-2 text-2xl font-semibold text-white">5 Adaptogene. 3 Routinen. 1 klarer Start.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+.badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
 
-      <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8">
-        <div className="grid gap-4 md:grid-cols-4">
-          {seals.map((seal, i) => (
-            <motion.div
-              key={seal}
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.06 }}
-              className="flex items-center gap-3 rounded-2xl border border-stone-200 bg-white px-4 py-4 shadow-sm"
-            >
-              <BadgeCheck className="h-5 w-5 text-emerald-700" />
-              <span className="text-sm font-medium text-stone-700">{seal}</span>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+.badge {
+    background: white;
+    padding: 10px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
 
-      <section className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
-        <div className="mb-8 flex items-end justify-between gap-6">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-emerald-700">Warum diese Section jetzt stärker verkauft</p>
-            <h2 className="mt-2 text-3xl font-semibold tracking-tight text-stone-900 md:text-4xl">
-              Mehr Leben durch Icons, Struktur und ruhige Bewegung.
-            </h2>
-          </div>
-        </div>
+.cta {
+    background: #0f172a;
+    color: white;
+    padding: 50px;
+    border-radius: 20px;
+    margin-top: 60px;
+}
+</style>
+</head>
 
-        <div className="grid gap-6 md:grid-cols-3">
-          {benefits.map((item, i) => {
-            const Icon = item.icon;
-            return (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-              >
-                <Card className="rounded-[1.75rem] border-stone-200 bg-white/90 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                  <CardContent className="p-7">
-                    <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-700">
-                      <Icon className="h-6 w-6" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-stone-900">{item.title}</h3>
-                    <p className="mt-3 leading-7 text-stone-600">{item.text}</p>
-                    <div className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-stone-800">
-                      Mehr erfahren <ArrowRight className="h-4 w-4" />
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            );
-          })}
-        </div>
-      </section>
+<body>
 
-      <section className="relative border-y border-stone-200 bg-white">
-        <div
-          className="absolute inset-0 opacity-[0.09]"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=1600&q=80')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+<div class="container">
 
-        <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -24 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.55 }}
-            >
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-stone-500">Seriöse Vertrauenselemente</p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-stone-900 md:text-4xl">
-                Siegel und Zertifikate – aber sauber und glaubwürdig eingebunden.
-              </h2>
-              <p className="mt-5 max-w-2xl text-lg leading-8 text-stone-600">
-                Statt übertriebener Fake-Siegel nutzt du ruhige Trust-Elemente, die professionell aussehen und das Produkt hochwertiger machen.
-              </p>
+<!-- HERO -->
+<div class="hero">
+    <h1>Mehr Ruhe, klarerer Fokus und stabile Energie</h1>
+    <p>Ein einfacher Guide für Menschen, die sich gestresst, leer und unfokussiert fühlen und natürliche Routinen verstehen wollen.</p>
+    <a href="#" class="btn">Jetzt für 19€ holen →</a>
+</div>
 
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-3xl border border-stone-200 bg-stone-50 p-5">
-                  <div className="flex items-center gap-3">
-                    <ShieldCheck className="h-5 w-5 text-emerald-700" />
-                    <p className="font-medium text-stone-900">Digitales Produkt</p>
-                  </div>
-                  <p className="mt-2 text-sm leading-6 text-stone-600">Sofortiger Zugriff nach dem Kauf, klar strukturiert ausgeliefert.</p>
-                </div>
+<!-- TRUST BADGES -->
+<div class="section badges">
+    <div class="badge">✔ Sofort verfügbar</div>
+    <div class="badge">✔ Digitales Produkt</div>
+    <div class="badge">✔ Strukturierter Guide</div>
+    <div class="badge">✔ Einsteigerfreundlich</div>
+</div>
 
-                <div className="rounded-3xl border border-stone-200 bg-stone-50 p-5">
-                  <div className="flex items-center gap-3">
-                    <Award className="h-5 w-5 text-emerald-700" />
-                    <p className="font-medium text-stone-900">Qualitätsversprechen</p>
-                  </div>
-                  <p className="mt-2 text-sm leading-6 text-stone-600">Seriös aufbereitet, verständlich geschrieben, für Einsteiger konzipiert.</p>
-                </div>
-              </div>
-            </motion.div>
+<!-- BENEFITS -->
+<div class="section grid">
 
-            <motion.div
-              initial={{ opacity: 0, x: 24 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.55 }}
-              className="grid gap-4 sm:grid-cols-2"
-            >
-              {[
-                "Sofort verfügbar",
-                "Klar strukturiert",
-                "Einsteigerfreundlich",
-                "Seriöser Guide",
-              ].map((title, i) => (
-                <div key={title} className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-sm">
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full border-2 border-emerald-200 bg-emerald-50 text-emerald-700">
-                    <BadgeCheck className="h-7 w-7" />
-                  </div>
-                  <p className="text-lg font-semibold text-stone-900">{title}</p>
-                  <p className="mt-2 text-sm leading-6 text-stone-600">
-                    Vertrauenselement {i + 1} mit ruhigem Premium-Look statt lautem Marketing.
-                  </p>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        <div className="rounded-[2rem] border border-stone-200 bg-stone-900 p-8 text-white shadow-xl md:p-12">
-          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-emerald-300">Call to Action</p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-                Starte heute mit einem klaren, seriösen Einstieg in Adaptogene.
-              </h2>
-              <p className="mt-4 max-w-2xl text-lg leading-8 text-stone-300">
-                Keine überdrehten Farben, keine billigen Elemente – sondern Vertrauen, Klarheit und ein starkes Naturgefühl mit moderner Präsentation.
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-              <Button size="lg" className="rounded-2xl bg-white px-6 py-6 text-base text-stone-900 hover:bg-stone-100">
-                Jetzt Guide holen <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-2xl border-white/30 bg-transparent px-6 py-6 text-base text-white hover:bg-white/10">
-                Inhalt ansehen
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div class="card">
+        <div class="icon">🧠</div>
+        <h3>Mehr Fokus</h3>
+        <p>Verstehe, wie du deine mentale Klarheit im Alltag verbessern kannst.</p>
     </div>
-  );
-}
+
+    <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Mehr Energie</h3>
+        <p>Einfach umsetzbare Routinen für stabilere Energie.</p>
+    </div>
+
+    <div class="card">
+        <div class="icon">🌿</div>
+        <h3>Weniger Stress</h3>
+        <p>Natürliche Ansätze für mehr Ruhe und Balance.</p>
+    </div>
+
+</div>
+
+<!-- CONTENT -->
+<div class="section">
+    <h2>Was du bekommst</h2>
+    <ul>
+        <li>→ 5 Adaptogene einfach erklärt</li>
+        <li>→ Auswahlhilfe nach Ziel</li>
+        <li>→ 3 einfache Routinen</li>
+        <li>→ Rezepte zum Start</li>
+        <li>→ Sicherheits-Hinweise</li>
+    </ul>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+    <h2>Starte jetzt mit deinem Adaptogen Reset</h2>
+    <p>Ein klarer, seriöser Einstieg ohne unnötigen Hype.</p>
+    <a href="#" class="btn">Jetzt kaufen →</a>
+</div>
+
+</div>
+
+</body>
+</html>
