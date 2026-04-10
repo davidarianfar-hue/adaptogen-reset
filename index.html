@@ -961,6 +961,7 @@
       margin-top: 18px;
       border-top: 1px solid rgba(255,255,255,0.08);
       padding-top: 18px;
+      scroll-margin-top: 100px;
     }
 
     .impressum details {
@@ -1666,7 +1667,7 @@
         <div>Powerpromotion · David Arianfar · Frankfurt am Main</div>
         <div class="footer-links">
           <a href="#impressum">Impressum</a>
-          <a href="#impressum">Datenschutz</a>
+          <a href="#datenschutz">Datenschutz</a>
           <a href="mailto:info@powerprom.de">Kontakt</a>
         </div>
         <div>© 2025 Alle Rechte vorbehalten</div>
@@ -1691,6 +1692,29 @@
               E-Mail: <a href="mailto:info@powerprom.de">info@powerprom.de</a><br />
               USt-IdNr: DE329889793<br />
               Verantwortlich: David Arianfar
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="impressum-wrap" id="datenschutz">
+        <div class="impressum">
+          <details>
+            <summary>Datenschutzerklärung</summary>
+            <div class="impressum-content">
+              <strong>1. Allgemeine Hinweise</strong><br />
+              Diese Website dient der Bereitstellung von Informationen zu einem digitalen Produkt.
+              Personenbezogene Daten werden nur im technisch erforderlichen Umfang verarbeitet.<br /><br />
+
+              <strong>2. Hosting</strong><br />
+              Diese Website wird über GitHub Pages bereitgestellt. Beim Aufruf der Website können technisch notwendige Verbindungsdaten verarbeitet werden.<br /><br />
+
+              <strong>3. Kaufabwicklung</strong><br />
+              Die Zahlungsabwicklung erfolgt über Digistore24. Es gelten die Datenschutzbestimmungen von Digistore24.<br /><br />
+
+              <strong>4. Kontakt</strong><br />
+              Bei Fragen zum Datenschutz erreichen Sie uns unter:
+              <a href="mailto:info@powerprom.de">info@powerprom.de</a>
             </div>
           </details>
         </div>
@@ -1755,6 +1779,20 @@
     }, { threshold: 0.12 });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    function openDetailsFromHash() {
+      const hash = window.location.hash;
+      if (!hash) return;
+      const target = document.querySelector(hash);
+      if (!target) return;
+      const details = target.querySelector('details');
+      if (details) {
+        details.open = true;
+      }
+    }
+
+    window.addEventListener('load', openDetailsFromHash);
+    window.addEventListener('hashchange', openDetailsFromHash);
   </script>
 </body>
 </html>
