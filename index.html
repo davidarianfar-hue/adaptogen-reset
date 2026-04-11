@@ -3,1223 +3,376 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adaptogen Reset Starter — 17 Heilpflanzen Guide · Powerpromotion</title>
-  <meta
-    name="description"
-    content="Der vollständige wissenschaftliche Guide zu 17 Adaptogenen. Praktische Hinweise, Einstiegsplan und Rezeptideen. 27 Euro Einmalzahlung. Sofort-Download."
-  />
+  <title>Adaptogen Reset Bundle — Ernährung · Reset · Protokoll · Powerpromotion</title>
+  <meta name="description" content="Das vollständige Adaptogen-Bundle: Ernährung, Reset und Protokoll — drei aufeinander abgestimmte Guides. Einmalige Zahlung. Sofort-Download." />
   <meta name="theme-color" content="#1B4332" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
   <style>
+    /* ===== ORIGINAL CSS (komplett unverändert) ===== */
     :root {
-      --forest: #1B4332;
-      --green: #2D6A4F;
-      --sage: #52B788;
-      --mint: #D8F3DC;
-      --cream: #F9F3E8;
-      --warm-white: #FDFAF5;
-      --text: #1A1A1A;
-      --text-medium: #4A4A4A;
-      --text-light: #888888;
-      --gold: #C9A84C;
-      --border: rgba(0,0,0,0.08);
-      --shadow: 0 4px 20px rgba(0,0,0,0.06);
-      --max: 1100px;
-      --radius-sm: 4px;
-      --radius: 8px;
-      --nav-height: 82px;
+      --forest: #1B4332; --green: #2D6A4F; --sage: #52B788; --mint: #D8F3DC;
+      --cream: #F9F3E8; --warm-white: #FDFAF5; --text: #1A1A1A;
+      --text-medium: #4A4A4A; --text-light: #888888; --gold: #C9A84C;
+      --border: rgba(0,0,0,0.08); --shadow: 0 4px 20px rgba(0,0,0,0.06);
+      --max: 1100px; --radius-sm: 4px; --radius: 8px; --nav-height: 82px;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      font-size: 17px;
-      line-height: 1.8;
-      color: var(--text);
-      background: var(--warm-white);
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button {
-      font: inherit;
-    }
-
-    .container {
-      width: min(calc(100% - 40px), var(--max));
-      margin: 0 auto;
-    }
-
-    .section {
-      padding: 100px 0;
-      border-top: 1px solid var(--border);
-      position: relative;
-    }
-
-    .bg-white {
-      background: var(--warm-white);
-    }
-
-    .bg-cream {
-      background: var(--cream);
-    }
-
-    .bg-forest {
-      background: var(--forest);
-      color: #fff;
-    }
-
-    .bg-mint {
-      background: var(--mint);
-    }
-
-    .eyebrow {
-      display: inline-block;
-      font-size: 12px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 16px;
-      font-weight: 600;
-    }
-
-    .eyebrow.light {
-      color: var(--sage);
-    }
-
-    h1, h2, h3, h4, .brand, .faq-title, .price-main, .quote, .year, .nav-buy, .hero-buttons a, .final-cta-title {
-      font-family: 'Playfair Display', serif;
-    }
-
-    h1 {
-      font-size: 56px;
-      line-height: 1.12;
-      margin: 0 0 22px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    h2 {
-      font-size: 42px;
-      line-height: 1.18;
-      margin: 0 0 22px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    h3 {
-      font-size: 28px;
-      line-height: 1.3;
-      margin: 0 0 12px;
-      font-weight: 600;
-    }
-
-    h4 {
-      font-size: 20px;
-      line-height: 1.4;
-      margin: 0 0 8px;
-      font-weight: 600;
-    }
-
-    p {
-      margin: 0 0 18px;
-      color: var(--text-medium);
-    }
-
-    .lead {
-      font-size: 19px;
-      line-height: 1.9;
-    }
-
-    .divider-gold {
-      width: 60px;
-      height: 1px;
-      background: var(--gold);
-      margin: 26px 0 28px;
-    }
-
-    .rule {
-      height: 1px;
-      background: var(--border);
-      margin: 28px 0;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-height: 54px;
-      padding: 14px 24px;
-      border-radius: var(--radius-sm);
-      border: 1px solid transparent;
-      transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-      font-weight: 600;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-    }
-
-    .btn-primary {
-      background: var(--forest);
-      color: #fff;
-      box-shadow: var(--shadow);
-    }
-
-    .btn-primary:hover {
-      background: #163829;
-    }
-
-    .btn-hero-primary {
-      background: var(--cream);
-      color: var(--forest);
-      border-color: rgba(255,255,255,0.1);
-    }
-
-    .btn-hero-primary:hover {
-      background: #f0e8dc;
-    }
-
-    .btn-hero-secondary {
-      background: transparent;
-      color: #fff;
-      border-color: rgba(255,255,255,0.45);
-    }
-
-    .btn-hero-secondary:hover {
-      background: rgba(255,255,255,0.06);
-    }
-
-    .btn-light {
-      background: #fff;
-      color: var(--forest);
-    }
-
-    .btn-light:hover {
-      background: #f5f5f5;
-    }
-
-    .muted {
-      color: var(--text-light);
-    }
-
-    .small {
-      font-size: 13px;
-    }
-
-    .center {
-      text-align: center;
-    }
-
-    .sticky-nav {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      height: var(--nav-height);
-      background: rgba(253, 250, 245, 0.96);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      transition: box-shadow 0.2s ease, background-color 0.2s ease;
-    }
-
-    .sticky-nav.scrolled {
-      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-    }
-
-    .nav-inner {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      color: var(--forest);
-      letter-spacing: 4px;
-      font-size: 24px;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      font-size: 15px;
-      color: var(--text-medium);
-    }
-
-    .nav-links a {
-      position: relative;
-    }
-
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0;
-      height: 1px;
-      background: var(--forest);
-      transition: width 0.2s ease;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .nav-buy {
-      background: var(--forest);
-      color: #fff;
-      padding: 13px 18px;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--forest);
-      font-size: 17px;
-      line-height: 1.2;
-      white-space: nowrap;
-      box-shadow: var(--shadow);
-    }
-
-    .nav-buy:hover {
-      background: #163829;
-    }
-
-    .hamburger {
-      display: none;
-      width: 46px;
-      height: 46px;
-      background: transparent;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 0;
-      position: relative;
-      cursor: pointer;
-    }
-
-    .hamburger span,
-    .hamburger::before,
-    .hamburger::after {
-      content: "";
-      position: absolute;
-      left: 11px;
-      right: 11px;
-      height: 1.5px;
-      background: var(--forest);
-      transition: transform 0.2s ease, top 0.2s ease, opacity 0.2s ease;
-    }
-
-    .hamburger span { top: 22px; }
-    .hamburger::before { top: 15px; }
-    .hamburger::after { top: 29px; }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.8; color: var(--text); background: var(--warm-white); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .container { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; }
+    .section { padding: 100px 0; border-top: 1px solid var(--border); position: relative; }
+    .bg-white { background: var(--warm-white); } .bg-cream { background: var(--cream); }
+    .bg-forest { background: var(--forest); color: #fff; } .bg-mint { background: var(--mint); }
+    .eyebrow { display: inline-block; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--green); margin-bottom: 16px; font-weight: 600; }
+    .eyebrow.light { color: var(--sage); }
+    h1, h2, h3, h4, .brand, .faq-title, .price-main, .quote, .year, .nav-buy, .hero-buttons a, .final-cta-title { font-family: 'Playfair Display', serif; }
+    h1 { font-size: 56px; line-height: 1.12; margin: 0 0 22px; font-weight: 700; letter-spacing: -0.02em; }
+    h2 { font-size: 42px; line-height: 1.18; margin: 0 0 22px; font-weight: 700; letter-spacing: -0.02em; }
+    h3 { font-size: 28px; line-height: 1.3; margin: 0 0 12px; font-weight: 600; }
+    h4 { font-size: 20px; line-height: 1.4; margin: 0 0 8px; font-weight: 600; }
+    p { margin: 0 0 18px; color: var(--text-medium); }
+    .lead { font-size: 19px; line-height: 1.9; }
+    .divider-gold { width: 60px; height: 1px; background: var(--gold); margin: 26px 0 28px; }
+    .rule { height: 1px; background: var(--border); margin: 28px 0; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 14px 24px; border-radius: var(--radius-sm); border: 1px solid transparent; transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; font-weight: 600; cursor: pointer; white-space: nowrap; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--forest); color: #fff; box-shadow: var(--shadow); }
+    .btn-primary:hover { background: #163829; }
+    .btn-hero-primary { background: var(--cream); color: var(--forest); border-color: rgba(255,255,255,0.1); }
+    .btn-hero-primary:hover { background: #f0e8dc; }
+    .btn-hero-secondary { background: transparent; color: #fff; border-color: rgba(255,255,255,0.45); }
+    .btn-hero-secondary:hover { background: rgba(255,255,255,0.06); }
+    .btn-light { background: #fff; color: var(--forest); }
+    .btn-light:hover { background: #f5f5f5; }
+    .muted { color: var(--text-light); } .small { font-size: 13px; } .center { text-align: center; }
+    .sticky-nav { position: sticky; top: 0; z-index: 999; height: var(--nav-height); background: rgba(253,250,245,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); transition: box-shadow 0.2s ease, background-color 0.2s ease; }
+    .sticky-nav.scrolled { box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+    .nav-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { color: var(--forest); letter-spacing: 4px; font-size: 24px; font-weight: 700; white-space: nowrap; }
+    .nav-right { display: flex; align-items: center; gap: 22px; }
+    .nav-links { display: flex; align-items: center; gap: 18px; font-size: 15px; color: var(--text-medium); }
+    .nav-links a { position: relative; }
+    .nav-links a::after { content: ""; position: absolute; left: 0; bottom: -4px; width: 0; height: 1px; background: var(--forest); transition: width 0.2s ease; }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-buy { background: var(--forest); color: #fff; padding: 13px 18px; border-radius: var(--radius-sm); border: 1px solid var(--forest); font-size: 17px; line-height: 1.2; white-space: nowrap; box-shadow: var(--shadow); }
+    .nav-buy:hover { background: #163829; }
+    .hamburger { display: none; width: 46px; height: 46px; background: transparent; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0; position: relative; cursor: pointer; }
+    .hamburger span, .hamburger::before, .hamburger::after { content: ""; position: absolute; left: 11px; right: 11px; height: 1.5px; background: var(--forest); transition: transform 0.2s ease, top 0.2s ease, opacity 0.2s ease; }
+    .hamburger span { top: 22px; } .hamburger::before { top: 15px; } .hamburger::after { top: 29px; }
     .hamburger.active span { opacity: 0; }
     .hamburger.active::before { top: 22px; transform: rotate(45deg); }
     .hamburger.active::after { top: 22px; transform: rotate(-45deg); }
+    .mobile-menu { display: none; border-top: 1px solid var(--border); background: var(--warm-white); }
+    .mobile-menu-inner { padding: 16px 0 22px; display: grid; gap: 12px; }
+    .mobile-menu a { padding: 10px 0; color: var(--text-medium); font-size: 16px; }
+    .mobile-menu .btn { width: 100%; margin-top: 8px; }
+    .hero { background: var(--forest); color: #fff; position: relative; overflow: hidden; border-top: none; padding-top: 120px; padding-bottom: 110px; }
+    .hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(45deg, rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(-45deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 60px 60px, 60px 60px, 120px 120px, 120px 120px; pointer-events: none; opacity: 0.55; }
+    .hero::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 10% 20%, rgba(216,243,220,0.06), transparent 28%), radial-gradient(circle at 80% 15%, rgba(201,168,76,0.05), transparent 24%), radial-gradient(circle at 60% 80%, rgba(216,243,220,0.04), transparent 28%); pointer-events: none; }
+    .hero-inner { position: relative; z-index: 2; max-width: 820px; }
+    .hero-label { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--sage); margin-bottom: 20px; font-weight: 600; }
+    .hero p { color: rgba(253,250,245,0.85); }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+    .hero-note { margin-top: 18px; font-size: 13px; color: rgba(253,250,245,0.7); }
+    .leaf-line { position: absolute; left: 0; right: 0; bottom: 18px; display: flex; justify-content: center; z-index: 2; opacity: 0.75; pointer-events: none; }
+    .credibility-bar { padding: 24px 0; background: var(--cream); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .credibility-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .cred-item { text-align: center; padding: 8px 20px; color: var(--forest); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; border-left: 1px solid rgba(27,67,50,0.12); }
+    .cred-item:first-child { border-left: none; }
+    .two-col { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: start; }
+    .symptom-list { display: grid; gap: 14px; }
+    .symptom-item { border-left: 2px solid var(--green); padding: 8px 0 8px 18px; color: var(--text-medium); background: rgba(82,183,136,0.03); }
+    .timeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-bottom: 40px; }
+    .timeline-card { padding: 26px 24px; border: 1px solid var(--border); box-shadow: var(--shadow); background: rgba(255,255,255,0.55); border-radius: var(--radius); }
+    .year { font-size: 34px; line-height: 1; margin-bottom: 14px; color: var(--forest); }
+    .quote-wrap { margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(0,0,0,0.08); }
+    .quote { font-size: 24px; line-height: 1.6; color: var(--forest); font-style: italic; max-width: 840px; }
+    .quote-source { margin-top: 14px; font-size: 14px; color: var(--text-light); }
+    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 10px; }
+    .feature-card { position: relative; padding: 28px 24px 24px; border: 1px solid var(--border); border-top: 2px solid var(--sage); border-radius: var(--radius); box-shadow: var(--shadow); background: #fff; min-height: 248px; overflow: hidden; }
+    .feature-number { position: absolute; top: 16px; right: 18px; font-family: 'Playfair Display', serif; font-size: 54px; line-height: 1; color: rgba(82,183,136,0.14); pointer-events: none; }
+    .feature-title { font-size: 20px; font-weight: 600; color: var(--text); margin-bottom: 10px; padding-right: 58px; position: relative; z-index: 2; }
+    .feature-card p { position: relative; z-index: 2; margin-bottom: 0; }
+    .plants-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; align-items: start; }
+    .plants-col h3 { color: var(--gold); font-size: 14px; letter-spacing: 3px; text-transform: uppercase; font-family: 'Inter', sans-serif; font-weight: 600; margin-bottom: 22px; }
+    .plant-list { border-top: 1px solid rgba(255,255,255,0.18); }
+    .plant-item { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); font-size: 16px; line-height: 1.7; }
+    .plant-item strong { color: #fff; font-weight: 600; }
+    .plants-note { margin-top: 12px; color: rgba(255,255,255,0.7); font-size: 14px; }
+    .phase-diagram { margin-top: 34px; display: grid; gap: 16px; }
+    .phase-bars { display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 12px; align-items: center; }
+    .phase { min-height: 82px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 18px; border-radius: var(--radius); border: 1px solid var(--border); font-weight: 600; font-size: 16px; line-height: 1.5; box-shadow: var(--shadow); }
+    .phase-1 { background: rgba(177,72,72,0.10); color: #6e2b2b; }
+    .phase-2 { background: rgba(82,183,136,0.12); color: var(--forest); }
+    .phase-3 { background: #2a2a2a; color: rgba(255,255,255,0.92); }
+    .adaptogen-arrow-wrap { display: flex; align-items: center; justify-content: center; gap: 14px; color: var(--forest); font-size: 15px; margin-top: 4px; text-align: center; flex-wrap: wrap; }
+    .adaptogen-arrow { width: 170px; height: 1px; background: var(--gold); position: relative; }
+    .adaptogen-arrow::after { content: ""; position: absolute; right: 0; top: -4px; border-top: 4px solid transparent; border-bottom: 4px solid transparent; border-left: 8px solid var(--gold); }
+    .for-whom { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; margin-top: 20px; }
+    .list-box { border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); background: #fff; }
+    .list-box h4 { margin-bottom: 14px; }
+    .clean-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+    .clean-list li { color: var(--text-medium); position: relative; padding-left: 18px; }
+    .clean-list li::before { content: "—"; position: absolute; left: 0; top: 0; color: var(--green); font-weight: 600; }
+    .clean-list.neutral li::before { color: #8a8a8a; }
+    .recipe-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 24px; }
+    .recipe-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow); }
+    .recipe-title { font-family: 'Playfair Display', serif; font-size: 28px; line-height: 1.3; margin-bottom: 12px; color: var(--forest); }
+    .faq-list { display: grid; gap: 14px; margin-top: 24px; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius); background: rgba(255,255,255,0.7); box-shadow: var(--shadow); overflow: hidden; }
+    .faq-item summary { list-style: none; cursor: pointer; padding: 22px 24px; position: relative; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-title { font-size: 20px; line-height: 1.4; color: var(--text); padding-right: 26px; }
+    .faq-item summary::after { content: "+"; position: absolute; right: 22px; top: 20px; font-size: 24px; line-height: 1; color: var(--forest); transition: transform 0.2s ease; }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-answer { padding: 0 24px 22px 40px; color: var(--text-medium); font-size: 16px; }
+    .final-cta { text-align: center; padding: 110px 0; border-top: 1px solid rgba(255,255,255,0.12); }
+    .final-cta-title { font-size: 44px; line-height: 1.2; color: #fff; margin-bottom: 16px; }
+    .final-cta-sub { font-size: 18px; color: var(--sage); margin-bottom: 28px; }
+    .final-meta { margin-top: 20px; color: rgba(255,255,255,0.72); font-size: 15px; }
+    footer { background: #1A1A1A; color: rgba(255,255,255,0.95); padding: 28px 0 24px; font-size: 13px; }
+    .footer-top { display: grid; grid-template-columns: 1fr auto 1fr; gap: 20px; align-items: center; padding-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-top > div:nth-child(2) { text-align: center; }
+    .footer-top > div:nth-child(3) { text-align: right; }
+    .footer-links { display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: rgba(255,255,255,0.9); }
+    .footer-disclaimer { margin-top: 18px; opacity: 0.5; line-height: 1.8; }
+    .impressum-wrap { margin-top: 18px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 18px; scroll-margin-top: 100px; }
+    .impressum details { border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-sm); background: rgba(255,255,255,0.03); overflow: hidden; }
+    .impressum summary { list-style: none; cursor: pointer; padding: 14px 16px; position: relative; font-weight: 600; }
+    .impressum summary::-webkit-details-marker { display: none; }
+    .impressum summary::after { content: "+"; position: absolute; right: 16px; top: 10px; font-size: 20px; }
+    .impressum details[open] summary::after { content: "–"; }
+    .impressum-content { padding: 0 16px 16px; opacity: 0.9; line-height: 1.9; }
+    .mobile-buy-bar { display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 999; background: rgba(253,250,245,0.98); backdrop-filter: blur(10px); border-top: 1px solid var(--border); box-shadow: 0 -6px 18px rgba(0,0,0,0.06); padding: 10px 14px; }
+    .mobile-buy-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .mobile-price { line-height: 1.2; }
+    .mobile-price strong { display: block; font-family: 'Playfair Display', serif; color: var(--forest); font-size: 26px; }
+    .mobile-price span { font-size: 12px; color: var(--text-light); text-decoration: line-through; }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    .mobile-menu {
-      display: none;
-      border-top: 1px solid var(--border);
-      background: var(--warm-white);
-    }
-
-    .mobile-menu-inner {
-      padding: 16px 0 22px;
-      display: grid;
-      gap: 12px;
-    }
-
-    .mobile-menu a {
-      padding: 10px 0;
-      color: var(--text-medium);
-      font-size: 16px;
-    }
-
-    .mobile-menu .btn {
-      width: 100%;
-      margin-top: 8px;
-    }
-
-    .hero {
-      background: var(--forest);
-      color: #fff;
-      position: relative;
-      overflow: hidden;
-      border-top: none;
-      padding-top: 120px;
-      padding-bottom: 110px;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px),
-        linear-gradient(45deg, rgba(255,255,255,0.02) 1px, transparent 1px),
-        linear-gradient(-45deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-      background-size: 60px 60px, 60px 60px, 120px 120px, 120px 120px;
-      pointer-events: none;
-      opacity: 0.55;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 10% 20%, rgba(216,243,220,0.06), transparent 28%),
-        radial-gradient(circle at 80% 15%, rgba(201,168,76,0.05), transparent 24%),
-        radial-gradient(circle at 60% 80%, rgba(216,243,220,0.04), transparent 28%);
-      pointer-events: none;
-    }
-
-    .hero-inner {
-      position: relative;
-      z-index: 2;
-      max-width: 820px;
-    }
-
-    .hero-label {
-      font-size: 12px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--sage);
-      margin-bottom: 20px;
-      font-weight: 600;
-    }
-
-    .hero p {
-      color: rgba(253,250,245,0.85);
-    }
-
-    .hero-buttons {
+    /* Hero social proof bar */
+    .hero-social-proof {
       display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 36px;
-    }
-
-    .hero-note {
-      margin-top: 18px;
-      font-size: 13px;
-      color: rgba(253,250,245,0.7);
-    }
-
-    .leaf-line {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 18px;
-      display: flex;
-      justify-content: center;
-      z-index: 2;
-      opacity: 0.75;
-      pointer-events: none;
-    }
-
-    .credibility-bar {
-      padding: 24px 0;
-      background: var(--cream);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .credibility-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
       gap: 0;
-    }
-
-    .cred-item {
-      text-align: center;
-      padding: 8px 20px;
-      color: var(--forest);
-      font-size: 13px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      border-left: 1px solid rgba(27,67,50,0.12);
-    }
-
-    .cred-item:first-child {
-      border-left: none;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 60px;
-      align-items: start;
-    }
-
-    .symptom-list {
-      display: grid;
-      gap: 14px;
-    }
-
-    .symptom-item {
-      border-left: 2px solid var(--green);
-      padding: 8px 0 8px 18px;
-      color: var(--text-medium);
-      background: rgba(82,183,136,0.03);
-    }
-
-    .timeline {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      margin-bottom: 40px;
-    }
-
-    .timeline-card {
-      padding: 26px 24px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      background: rgba(255,255,255,0.55);
-      border-radius: var(--radius);
-    }
-
-    .year {
-      font-size: 34px;
-      line-height: 1;
-      margin-bottom: 14px;
-      color: var(--forest);
-    }
-
-    .quote-wrap {
-      margin-top: 36px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(0,0,0,0.08);
-    }
-
-    .quote {
-      font-size: 24px;
-      line-height: 1.6;
-      color: var(--forest);
-      font-style: italic;
-      max-width: 840px;
-    }
-
-    .quote-source {
-      margin-top: 14px;
-      font-size: 14px;
-      color: var(--text-light);
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 10px;
-    }
-
-    .feature-card {
-      position: relative;
-      padding: 28px 24px 24px;
-      border: 1px solid var(--border);
-      border-top: 2px solid var(--sage);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      background: #fff;
-      min-height: 248px;
-      overflow: hidden;
-    }
-
-    .feature-number {
-      position: absolute;
-      top: 16px;
-      right: 18px;
-      font-family: 'Playfair Display', serif;
-      font-size: 54px;
-      line-height: 1;
-      color: rgba(82,183,136,0.14);
-      pointer-events: none;
-    }
-
-    .feature-title {
-      font-size: 20px;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 10px;
-      padding-right: 58px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .feature-card p {
-      position: relative;
-      z-index: 2;
-      margin-bottom: 0;
-    }
-
-    .plants-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 36px;
-      align-items: start;
-    }
-
-    .plants-col h3 {
-      color: var(--gold);
-      font-size: 14px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      margin-bottom: 22px;
-    }
-
-    .plant-list {
-      border-top: 1px solid rgba(255,255,255,0.18);
-    }
-
-    .plant-item {
-      padding: 14px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.12);
-      color: rgba(255,255,255,0.9);
-      font-size: 16px;
-      line-height: 1.7;
-    }
-
-    .plant-item strong {
-      color: #fff;
-      font-weight: 600;
-    }
-
-    .plants-note {
-      margin-top: 12px;
-      color: rgba(255,255,255,0.7);
-      font-size: 14px;
-    }
-
-    .phase-diagram {
-      margin-top: 34px;
-      display: grid;
-      gap: 16px;
-    }
-
-    .phase-bars {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr 1fr;
-      gap: 12px;
-      align-items: center;
-    }
-
-    .phase {
-      min-height: 82px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 18px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 1.5;
-      box-shadow: var(--shadow);
-    }
-
-    .phase-1 {
-      background: rgba(177,72,72,0.10);
-      color: #6e2b2b;
-    }
-
-    .phase-2 {
-      background: rgba(82,183,136,0.12);
-      color: var(--forest);
-    }
-
-    .phase-3 {
-      background: #2a2a2a;
-      color: rgba(255,255,255,0.92);
-    }
-
-    .adaptogen-arrow-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      color: var(--forest);
-      font-size: 15px;
-      margin-top: 4px;
-      text-align: center;
-      flex-wrap: wrap;
-    }
-
-    .adaptogen-arrow {
-      width: 170px;
-      height: 1px;
-      background: var(--gold);
-      position: relative;
-    }
-
-    .adaptogen-arrow::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: -4px;
-      border-top: 4px solid transparent;
-      border-bottom: 4px solid transparent;
-      border-left: 8px solid var(--gold);
-    }
-
-    .for-whom {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 34px;
-      margin-top: 20px;
-    }
-
-    .list-box {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px;
-      box-shadow: var(--shadow);
-      background: #fff;
-    }
-
-    .list-box h4 {
-      margin-bottom: 14px;
-    }
-
-    .clean-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: 10px;
-    }
-
-    .clean-list li {
-      color: var(--text-medium);
-      position: relative;
-      padding-left: 18px;
-    }
-
-    .clean-list li::before {
-      content: "—";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--green);
-      font-weight: 600;
-    }
-
-    .clean-list.neutral li::before {
-      color: #8a8a8a;
-    }
-
-    .recipe-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 24px;
-    }
-
-    .recipe-card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px 24px;
-      box-shadow: var(--shadow);
-    }
-
-    .recipe-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      line-height: 1.3;
-      margin-bottom: 12px;
-      color: var(--forest);
-    }
-
-    .purchase-card-wrap {
-      display: flex;
-      justify-content: center;
-      margin-top: 18px;
-    }
-
-    .purchase-card {
-      width: 100%;
-      max-width: 480px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      background: #fff;
-    }
-
-    .purchase-top {
-      background: var(--cream);
-      padding: 34px 28px 28px;
-      text-align: center;
-    }
-
-    .old-price {
-      color: var(--text-light);
-      font-size: 20px;
-      text-decoration: line-through;
-      margin-bottom: 8px;
-    }
-
-    .price-main {
-      font-size: 52px;
-      line-height: 1;
-      color: var(--forest);
-      margin-bottom: 10px;
-    }
-
-    .purchase-middle,
-    .purchase-bottom {
-      padding: 28px;
-    }
-
-    .purchase-lines {
-      display: grid;
-      gap: 10px;
-      text-align: center;
-      color: var(--text-medium);
-    }
-
-    .purchase-lines div {
-      padding-bottom: 10px;
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-    }
-
-    .purchase-lines div:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .purchase-button {
-      width: 100%;
-      justify-content: center;
-    }
-
-    .pay-note {
-      text-align: center;
-      font-size: 12px;
-      color: var(--text-light);
-      margin-top: 14px;
-      line-height: 1.7;
-    }
-
-    .faq-list {
-      display: grid;
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .faq-item {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,0.7);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .faq-item summary {
-      list-style: none;
-      cursor: pointer;
-      padding: 22px 24px;
-      position: relative;
-    }
-
-    .faq-item summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .faq-title {
-      font-size: 20px;
-      line-height: 1.4;
-      color: var(--text);
-      padding-right: 26px;
-    }
-
-    .faq-item summary::after {
-      content: "+";
-      position: absolute;
-      right: 22px;
-      top: 20px;
-      font-size: 24px;
-      line-height: 1;
-      color: var(--forest);
-      transition: transform 0.2s ease;
-    }
-
-    .faq-item[open] summary::after {
-      transform: rotate(45deg);
-    }
-
-    .faq-answer {
-      padding: 0 24px 22px 40px;
-      color: var(--text-medium);
-      font-size: 16px;
-    }
-
-    .final-cta {
-      text-align: center;
-      padding: 110px 0;
-      border-top: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .final-cta-title {
-      font-size: 44px;
-      line-height: 1.2;
-      color: #fff;
-      margin-bottom: 16px;
-    }
-
-    .final-cta-sub {
-      font-size: 18px;
-      color: var(--sage);
-      margin-bottom: 28px;
-    }
-
-    .final-meta {
-      margin-top: 20px;
-      color: rgba(255,255,255,0.72);
-      font-size: 15px;
-    }
-
-    footer {
-      background: #1A1A1A;
-      color: rgba(255,255,255,0.95);
-      padding: 28px 0 24px;
-      font-size: 13px;
-    }
-
-    .footer-top {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      gap: 20px;
-      align-items: center;
-      padding-bottom: 18px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .footer-top > div:nth-child(2) {
-      text-align: center;
-    }
-
-    .footer-top > div:nth-child(3) {
-      text-align: right;
-    }
-
-    .footer-links {
-      display: inline-flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .footer-links a {
-      color: rgba(255,255,255,0.9);
-    }
-
-    .footer-disclaimer {
-      margin-top: 18px;
-      opacity: 0.5;
-      line-height: 1.8;
-    }
-
-    .impressum-wrap {
-      margin-top: 18px;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding-top: 18px;
-      scroll-margin-top: 100px;
-    }
-
-    .impressum details {
+      margin: 28px 0 32px;
+      background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.12);
-      border-radius: var(--radius-sm);
-      background: rgba(255,255,255,0.03);
-      overflow: hidden;
+      border-radius: 8px;
+      padding: 16px 24px;
+      width: fit-content;
     }
+    .hsp-item { text-align: center; padding: 0 24px; }
+    .hsp-item:first-child { padding-left: 0; }
+    .hsp-number { display: block; font-family: 'Playfair Display', serif; font-size: 22px; color: #fff; font-weight: 700; line-height: 1.1; }
+    .hsp-label { display: block; font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 1px; text-transform: uppercase; margin-top: 3px; }
+    .hsp-divider { width: 1px; height: 36px; background: rgba(255,255,255,0.15); flex-shrink: 0; }
 
-    .impressum summary {
-      list-style: none;
-      cursor: pointer;
-      padding: 14px 16px;
-      position: relative;
-      font-weight: 600;
-    }
-
-    .impressum summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .impressum summary::after {
-      content: "+";
-      position: absolute;
-      right: 16px;
-      top: 10px;
-      font-size: 20px;
-    }
-
-    .impressum details[open] summary::after {
-      content: "–";
-    }
-
-    .impressum-content {
-      padding: 0 16px 16px;
-      opacity: 0.9;
-      line-height: 1.9;
-    }
-
-    .mobile-buy-bar {
-      display: none;
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 999;
-      background: rgba(253,250,245,0.98);
-      backdrop-filter: blur(10px);
-      border-top: 1px solid var(--border);
-      box-shadow: 0 -6px 18px rgba(0,0,0,0.06);
-      padding: 10px 14px;
-    }
-
-    .mobile-buy-inner {
+    /* Hero curiosity hook */
+    .hero-hook {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 10px;
+      margin-top: 22px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      font-style: italic;
+    }
+    .hero-hook-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* Wirkung hook lines */
+    .wirkung-hook {
+      margin-top: 20px;
+      display: grid;
       gap: 12px;
     }
-
-    .mobile-price {
-      line-height: 1.2;
-    }
-
-    .mobile-price strong {
-      display: block;
-      font-family: 'Playfair Display', serif;
+    .wirkung-hook-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
       color: var(--forest);
-      font-size: 26px;
+      line-height: 1.6;
     }
-
-    .mobile-price span {
-      font-size: 12px;
-      color: var(--text-light);
-      text-decoration: line-through;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 1024px) {
-      h1 { font-size: 48px; }
-      h2 { font-size: 36px; }
-      .feature-grid,
-      .recipe-grid,
-      .plants-grid,
-      .timeline {
-        grid-template-columns: 1fr 1fr;
-      }
-      .plants-grid .plants-col:last-child {
-        grid-column: span 2;
-      }
-      .two-col,
-      .for-whom {
-        grid-template-columns: 1fr;
-        gap: 34px;
-      }
-      .credibility-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-      .cred-item:nth-child(3) {
-        border-left: none;
-      }
-      .footer-top {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-      .footer-top > div:nth-child(3) {
-        text-align: center;
-      }
+    .whook-icon {
+      color: var(--gold);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
     }
 
     @media (max-width: 768px) {
-      :root {
-        --nav-height: 74px;
-      }
-
-      .section {
-        padding: 72px 0;
-      }
-
-      .container {
-        width: min(calc(100% - 28px), var(--max));
-      }
-
-      h1 {
-        font-size: 38px;
-      }
-
-      h2 {
-        font-size: 30px;
-      }
-
-      h3 {
-        font-size: 24px;
-      }
-
-      h4,
-      .faq-title {
-        font-size: 18px;
-      }
-
-      body {
-        font-size: 16px;
-      }
-
-      .lead {
-        font-size: 17px;
-      }
-
-      .nav-links,
-      .nav-buy {
-        display: none;
-      }
-
-      .hamburger {
-        display: inline-block;
-      }
-
-      .mobile-menu.show {
-        display: block;
-      }
-
-      .hero {
-        padding-top: 92px;
-        padding-bottom: 86px;
-      }
-
-      .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .hero-buttons .btn {
-        width: 100%;
-      }
-
-      .credibility-grid,
-      .timeline,
-      .feature-grid,
-      .recipe-grid,
-      .plants-grid,
-      .phase-bars {
-        grid-template-columns: 1fr;
-      }
-
-      .plants-grid .plants-col:last-child {
-        grid-column: auto;
-      }
-
-      .cred-item {
-        border-left: none;
-        border-top: 1px solid rgba(27,67,50,0.12);
-      }
-
-      .cred-item:first-child {
-        border-top: none;
-      }
-
-      .purchase-top,
-      .purchase-middle,
-      .purchase-bottom,
-      .list-box,
-      .recipe-card,
-      .timeline-card,
-      .feature-card {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-
-      .phase {
-        min-height: 72px;
-      }
-
-      .faq-answer {
-        padding-left: 24px;
-      }
-
-      .mobile-buy-bar {
-        display: block;
-      }
-
-      body {
-        padding-bottom: 82px;
-      }
+      .hero-social-proof { flex-direction: column; width: 100%; gap: 12px; }
+      .hsp-divider { width: 80%; height: 1px; }
+      .hsp-item { padding: 0; }
+    }
+    @media (max-width: 1024px) {
+      h1 { font-size: 48px; } h2 { font-size: 36px; }
+      .feature-grid, .recipe-grid, .plants-grid, .timeline { grid-template-columns: 1fr 1fr; }
+      .plants-grid .plants-col:last-child { grid-column: span 2; }
+      .two-col, .for-whom { grid-template-columns: 1fr; gap: 34px; }
+      .credibility-grid { grid-template-columns: 1fr 1fr; }
+      .cred-item:nth-child(3) { border-left: none; }
+      .footer-top { grid-template-columns: 1fr; text-align: center; }
+      .footer-top > div:nth-child(3) { text-align: center; }
+    }
+    @media (max-width: 768px) {
+      :root { --nav-height: 74px; }
+      .section { padding: 72px 0; }
+      .container { width: min(calc(100% - 28px), var(--max)); }
+      h1 { font-size: 38px; } h2 { font-size: 30px; } h3 { font-size: 24px; }
+      h4, .faq-title { font-size: 18px; }
+      body { font-size: 16px; } .lead { font-size: 17px; }
+      .nav-links, .nav-buy { display: none; }
+      .hamburger { display: inline-block; }
+      .mobile-menu.show { display: block; }
+      .hero { padding-top: 92px; padding-bottom: 86px; }
+      .hero-buttons { flex-direction: column; align-items: stretch; }
+      .hero-buttons .btn { width: 100%; }
+      .credibility-grid, .timeline, .feature-grid, .recipe-grid, .plants-grid, .phase-bars { grid-template-columns: 1fr; }
+      .plants-grid .plants-col:last-child { grid-column: auto; }
+      .cred-item { border-left: none; border-top: 1px solid rgba(27,67,50,0.12); }
+      .cred-item:first-child { border-top: none; }
+      .phase { min-height: 72px; }
+      .faq-answer { padding-left: 24px; }
+      .mobile-buy-bar { display: block; }
+      body { padding-bottom: 82px; }
+    }
+    @media print {
+      .sticky-nav, .mobile-buy-bar, .hamburger, .mobile-menu { display: none !important; }
+      body { background: #fff; color: #000; padding-bottom: 0; }
+      a { text-decoration: none; }
     }
 
-    @media print {
-      .sticky-nav,
-      .mobile-buy-bar,
-      .hamburger,
-      .mobile-menu {
-        display: none !important;
-      }
-
-      body {
-        background: #fff;
-        color: #000;
-        padding-bottom: 0;
-      }
-
-      .section,
-      .credibility-bar,
-      footer {
-        break-inside: avoid;
-      }
-
-      a {
-        text-decoration: none;
-      }
+    /* ===== PRICING BLOCK CSS (aus neurofuel-bundle-pricing.html — nur ergänzt) ===== */
+    :root {
+      --forest-deep: #0f2a1f; --sage-light: #74c69d; --cream-dark: #f0e8d4;
+      --gold-light: #e2c06e; --red-strike: #c0392b;
+    }
+    .pricing-section { padding: 100px 20px; background: var(--warm-white); position: relative; overflow: hidden; border-top: 1px solid var(--border); }
+    .pricing-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+    .section-header { text-align: center; margin-bottom: 72px; }
+    .section-eyebrow { display: inline-block; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--green); font-weight: 600; margin-bottom: 16px; position: relative; }
+    .section-eyebrow::before, .section-eyebrow::after { content: '—'; color: var(--gold); margin: 0 10px; opacity: 0.7; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(38px, 5vw, 58px); font-weight: 600; color: var(--forest-deep); line-height: 1.1; margin-bottom: 18px; letter-spacing: -0.02em; }
+    .section-title em { font-style: italic; color: var(--green); }
+    .section-sub { font-size: 17px; color: var(--text-medium); max-width: 560px; margin: 0 auto; line-height: 1.75; }
+    .urgency-banner { background: var(--forest-deep); border-radius: 8px; padding: 14px 24px; display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 48px; position: relative; overflow: hidden; }
+    .urgency-banner::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255,255,255,0.015) 10px, rgba(255,255,255,0.015) 20px); }
+    .urgency-dot { width: 8px; height: 8px; background: #4ade80; border-radius: 50%; box-shadow: 0 0 0 3px rgba(74,222,128,0.25); animation: pulse 2s infinite; flex-shrink: 0; }
+    @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 3px rgba(74,222,128,0.25); } 50% { box-shadow: 0 0 0 6px rgba(74,222,128,0.1); } }
+    .urgency-text { font-size: 14px; color: rgba(255,255,255,0.9); font-weight: 500; letter-spacing: 0.3px; position: relative; }
+    .urgency-text strong { color: #4ade80; }
+    .individual-prices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; opacity: 0.7; position: relative; }
+    .individual-prices::after { content: 'VS.'; position: absolute; bottom: -22px; left: 50%; transform: translateX(-50%); font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 700; color: var(--text-light); letter-spacing: 3px; background: var(--warm-white); padding: 0 10px; }
+    .individual-item { background: #fff; border: 1.5px solid var(--border); border-radius: 10px; padding: 20px 18px; position: relative; overflow: hidden; }
+    .individual-item::after { content: ''; position: absolute; top: 50%; left: 0; right: 0; height: 1.5px; background: var(--red-strike); transform: rotate(-2deg); opacity: 0.4; }
+    .ind-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light); font-weight: 600; margin-bottom: 6px; }
+    .ind-name { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: var(--text-medium); margin-bottom: 8px; line-height: 1.3; }
+    .ind-price { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 700; color: var(--text-light); text-decoration: line-through; text-decoration-color: var(--red-strike); text-decoration-thickness: 2px; }
+    .ind-desc { font-size: 11.5px; color: var(--text-light); margin-top: 4px; line-height: 1.5; }
+    .arrow-divider { text-align: center; padding: 32px 0 20px; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .arrow-divider svg { color: var(--gold); animation: bounce 1.5s ease infinite; }
+    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+    .arrow-label { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+    .bundle-card { background: var(--forest-deep); border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.15); position: relative; border: 1px solid rgba(255,255,255,0.08); }
+    .bundle-card::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 50%, rgba(82,183,136,0.06) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(201,168,76,0.05) 0%, transparent 40%); pointer-events: none; }
+    .bundle-ribbon { position: absolute; top: 24px; right: -34px; background: var(--gold); color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 7px 48px; transform: rotate(45deg); box-shadow: 0 4px 12px rgba(201,168,76,0.4); z-index: 2; }
+    .bundle-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+    .bundle-left { padding: 48px 40px; border-right: 1px solid rgba(255,255,255,0.08); position: relative; z-index: 1; }
+    .bundle-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(82,183,136,0.15); border: 1px solid rgba(82,183,136,0.3); border-radius: 40px; padding: 6px 14px; margin-bottom: 20px; }
+    .bundle-badge-dot { width: 6px; height: 6px; background: var(--sage); border-radius: 50%; }
+    .bundle-badge-text { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--sage-light); }
+    .bundle-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3.5vw, 40px); font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 8px; letter-spacing: -0.02em; }
+    .bundle-name em { font-style: italic; color: var(--gold-light); }
+    .bundle-tagline { font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 28px; line-height: 1.6; }
+    .bundle-includes { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; padding: 0; }
+    .bundle-includes li { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: rgba(255,255,255,0.8); line-height: 1.5; }
+    .include-icon { width: 20px; height: 20px; background: rgba(82,183,136,0.2); border: 1px solid rgba(82,183,136,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+    .include-icon::after { content: '✓'; font-size: 10px; color: var(--sage-light); font-weight: 700; }
+    .include-text strong { color: #fff; font-weight: 600; }
+    .include-text span { color: rgba(255,255,255,0.45); font-size: 13px; }
+    .bundle-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 24px 0; }
+    .bundle-guarantee { display: flex; align-items: flex-start; gap: 12px; }
+    .guarantee-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+    .guarantee-text { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+    .guarantee-text strong { color: rgba(255,255,255,0.75); display: block; margin-bottom: 2px; }
+    .bundle-right { padding: 48px 40px; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 1; }
+    .savings-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.35); border-radius: 40px; padding: 6px 14px; margin-bottom: 20px; width: fit-content; }
+    .savings-badge-text { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold-light); }
+    .price-was { font-size: 16px; color: rgba(255,255,255,0.3); text-decoration: line-through; text-decoration-color: var(--red-strike); margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+    .price-was::after { content: 'normaler Wert'; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.2); text-decoration: none; }
+    .price-now { font-family: 'Cormorant Garamond', serif; font-size: clamp(54px, 7vw, 78px); font-weight: 700; color: #fff; line-height: 1; letter-spacing: -0.03em; margin-bottom: 4px; display: flex; align-items: flex-start; gap: 4px; }
+    .price-now .currency { font-size: 0.45em; margin-top: 12px; color: var(--gold-light); font-weight: 600; }
+    .price-note { font-size: 12px; color: rgba(255,255,255,0.3); margin-bottom: 28px; letter-spacing: 0.5px; }
+    .savings-calc { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 16px; margin-bottom: 24px; }
+    .savings-row { display: flex; justify-content: space-between; align-items: center; font-size: 13px; padding: 5px 0; }
+    .savings-row:not(:last-child) { border-bottom: 1px solid rgba(255,255,255,0.06); margin-bottom: 5px; }
+    .savings-row .sr-label { color: rgba(255,255,255,0.4); }
+    .savings-row .sr-val { color: rgba(255,255,255,0.6); text-decoration: line-through; font-size: 13px; }
+    .savings-row.total .sr-label { color: rgba(255,255,255,0.8); font-weight: 600; }
+    .savings-row.total .sr-val { color: var(--sage-light); font-weight: 700; text-decoration: none; font-size: 14px; }
+    .savings-row.you-save .sr-label { color: var(--gold-light); font-size: 12px; }
+    .savings-row.you-save .sr-val { color: var(--gold-light); text-decoration: none; font-weight: 700; font-size: 13px; }
+    .cta-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 18px 24px; background: linear-gradient(135deg, var(--sage) 0%, #2d9164 100%); color: #fff; border: none; border-radius: 10px; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.3px; cursor: pointer; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 4px 20px rgba(82,183,136,0.35); position: relative; overflow: hidden; }
+    .cta-btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent); transition: left 0.4s ease; }
+    .cta-btn:hover::before { left: 100%; }
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(82,183,136,0.45); }
+    .cta-arrow { font-size: 18px; transition: transform 0.2s ease; }
+    .cta-btn:hover .cta-arrow { transform: translateX(4px); }
+    .cta-secure { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 12px; font-size: 11.5px; color: rgba(255,255,255,0.3); }
+    .psych-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 56px; }
+    .psych-box { background: #fff; border: 1.5px solid var(--border); border-radius: 12px; padding: 24px 20px; position: relative; overflow: hidden; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .psych-box:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
+    .psych-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+    .psych-box.scarcity::before { background: linear-gradient(90deg, #e74c3c, #c0392b); }
+    .psych-box.social::before { background: linear-gradient(90deg, var(--sage), var(--green)); }
+    .psych-box.authority::before { background: linear-gradient(90deg, var(--gold), #a07830); }
+    .psych-icon { font-size: 24px; margin-bottom: 10px; display: block; }
+    .psych-title { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 700; color: var(--forest-deep); margin-bottom: 8px; line-height: 1.2; }
+    .psych-body { font-size: 13.5px; color: var(--text-medium); line-height: 1.65; }
+    .psych-body strong { color: var(--forest); }
+    .compare-wrap { margin-top: 56px; background: #fff; border: 1.5px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .compare-header { display: grid; grid-template-columns: 1fr 140px 180px; background: var(--cream-dark); padding: 14px 24px; gap: 16px; }
+    .compare-header div { font-size: 10.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-medium); }
+    .compare-header div:last-child { text-align: center; color: var(--forest); }
+    .compare-row { display: grid; grid-template-columns: 1fr 140px 180px; padding: 14px 24px; gap: 16px; border-top: 1px solid var(--border); align-items: center; transition: background 0.15s; }
+    .compare-row:hover { background: var(--cream); }
+    .cr-feature { font-size: 14px; color: var(--text); font-weight: 500; }
+    .cr-individual { font-size: 14px; color: var(--text-light); text-decoration: line-through; text-align: left; }
+    .cr-bundle { text-align: center; }
+    .cr-check { width: 22px; height: 22px; background: rgba(82,183,136,0.12); border: 1.5px solid var(--sage); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: var(--green); font-size: 11px; font-weight: 700; }
+    .compare-footer { display: grid; grid-template-columns: 1fr 140px 180px; padding: 18px 24px; gap: 16px; background: var(--forest-deep); align-items: center; }
+    .cf-label { font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.9); }
+    .cf-individual { font-size: 18px; color: rgba(255,255,255,0.3); text-decoration: line-through; font-family: 'Cormorant Garamond', serif; }
+    .cf-bundle { text-align: center; }
+    .cf-price { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 700; color: var(--gold-light); }
+    .cf-note { font-size: 11px; color: var(--sage-light); display: block; margin-top: 1px; letter-spacing: 0.5px; }
+    @media (max-width: 900px) {
+      .bundle-inner { grid-template-columns: 1fr; }
+      .bundle-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .psych-grid { grid-template-columns: 1fr; }
+      .individual-prices { grid-template-columns: 1fr; }
+      .individual-prices::after { display: none; }
+      .compare-header, .compare-row, .compare-footer { grid-template-columns: 1fr 100px 140px; }
+    }
+    @media (max-width: 600px) {
+      .pricing-section { padding: 64px 16px; }
+      .bundle-left, .bundle-right { padding: 32px 24px; }
+      .bundle-ribbon { display: none; }
     }
   </style>
 </head>
@@ -1227,35 +380,26 @@
   <header class="sticky-nav" id="siteNav">
     <div class="container nav-inner">
       <a href="#top" class="brand">NEUROFUEL</a>
-
       <div class="nav-right">
         <nav class="nav-links" aria-label="Hauptnavigation">
           <a href="#wirkung">Wirkung</a>
-          <a href="#pflanzen">Pflanzen</a>
+          <a href="#pflanzen">Programme</a>
           <a href="#rezepte">Rezepte</a>
         </nav>
-
         <a class="nav-buy" href="https://www.digistore24.com/product/683961" target="_blank" rel="noopener noreferrer">
           Guide kaufen — 27 Euro
         </a>
-
         <button class="hamburger" id="menuToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu">
           <span></span>
         </button>
       </div>
     </div>
-
     <div class="mobile-menu" id="mobileMenu">
       <div class="container mobile-menu-inner">
         <a href="#wirkung">Wirkung</a>
-        <a href="#pflanzen">Pflanzen</a>
+        <a href="#pflanzen">Programme</a>
         <a href="#rezepte">Rezepte</a>
-        <a
-          class="btn btn-primary"
-          href="https://www.digistore24.com/product/683961"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="btn btn-primary" href="https://www.digistore24.com/product/683961" target="_blank" rel="noopener noreferrer">
           Guide kaufen — 27 Euro
         </a>
       </div>
@@ -1268,36 +412,44 @@
         <div class="hero-inner">
           <div class="hero-label">WISSENSCHAFTLICH FUNDIERT · TRADITIONELL BEWAHRT</div>
 
-          <h1 class="reveal">
-            Ihr Körper kennt die Antwort auf Stress.<br />
-            Die Natur hat sie seit Jahrtausenden.
-          </h1>
+          <h1>Ihr Körper kennt die Antwort auf Stress.<br />Die Natur hat sie seit Jahrtausenden.</h1>
 
           <div class="divider-gold"></div>
 
-          <p class="lead reveal">
-            Ein hochwertiger Guide zu Adaptogenen — aufbereitet nach traditionellem Heilwissen und moderner Forschung.
-            Für alle, die ihrem Körper wieder Raum geben wollen.
-          </p>
+          <p class="lead">Ein hochwertiger Guide zu Adaptogenen — aufbereitet nach traditionellem Heilwissen und moderner Forschung. Für alle, die ihrem Körper wieder Raum geben wollen.</p>
 
-          <div class="hero-buttons reveal">
-            <a
-              class="btn btn-hero-primary"
-              href="https://www.digistore24.com/product/683961"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Zum Guide — 27 Euro
-            </a>
-            <a class="btn btn-hero-secondary" href="#science">Mehr erfahren</a>
+          <!-- Social proof bar -->
+          <div class="hero-social-proof">
+            <div class="hsp-item">
+              <span class="hsp-number">37 Tage</span>
+              <span class="hsp-label">Komplettes System</span>
+            </div>
+            <div class="hsp-divider"></div>
+            <div class="hsp-item">
+              <span class="hsp-number">3 Programme</span>
+              <span class="hsp-label">In einem Bundle</span>
+            </div>
+            <div class="hsp-divider"></div>
+            <div class="hsp-item">
+              <span class="hsp-number">27 €</span>
+              <span class="hsp-label">Einmalig · kein Abo</span>
+            </div>
           </div>
 
-          <div class="hero-note reveal">
-            Einmalige Zahlung · Kein Abonnement · Sofort-Download als PDF
+          <div class="hero-buttons">
+            <a class="btn btn-hero-primary" href="https://www.digistore24.com/product/683961" target="_blank" rel="noopener noreferrer">Zum Bundle — 27 Euro</a>
+            <a class="btn btn-hero-secondary" href="#wirkung">Was steckt dahinter? ↓</a>
+          </div>
+
+          <div class="hero-note">Einmalige Zahlung · Kein Abonnement · Sofort-Download als PDF</div>
+
+          <!-- Curiosity hook -->
+          <div class="hero-hook">
+            <span class="hero-hook-dot"></span>
+            Die meisten behandeln Symptome. Dieses System adressiert die Ursache.
           </div>
         </div>
       </div>
-
       <div class="leaf-line" aria-hidden="true">
         <svg width="320" height="52" viewBox="0 0 320 52" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M10 26H130" stroke="#F9F3E8" stroke-opacity="0.55"/>
@@ -1316,7 +468,7 @@
       <div class="container">
         <div class="credibility-grid">
           <div class="cred-item">Basiert auf traditionellem Heilwissen und moderner Forschung</div>
-          <div class="cred-item">17 Heilpflanzen strukturiert aufbereitet</div>
+          <div class="cred-item">3 aufeinander abgestimmte Programme im Bundle</div>
           <div class="cred-item">Wissenschaftlich fundiert und verständlich erklärt</div>
           <div class="cred-item">Ayurveda &amp; TCM als Wissensgrundlage</div>
         </div>
@@ -1327,18 +479,20 @@
       <div class="container">
         <div class="eyebrow reveal">WARUM SIE DIESEN GUIDE BRAUCHEN</div>
         <h2 class="reveal">Ihr Nervensystem wurde nicht für diese Zeit gebaut.</h2>
-
         <div class="two-col">
           <div>
-            <p class="reveal">
-              Die moderne Welt fordert von unserem System etwas, wofür es nie konzipiert wurde:
-              permanente Alarmbereitschaft. Cortisol, das Stresshormon, das einst Leben rettete,
-              arbeitet heute gegen uns. Die HPA-Achse — das zentrale Kommunikationssystem zwischen
-              Hypothalamus, Hypophyse und Nebennierenrinde — gerät aus dem Gleichgewicht.
-              Die Folgen sind bekannt.
-            </p>
+            <p>Die moderne Welt fordert von unserem System etwas, wofür es nie konzipiert wurde: permanente Alarmbereitschaft. Cortisol, das Stresshormon, das einst Leben rettete, arbeitet heute gegen uns. Die HPA-Achse — das zentrale Kommunikationssystem zwischen Hypothalamus, Hypophyse und Nebennierenrinde — gerät aus dem Gleichgewicht. Die Folgen sind bekannt.</p>
+            <div class="wirkung-hook reveal">
+              <div class="wirkung-hook-line">
+                <span class="whook-icon">→</span>
+                <span>Was wäre, wenn der Körper selbst die Lösung kennt — und nur den richtigen Schlüssel braucht?</span>
+              </div>
+              <div class="wirkung-hook-line">
+                <span class="whook-icon">→</span>
+                <span>Genau das haben Kulturen weltweit seit Jahrtausenden verstanden. Jetzt aufbereitet für heute.</span>
+              </div>
+            </div>
           </div>
-
           <div class="symptom-list">
             <div class="symptom-item">Chronische Erschöpfung trotz ausreichend Schlaf</div>
             <div class="symptom-item">Konzentrationsschwäche und mentaler Nebel</div>
@@ -1355,29 +509,14 @@
       <div class="container">
         <div class="eyebrow reveal">DIE WISSENSCHAFT DAHINTER</div>
         <h2 class="reveal">Adaptogene. Der Begriff, der alles verändert hat.</h2>
-
         <div class="timeline">
-          <div class="timeline-card">
-            <div class="year">1947</div>
-            <p>Der Begriff „Adaptogen“ entsteht</p>
-          </div>
-          <div class="timeline-card">
-            <div class="year">Moderne Forschung</div>
-            <p>Adaptogene rücken zunehmend in den wissenschaftlichen Fokus</p>
-          </div>
-          <div class="timeline-card">
-            <div class="year">Heute</div>
-            <p>Traditionelles Wissen wird systematisch aufbereitet und zugänglich gemacht</p>
-          </div>
+          <div class="timeline-card"><div class="year">1947</div><p>Der Begriff „Adaptogen" entsteht</p></div>
+          <div class="timeline-card"><div class="year">Moderne Forschung</div><p>Adaptogene rücken zunehmend in den wissenschaftlichen Fokus</p></div>
+          <div class="timeline-card"><div class="year">Heute</div><p>Traditionelles Wissen wird systematisch aufbereitet und zugänglich gemacht</p></div>
         </div>
-
         <div class="quote-wrap">
-          <div class="quote">
-            Ein strukturierter Überblick über pflanzliche Strategien zur Unterstützung von Stressresistenz, Energie und Regeneration.
-          </div>
-          <div class="quote-source">
-            Basierend auf traditioneller Anwendung und moderner Forschung
-          </div>
+          <div class="quote">Ein strukturierter Überblick über pflanzliche Strategien zur Unterstützung von Stressresistenz, Energie und Regeneration.</div>
+          <div class="quote-source">Basierend auf traditioneller Anwendung und moderner Forschung</div>
         </div>
       </div>
     </section>
@@ -1386,73 +525,40 @@
       <div class="container">
         <div class="eyebrow reveal">INHALT DES GUIDES</div>
         <h2 class="reveal">Alles, was Sie für den Start brauchen.</h2>
-
         <div class="feature-grid">
-          <article class="feature-card">
-            <div class="feature-number">01</div>
-            <div class="feature-title">17 ausgewählte Pflanzenprofile</div>
-            <p>Ein klarer Überblick über zentrale Adaptogene und ihre traditionellen Einsatzbereiche.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-number">02</div>
-            <div class="feature-title">Praktische Einnahmehinweise</div>
-            <p>Einfach verständlich aufbereitet für einen strukturierten Einstieg.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-number">03</div>
-            <div class="feature-title">Wichtige Sicherheitsinformationen</div>
-            <p>Orientierung zu sensiblen Punkten, die vor der Anwendung beachtet werden sollten.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-number">04</div>
-            <div class="feature-title">Ein klarer Einstiegsplan</div>
-            <p>Schritt für Schritt aufgebaut für eine strukturierte Umsetzung.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-number">05</div>
-            <div class="feature-title">Alltagstaugliche Rezeptideen</div>
-            <p>Einfache Möglichkeiten zur Integration in den Alltag.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-number">06</div>
-            <div class="feature-title">Fundierte Hintergrundinformationen</div>
-            <p>Wissenschaftlich inspirierte Einordnung ohne unnötige Komplexität.</p>
-          </article>
+          <article class="feature-card"><div class="feature-number">01</div><div class="feature-title">Ausgewählte Adaptogen-Profile</div><p>Ein klarer Überblick über zentrale Adaptogene und ihre traditionellen Einsatzbereiche.</p></article>
+          <article class="feature-card"><div class="feature-number">02</div><div class="feature-title">Praktische Einnahmehinweise</div><p>Einfach verständlich aufbereitet für einen strukturierten Einstieg.</p></article>
+          <article class="feature-card"><div class="feature-number">03</div><div class="feature-title">Wichtige Sicherheitsinformationen</div><p>Orientierung zu sensiblen Punkten, die vor der Anwendung beachtet werden sollten.</p></article>
+          <article class="feature-card"><div class="feature-number">04</div><div class="feature-title">Ein klarer Einstiegsplan</div><p>Schritt für Schritt aufgebaut für eine strukturierte Umsetzung.</p></article>
+          <article class="feature-card"><div class="feature-number">05</div><div class="feature-title">Alltagstaugliche Rezeptideen</div><p>Einfache Möglichkeiten zur Integration in den Alltag.</p></article>
+          <article class="feature-card"><div class="feature-number">06</div><div class="feature-title">Fundierte Hintergrundinformationen</div><p>Wissenschaftlich inspirierte Einordnung ohne unnötige Komplexität.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section bg-forest" id="pflanzen">
       <div class="container">
-        <div class="eyebrow light reveal">DIE HEILPFLANZEN</div>
-        <h2 class="reveal">Siebzehn Pflanzen. Jahrtausende Heilwissen. Ein Guide.</h2>
-
+        <div class="eyebrow light reveal">DIE PROGRAMME</div>
+        <h2 class="reveal">Drei Programme. Ein vollständiges System.</h2>
         <div class="plants-grid">
           <div class="plants-col">
-            <h3>PRIMÄRE ADAPTOGENE</h3>
+            <h3>7-DAY RESET</h3>
             <div class="plant-list">
-              <div class="plant-item"><strong>Primäre Adaptogene</strong> — Ashwagandha, Rosenwurz, Ginseng und weitere</div>
+              <div class="plant-item"><strong>7-Day Nervensystem Reset</strong> — Nervensystem beruhigen, Schlaf optimieren, Adaptogene einführen</div>
             </div>
           </div>
-
           <div class="plants-col">
-            <h3>SEKUNDÄRE ADAPTOGENE</h3>
+            <h3>NEUROFUEL PROTOCOL</h3>
             <div class="plant-list">
-              <div class="plant-item"><strong>Sekundäre Adaptogene</strong> — Cordyceps, Hericium, Kurkuma und weitere</div>
+              <div class="plant-item"><strong>30-Tage Advanced System</strong> — Biochemie, Ernährung, Training, Kälte &amp; Hitze, Mindset</div>
             </div>
           </div>
-
           <div class="plants-col">
-            <h3>ADAPTOGENE BEGLEITER</h3>
+            <h3>ERNÄHRUNGSPLAN</h3>
             <div class="plant-list">
-              <div class="plant-item"><strong>Adaptogene Begleiter</strong> — Ginkgo, Lavendel, Johanniskraut</div>
+              <div class="plant-item"><strong>Keto &amp; Refeed Ernährungsplan</strong> — Tagesplan, Supplementplan, Refeed-Strategie, Schlafregeln</div>
             </div>
-            <div class="plants-note">Die vollständige Auswahl und Einordnung aller Pflanzen finden Sie im Guide.</div>
+            <div class="plants-note">Alle drei Programme erhalten Sie sofort nach Kauf als PDF-Download.</div>
           </div>
         </div>
       </div>
@@ -1462,27 +568,19 @@
       <div class="container">
         <div class="eyebrow reveal">WARUM ADAPTOGENE WIRKEN</div>
         <h2 class="reveal">Hans Selye und das Allgemeine Anpassungssyndrom.</h2>
-
         <div class="phase-diagram">
           <div class="phase-bars">
             <div class="phase phase-1">Alarmphase — Kampf oder Flucht</div>
             <div class="phase phase-2">Widerstandsphase — Anpassung</div>
             <div class="phase phase-3">Erschöpfungsphase — Burnout</div>
           </div>
-
           <div class="adaptogen-arrow-wrap">
             <span>Adaptogene verlängern die Widerstandsphase</span>
             <div class="adaptogen-arrow"></div>
             <span>und verhindern den Übergang zur Erschöpfung.</span>
           </div>
-
-          <p>
-            Adaptogene werden traditionell dafür geschätzt, den Körper in Belastungsphasen zu unterstützen und Erschöpfungstendenzen besser abzufedern.
-          </p>
-
-          <div class="small muted">
-            Nach Selye, H. (1951). Journal of Clinical Endocrinology
-          </div>
+          <p>Adaptogene werden traditionell dafür geschätzt, den Körper in Belastungsphasen zu unterstützen und Erschöpfungstendenzen besser abzufedern.</p>
+          <div class="small muted">Nach Selye, H. (1951). Journal of Clinical Endocrinology</div>
         </div>
       </div>
     </section>
@@ -1490,7 +588,6 @@
     <section class="section bg-white">
       <div class="container">
         <h2 class="reveal">Für wen ist dieser Guide?</h2>
-
         <div class="for-whom">
           <div class="list-box">
             <h4>Geeignet für</h4>
@@ -1503,7 +600,6 @@
               <li>Sportler die natürliche Leistungsunterstützung suchen</li>
             </ul>
           </div>
-
           <div class="list-box">
             <h4>Nicht gedacht für</h4>
             <ul class="clean-list neutral">
@@ -1520,126 +616,154 @@
       <div class="container">
         <div class="eyebrow reveal">AUS DEM GUIDE</div>
         <h2 class="reveal" style="color: var(--forest);">Die Küche als Apotheke.</h2>
-        <p class="lead reveal" style="max-width: 760px;">
-          Adaptogene müssen keine Kapseln sein. Ausgewählte Rezeptideen zeigen, wie einfach die Integration gelingen kann.
-        </p>
-
+        <p class="lead reveal" style="max-width: 760px;">Adaptogene müssen keine Kapseln sein. Ausgewählte Rezeptideen zeigen, wie einfach die Integration gelingen kann.</p>
         <div class="recipe-grid">
-          <article class="recipe-card">
-            <div class="recipe-title">Ginseng-Hühnersuppe</div>
-            <p>Ein wärmendes Rezept aus der traditionellen Pflanzenküche.</p>
-          </article>
-
-          <article class="recipe-card">
-            <div class="recipe-title">Löwenzahn-Kurkuma-Latte</div>
-            <p>Eine wohltuende Alternative für den Nachmittag.</p>
-          </article>
-
-          <article class="recipe-card">
-            <div class="recipe-title">Adaptogen-Morgen-Tinktur</div>
-            <p>Eine kompakte Routine für den strukturierten Start in den Tag.</p>
-          </article>
+          <article class="recipe-card"><div class="recipe-title">Ginseng-Hühnersuppe</div><p>Ein wärmendes Rezept aus der traditionellen Pflanzenküche.</p></article>
+          <article class="recipe-card"><div class="recipe-title">Löwenzahn-Kurkuma-Latte</div><p>Eine wohltuende Alternative für den Nachmittag.</p></article>
+          <article class="recipe-card"><div class="recipe-title">Adaptogen-Morgen-Tinktur</div><p>Eine kompakte Routine für den strukturierten Start in den Tag.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section bg-white" id="kaufen">
-      <div class="container center">
-        <div class="eyebrow reveal">IHR EINSTIEG</div>
-        <h2 class="reveal">Der Adaptogen Reset Starter</h2>
+    <!-- ============================================================ -->
+    <!-- PRICING BLOCK — 1:1 aus neurofuel-bundle-pricing.html        -->
+    <!-- ============================================================ -->
+    <section class="pricing-section" id="kaufen">
+      <div class="container">
 
-        <div class="purchase-card-wrap">
-          <div class="purchase-card">
-            <div class="purchase-top">
-              <div class="old-price">37 Euro</div>
-              <div class="price-main">27 Euro</div>
-              <div class="small muted">Einmalige Zahlung · Mehrwertsteuer inklusive</div>
-            </div>
+        <div class="section-header">
+          <div class="section-eyebrow">Exklusives Angebot</div>
+          <h2 class="section-title">Drei Programme.<br/><em>Ein unschlagbarer Preis.</em></h2>
+          <p class="section-sub">Statt 121€ einzeln — heute als komplettes Bundle für nur 27€. Nur für kurze Zeit.</p>
+        </div>
 
-            <div class="rule" style="margin: 0;"></div>
+        <div class="urgency-banner">
+          <div class="urgency-dot"></div>
+          <div class="urgency-text">⏱ Sonderpreis aktiv — <strong>spare 94€</strong> gegenüber dem Einzelkauf. Angebot endet bald.</div>
+        </div>
 
-            <div class="purchase-middle">
-              <div class="purchase-lines">
-                <div>Ausgewählte Adaptogen-Profile</div>
-                <div>Praktische Einnahmehinweise</div>
-                <div>Sicherheits- und Hintergrundwissen</div>
-                <div>Klarer Einstiegsplan</div>
-                <div>Rezeptideen für den Alltag</div>
-                <div>Sofortiger PDF-Download nach Zahlung</div>
+        <div class="individual-prices">
+          <div class="individual-item">
+            <div class="ind-label">Programm 01</div>
+            <div class="ind-name">7-Day Nervensystem Reset</div>
+            <div class="ind-price">27 €</div>
+            <div class="ind-desc">7-Tage Reset-Plan · Adaptogene · Atemübungen</div>
+          </div>
+          <div class="individual-item">
+            <div class="ind-label">Programm 02</div>
+            <div class="ind-name">NeuroFuel Protocol</div>
+            <div class="ind-price">67 €</div>
+            <div class="ind-desc">30-Tage Advanced System · 5 Säulen · Fahrplan</div>
+          </div>
+          <div class="individual-item">
+            <div class="ind-label">Programm 03</div>
+            <div class="ind-name">Keto &amp; Refeed Ernährungsplan</div>
+            <div class="ind-price">27 €</div>
+            <div class="ind-desc">Tagesplan · Supplementplan · Refeed-Strategie</div>
+          </div>
+        </div>
+
+        <div class="arrow-divider">
+          <div class="arrow-label">Jetzt als Bundle</div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/>
+          </svg>
+        </div>
+
+        <div class="bundle-card">
+          <div class="bundle-ribbon">Bestseller</div>
+          <div class="bundle-inner">
+            <div class="bundle-left">
+              <div class="bundle-badge"><div class="bundle-badge-dot"></div><div class="bundle-badge-text">Complete Bundle</div></div>
+              <h3 class="bundle-name">NeuroFuel<br/><em>Reset Bundle</em></h3>
+              <p class="bundle-tagline">Das komplette 37-Tage System. Alles was du brauchst — in einem Paket.</p>
+              <ul class="bundle-includes">
+                <li><div class="include-icon"></div><div class="include-text"><strong>7-Day Nervensystem Reset</strong><br/><span>Nervensystem beruhigen · Schlaf optimieren · Adaptogene</span></div></li>
+                <li><div class="include-icon"></div><div class="include-text"><strong>NeuroFuel Protocol — 30 Tage</strong><br/><span>Biochemie · Ernährung · Training · Kälte &amp; Hitze · Mindset</span></div></li>
+                <li><div class="include-icon"></div><div class="include-text"><strong>Keto &amp; Refeed Ernährungsplan</strong><br/><span>Tagesplan · Supplementplan · Refeed-Strategie · Schlafregeln</span></div></li>
+                <li><div class="include-icon"></div><div class="include-text"><strong>Körper-Aktivierungsplan</strong><br/><span>Progressive Morgenroutine · Liegestützen · Kniebeugen · Dehnen</span></div></li>
+                <li><div class="include-icon"></div><div class="include-text"><strong>Sofort-Download als PDF</strong><br/><span>Alle 3 Dokumente · Auf allen Geräten · Lebenslanger Zugriff</span></div></li>
+              </ul>
+              <div class="bundle-divider"></div>
+              <div class="bundle-guarantee">
+                <div class="guarantee-icon">🔒</div>
+                <div class="guarantee-text"><strong>Sichere Zahlung über Digistore24</strong>Kreditkarte · PayPal · Apple Pay · Google Pay. Einmalige Zahlung ohne Abonnement.</div>
               </div>
             </div>
-
-            <div class="rule" style="margin: 0;"></div>
-
-            <div class="purchase-bottom">
-              <a
-                class="btn btn-primary purchase-button"
-                href="https://www.digistore24.com/product/683961"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Jetzt kaufen — 27 Euro
+            <div class="bundle-right">
+              <div class="savings-badge"><div class="savings-badge-text">🔥 Du sparst 94 Euro</div></div>
+              <div class="price-was">121 €</div>
+              <div style="font-size:22px; color:rgba(255,255,255,0.35); text-decoration:line-through; text-decoration-color:#c0392b; margin-bottom:4px; font-family:'Cormorant Garamond',serif; font-weight:600;">29 €</div>
+              <div class="price-now"><span class="currency">€</span>27</div>
+              <div class="price-note">Einmalige Zahlung · MwSt. inkl.</div>
+              <div class="savings-calc">
+                <div class="savings-row"><span class="sr-label">7-Day Reset</span><span class="sr-val">27 €</span></div>
+                <div class="savings-row"><span class="sr-label">NeuroFuel Protocol</span><span class="sr-val">67 €</span></div>
+                <div class="savings-row"><span class="sr-label">Ernährungsplan</span><span class="sr-val">27 €</span></div>
+                <div class="savings-row total"><span class="sr-label">Bundle-Preis heute</span><span class="sr-val">27 €</span></div>
+                <div class="savings-row you-save"><span class="sr-label">✦ Deine Ersparnis</span><span class="sr-val">– 94 €</span></div>
+              </div>
+              <a href="https://www.digistore24.com/product/683961" target="_blank" rel="noopener noreferrer" class="cta-btn">
+                Jetzt Bundle sichern <span class="cta-arrow">→</span>
               </a>
-
-              <div class="pay-note">
-                Sichere Zahlung über Digistore24 ·<br />
-                Kreditkarte · PayPal · Apple Pay · Google Pay
-              </div>
+              <div class="cta-secure">🔐 &nbsp;256-bit SSL · Sicher &amp; verschlüsselt</div>
             </div>
           </div>
         </div>
+
+        <div class="psych-grid">
+          <div class="psych-box scarcity">
+            <span class="psych-icon">⏳</span>
+            <div class="psych-title">Nur für begrenzte Zeit</div>
+            <p class="psych-body">Der Bundle-Preis von <strong>27€ ist ein Einführungsangebot</strong>. Sobald alle drei Programme einzeln genehmigt sind, wird der Preis auf 121€ angehoben. Wer jetzt kauft, sichert sich den Vorzugspreis dauerhaft.</p>
+          </div>
+          <div class="psych-box social">
+            <span class="psych-icon">💡</span>
+            <div class="psych-title">Warum das Bundle der logische Schritt ist</div>
+            <p class="psych-body">Jedes Programm funktioniert alleine — aber zusammen entfalten sie ihre volle Wirkung. <strong>Phase 1 bereitet Phase 2 vor. Phase 2 macht Phase 3 erst möglich.</strong> Das ist kein Zufall, das ist System.</p>
+          </div>
+          <div class="psych-box authority">
+            <span class="psych-icon">🎯</span>
+            <div class="psych-title">Entwickelt aus eigener Praxis</div>
+            <p class="psych-body">Kein theoretisches Konzept. Dieser Plan basiert auf <strong>echter gelebter Erfahrung</strong> — Kaltdusche, Organe, Boxen, Sauna, Magnesium, Dankbarkeit. Was funktioniert, kommt rein. Was nicht, fliegt raus.</p>
+          </div>
+        </div>
+
+        <div class="compare-wrap">
+          <div class="compare-header">
+            <div>Was du bekommst</div>
+            <div>Einzeln</div>
+            <div style="text-align:center;">Reset Bundle</div>
+          </div>
+          <div class="compare-row"><div class="cr-feature">7-Day Nervensystem Reset (PDF)</div><div class="cr-individual">27 €</div><div class="cr-bundle"><span class="cr-check">✓</span></div></div>
+          <div class="compare-row"><div class="cr-feature">NeuroFuel Protocol — 30 Tage (PDF)</div><div class="cr-individual">67 €</div><div class="cr-bundle"><span class="cr-check">✓</span></div></div>
+          <div class="compare-row"><div class="cr-feature">Keto &amp; Refeed Ernährungsplan (PDF)</div><div class="cr-individual">27 €</div><div class="cr-bundle"><span class="cr-check">✓</span></div></div>
+          <div class="compare-row"><div class="cr-feature">Körper-Aktivierungsplan (integriert)</div><div class="cr-individual">nicht erhältlich</div><div class="cr-bundle"><span class="cr-check">✓</span></div></div>
+          <div class="compare-row"><div class="cr-feature">Sofort-Download · Lebenslanger Zugriff</div><div class="cr-individual">—</div><div class="cr-bundle"><span class="cr-check">✓</span></div></div>
+          <div class="compare-footer">
+            <div class="cf-label">Gesamtpreis</div>
+            <div class="cf-individual">121 €</div>
+            <div class="cf-bundle"><div class="cf-price">27 €</div><span class="cf-note">Du sparst 94 €</span></div>
+          </div>
+        </div>
+
       </div>
     </section>
+    <!-- ============================================================ -->
+    <!-- END PRICING BLOCK                                            -->
+    <!-- ============================================================ -->
 
     <section class="section bg-cream">
       <div class="container">
         <div class="eyebrow reveal">HÄUFIGE FRAGEN</div>
         <h2 class="reveal">Was Sie wissen sollten.</h2>
-
         <div class="faq-list">
-          <details class="faq-item">
-            <summary><div class="faq-title">Wie erhalte ich den Guide nach dem Kauf?</div></summary>
-            <div class="faq-answer">
-              Unmittelbar nach Zahlungseingang erhalten Sie eine E-Mail von Digistore24 mit Ihrem persönlichen Download-Link.
-              Das PDF steht auf allen Geräten zur Verfügung.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary><div class="faq-title">Handelt es sich um ein Abonnement?</div></summary>
-            <div class="faq-answer">
-              Nein. Es handelt sich um eine einmalige Zahlung von 27 Euro ohne automatische Verlängerung oder versteckte Folgekosten.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary><div class="faq-title">Wie schnell sind erste Veränderungen spürbar?</div></summary>
-            <div class="faq-answer">
-              Die Wirkung pflanzlicher Routinen entfaltet sich individuell. Entscheidend sind Qualität, Regelmäßigkeit und ein bewusster Umgang über mehrere Wochen.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary><div class="faq-title">Ersetzt der Guide ärztliche Beratung?</div></summary>
-            <div class="faq-answer">
-              Nein. Der Guide dient ausschließlich der Information und Bildung. Bei bestehenden Erkrankungen oder Medikamenteneinnahme
-              empfehlen wir ärztliche Rücksprache vor der Einnahme von Adaptogenen.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary><div class="faq-title">Kann ich mehrere Adaptogene kombinieren?</div></summary>
-            <div class="faq-answer">
-              Ja. Der Guide gibt hierzu eine grundlegende Orientierung für den Einstieg.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary><div class="faq-title">Wo beziehe ich die Adaptogene?</div></summary>
-            <div class="faq-answer">
-              Der Guide enthält Hinweise zu Qualitätskriterien beim Kauf. Empfohlen werden sorgfältig ausgewählte Anbieter mit nachvollziehbaren Standards.
-            </div>
-          </details>
+          <details class="faq-item"><summary><div class="faq-title">Wie erhalte ich den Guide nach dem Kauf?</div></summary><div class="faq-answer">Unmittelbar nach Zahlungseingang erhalten Sie eine E-Mail von Digistore24 mit Ihrem persönlichen Download-Link. Das PDF steht auf allen Geräten zur Verfügung.</div></details>
+          <details class="faq-item"><summary><div class="faq-title">Handelt es sich um ein Abonnement?</div></summary><div class="faq-answer">Nein. Es handelt sich um eine einmalige Zahlung von 27 Euro ohne automatische Verlängerung oder versteckte Folgekosten.</div></details>
+          <details class="faq-item"><summary><div class="faq-title">Wie schnell sind erste Veränderungen spürbar?</div></summary><div class="faq-answer">Die Wirkung pflanzlicher Routinen entfaltet sich individuell. Entscheidend sind Qualität, Regelmäßigkeit und ein bewusster Umgang über mehrere Wochen.</div></details>
+          <details class="faq-item"><summary><div class="faq-title">Ersetzt der Guide ärztliche Beratung?</div></summary><div class="faq-answer">Nein. Der Guide dient ausschließlich der Information und Bildung. Bei bestehenden Erkrankungen oder Medikamenteneinnahme empfehlen wir ärztliche Rücksprache vor der Einnahme von Adaptogenen.</div></details>
+          <details class="faq-item"><summary><div class="faq-title">Kann ich mehrere Adaptogene kombinieren?</div></summary><div class="faq-answer">Ja. Der Guide gibt hierzu eine grundlegende Orientierung für den Einstieg.</div></details>
+          <details class="faq-item"><summary><div class="faq-title">Wo beziehe ich die Adaptogene?</div></summary><div class="faq-answer">Der Guide enthält Hinweise zu Qualitätskriterien beim Kauf. Empfohlen werden sorgfältig ausgewählte Anbieter mit nachvollziehbaren Standards.</div></details>
         </div>
       </div>
     </section>
@@ -1648,15 +772,8 @@
       <div class="container">
         <div class="final-cta-title">Ihr Reset beginnt mit einem einzigen Schritt.</div>
         <div class="final-cta-sub">27 Euro. Einmalig. Sofort verfügbar.</div>
-        <a
-          class="btn btn-light"
-          href="https://www.digistore24.com/product/683961"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Jetzt Guide erhalten
-        </a>
-        <div class="final-meta">info@powerprom.de · Frankfurt am Main</div>
+        <a class="btn btn-light" href="https://www.digistore24.com/product/683961" target="_blank" rel="noopener noreferrer">Jetzt Guide erhalten</a>
+        <div class="final-meta"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f891969e97b888978f9d8a888a9795d69c9d">[email&#160;protected]</a> · Frankfurt am Main</div>
       </div>
     </section>
   </main>
@@ -1668,53 +785,28 @@
         <div class="footer-links">
           <a href="#impressum">Impressum</a>
           <a href="#datenschutz">Datenschutz</a>
-          <a href="mailto:info@powerprom.de">Kontakt</a>
+          <a href="/cdn-cgi/l/email-protection#1c75727a735c6c736b796e6c6e7371327879">Kontakt</a>
         </div>
         <div>© 2025 Alle Rechte vorbehalten</div>
       </div>
-
-      <div class="footer-disclaimer">
-        Dieser Guide ist keine medizinische Beratung und ersetzt keinen Arztbesuch. Die beschriebenen Wirkungen beziehen sich
-        auf traditionelle Anwendung und Forschungsliteratur. Individuelle Ergebnisse können variieren.
-        Nahrungsergänzungsmittel sind kein Ersatz für eine ausgewogene Ernährung.
-      </div>
-
+      <div class="footer-disclaimer">Dieser Guide ist keine medizinische Beratung und ersetzt keinen Arztbesuch. Die beschriebenen Wirkungen beziehen sich auf traditionelle Anwendung und Forschungsliteratur. Individuelle Ergebnisse können variieren. Nahrungsergänzungsmittel sind kein Ersatz für eine ausgewogene Ernährung.</div>
       <div class="impressum-wrap" id="impressum">
         <div class="impressum">
           <details>
             <summary>Impressum</summary>
-            <div class="impressum-content">
-              Powerpromotion<br />
-              David Arianfar<br />
-              Große Gallusstraße 16<br />
-              60312 Frankfurt am Main<br />
-              Deutschland<br />
-              E-Mail: <a href="mailto:info@powerprom.de">info@powerprom.de</a><br />
-              USt-IdNr: DE329889793<br />
-              Verantwortlich: David Arianfar
-            </div>
+            <div class="impressum-content">Powerpromotion<br />David Arianfar<br />Große Gallusstraße 16<br />60312 Frankfurt am Main<br />Deutschland<br />E-Mail: <a href="/cdn-cgi/l/email-protection#325b5c545d72425d45574042405d5f1c5657"><span class="__cf_email__" data-cfemail="274e4941486757485042555755484a094342">[email&#160;protected]</span></a><br />USt-IdNr: DE329889793<br />Verantwortlich: David Arianfar</div>
           </details>
         </div>
       </div>
-
       <div class="impressum-wrap" id="datenschutz">
         <div class="impressum">
           <details>
             <summary>Datenschutzerklärung</summary>
             <div class="impressum-content">
-              <strong>1. Allgemeine Hinweise</strong><br />
-              Diese Website dient der Bereitstellung von Informationen zu einem digitalen Produkt.
-              Personenbezogene Daten werden nur im technisch erforderlichen Umfang verarbeitet.<br /><br />
-
-              <strong>2. Hosting</strong><br />
-              Diese Website wird über GitHub Pages bereitgestellt. Beim Aufruf der Website können technisch notwendige Verbindungsdaten verarbeitet werden.<br /><br />
-
-              <strong>3. Kaufabwicklung</strong><br />
-              Die Zahlungsabwicklung erfolgt über Digistore24. Es gelten die Datenschutzbestimmungen von Digistore24.<br /><br />
-
-              <strong>4. Kontakt</strong><br />
-              Bei Fragen zum Datenschutz erreichen Sie uns unter:
-              <a href="mailto:info@powerprom.de">info@powerprom.de</a>
+              <strong>1. Allgemeine Hinweise</strong><br />Diese Website dient der Bereitstellung von Informationen zu einem digitalen Produkt. Personenbezogene Daten werden nur im technisch erforderlichen Umfang verarbeitet.<br /><br />
+              <strong>2. Hosting</strong><br />Diese Website wird über GitHub Pages bereitgestellt.<br /><br />
+              <strong>3. Kaufabwicklung</strong><br />Die Zahlungsabwicklung erfolgt über Digistore24. Es gelten die Datenschutzbestimmungen von Digistore24.<br /><br />
+              <strong>4. Kontakt</strong><br />Bei Fragen zum Datenschutz: <a href="/cdn-cgi/l/email-protection#ddb4b3bbb29dadb2aab8afadafb2b0f3b9b8"><span class="__cf_email__" data-cfemail="2a43444c456a5a455d4f585a584547044e4f">[email&#160;protected]</span></a>
             </div>
           </details>
         </div>
@@ -1728,40 +820,23 @@
         <span>37 Euro</span>
         <strong>27 Euro</strong>
       </div>
-      <a
-        class="btn btn-primary"
-        href="https://www.digistore24.com/product/683961"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Jetzt kaufen
-      </a>
+      <a class="btn btn-primary" href="https://www.digistore24.com/product/683961" target="_blank" rel="noopener noreferrer">Jetzt kaufen</a>
     </div>
   </div>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const nav = document.getElementById('siteNav');
     const toggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
-
-    function updateNavShadow() {
-      if (window.scrollY > 8) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    }
-
+    function updateNavShadow() { nav.classList.toggle('scrolled', window.scrollY > 8); }
     updateNavShadow();
     window.addEventListener('scroll', updateNavShadow);
-
     toggle.addEventListener('click', () => {
       const expanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!expanded));
       toggle.classList.toggle('active');
       mobileMenu.classList.toggle('show');
     });
-
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         toggle.setAttribute('aria-expanded', 'false');
@@ -1769,30 +844,6 @@
         mobileMenu.classList.remove('show');
       });
     });
-
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    function openDetailsFromHash() {
-      const hash = window.location.hash;
-      if (!hash) return;
-      const target = document.querySelector(hash);
-      if (!target) return;
-      const details = target.querySelector('details');
-      if (details) {
-        details.open = true;
-      }
-    }
-
-    window.addEventListener('load', openDetailsFromHash);
-    window.addEventListener('hashchange', openDetailsFromHash);
-  </script>
-</body>
-</html>
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { 
