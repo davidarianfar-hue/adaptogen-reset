@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NeuroFuel Reset Bundle — Das komplette System · neurofuel.de</title>
+  <title>Adaptogen Reset Starter — 17 Heilpflanzen Guide · Powerpromotion</title>
   <meta
     name="description"
-    content="Das Advanced System gegen chronische Erschöpfung. 5 Säulen: Biochemie, Ernährung, Kälte & Hitze, Training, Mindset. 67 Euro Einmalzahlung. Sofort-Download."
+    content="Der vollständige wissenschaftliche Guide zu 17 Adaptogenen. Praktische Hinweise, Einstiegsplan und Rezeptideen. 27 Euro Einmalzahlung. Sofort-Download."
   />
   <meta name="theme-color" content="#1B4332" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,6 +15,7 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
+
   <style>
     :root {
       --forest: #1B4332;
@@ -34,12 +35,15 @@
       --radius: 8px;
       --nav-height: 82px;
     }
+
     * {
       box-sizing: border-box;
     }
+
     html {
       scroll-behavior: smooth;
     }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -50,39 +54,49 @@
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
+
     img {
       max-width: 100%;
       display: block;
     }
+
     a {
       color: inherit;
       text-decoration: none;
     }
+
     button {
       font: inherit;
     }
+
     .container {
       width: min(calc(100% - 40px), var(--max));
       margin: 0 auto;
     }
+
     .section {
       padding: 100px 0;
       border-top: 1px solid var(--border);
       position: relative;
     }
+
     .bg-white {
       background: var(--warm-white);
     }
+
     .bg-cream {
       background: var(--cream);
     }
+
     .bg-forest {
       background: var(--forest);
       color: #fff;
     }
+
     .bg-mint {
       background: var(--mint);
     }
+
     .eyebrow {
       display: inline-block;
       font-size: 12px;
@@ -92,12 +106,15 @@
       margin-bottom: 16px;
       font-weight: 600;
     }
+
     .eyebrow.light {
       color: var(--sage);
     }
+
     h1, h2, h3, h4, .brand, .faq-title, .price-main, .quote, .year, .nav-buy, .hero-buttons a, .final-cta-title {
       font-family: 'Playfair Display', serif;
     }
+
     h1 {
       font-size: 56px;
       line-height: 1.12;
@@ -105,6 +122,7 @@
       font-weight: 700;
       letter-spacing: -0.02em;
     }
+
     h2 {
       font-size: 42px;
       line-height: 1.18;
@@ -112,37 +130,44 @@
       font-weight: 700;
       letter-spacing: -0.02em;
     }
+
     h3 {
       font-size: 28px;
       line-height: 1.3;
       margin: 0 0 12px;
       font-weight: 600;
     }
+
     h4 {
       font-size: 20px;
       line-height: 1.4;
       margin: 0 0 8px;
       font-weight: 600;
     }
+
     p {
       margin: 0 0 18px;
       color: var(--text-medium);
     }
+
     .lead {
       font-size: 19px;
       line-height: 1.9;
     }
+
     .divider-gold {
       width: 60px;
       height: 1px;
       background: var(--gold);
       margin: 26px 0 28px;
     }
+
     .rule {
       height: 1px;
       background: var(--border);
       margin: 28px 0;
     }
+
     .btn {
       display: inline-flex;
       align-items: center;
@@ -157,49 +182,62 @@
       cursor: pointer;
       white-space: nowrap;
     }
+
     .btn:hover {
       transform: translateY(-1px);
     }
+
     .btn-primary {
       background: var(--forest);
       color: #fff;
       box-shadow: var(--shadow);
     }
+
     .btn-primary:hover {
       background: #163829;
     }
+
     .btn-hero-primary {
       background: var(--cream);
       color: var(--forest);
       border-color: rgba(255,255,255,0.1);
     }
+
     .btn-hero-primary:hover {
       background: #f0e8dc;
     }
+
     .btn-hero-secondary {
       background: transparent;
       color: #fff;
       border-color: rgba(255,255,255,0.45);
     }
+
     .btn-hero-secondary:hover {
       background: rgba(255,255,255,0.06);
     }
+
     .btn-light {
       background: #fff;
       color: var(--forest);
     }
+
     .btn-light:hover {
       background: #f5f5f5;
     }
+
     .muted {
       color: var(--text-light);
     }
+
     .small {
       font-size: 13px;
     }
+
     .center {
       text-align: center;
     }
+
     .sticky-nav {
       position: sticky;
       top: 0;
@@ -210,9 +248,11 @@
       border-bottom: 1px solid var(--border);
       transition: box-shadow 0.2s ease, background-color 0.2s ease;
     }
+
     .sticky-nav.scrolled {
       box-shadow: 0 6px 20px rgba(0,0,0,0.06);
     }
+
     .nav-inner {
       height: 100%;
       display: flex;
@@ -220,6 +260,7 @@
       justify-content: space-between;
       gap: 24px;
     }
+
     .brand {
       color: var(--forest);
       letter-spacing: 4px;
@@ -227,11 +268,13 @@
       font-weight: 700;
       white-space: nowrap;
     }
+
     .nav-right {
       display: flex;
       align-items: center;
       gap: 22px;
     }
+
     .nav-links {
       display: flex;
       align-items: center;
@@ -239,9 +282,11 @@
       font-size: 15px;
       color: var(--text-medium);
     }
+
     .nav-links a {
       position: relative;
     }
+
     .nav-links a::after {
       content: "";
       position: absolute;
@@ -252,9 +297,11 @@
       background: var(--forest);
       transition: width 0.2s ease;
     }
+
     .nav-links a:hover::after {
       width: 100%;
     }
+
     .nav-buy {
       background: var(--forest);
       color: #fff;
@@ -266,9 +313,11 @@
       white-space: nowrap;
       box-shadow: var(--shadow);
     }
+
     .nav-buy:hover {
       background: #163829;
     }
+
     .hamburger {
       display: none;
       width: 46px;
@@ -280,6 +329,7 @@
       position: relative;
       cursor: pointer;
     }
+
     .hamburger span,
     .hamburger::before,
     .hamburger::after {
@@ -291,31 +341,38 @@
       background: var(--forest);
       transition: transform 0.2s ease, top 0.2s ease, opacity 0.2s ease;
     }
+
     .hamburger span { top: 22px; }
     .hamburger::before { top: 15px; }
     .hamburger::after { top: 29px; }
+
     .hamburger.active span { opacity: 0; }
     .hamburger.active::before { top: 22px; transform: rotate(45deg); }
     .hamburger.active::after { top: 22px; transform: rotate(-45deg); }
+
     .mobile-menu {
       display: none;
       border-top: 1px solid var(--border);
       background: var(--warm-white);
     }
+
     .mobile-menu-inner {
       padding: 16px 0 22px;
       display: grid;
       gap: 12px;
     }
+
     .mobile-menu a {
       padding: 10px 0;
       color: var(--text-medium);
       font-size: 16px;
     }
+
     .mobile-menu .btn {
       width: 100%;
       margin-top: 8px;
     }
+
     .hero {
       background: var(--forest);
       color: #fff;
@@ -325,6 +382,7 @@
       padding-top: 120px;
       padding-bottom: 110px;
     }
+
     .hero::before {
       content: "";
       position: absolute;
@@ -338,6 +396,7 @@
       pointer-events: none;
       opacity: 0.55;
     }
+
     .hero::after {
       content: "";
       position: absolute;
@@ -348,11 +407,13 @@
         radial-gradient(circle at 60% 80%, rgba(216,243,220,0.04), transparent 28%);
       pointer-events: none;
     }
+
     .hero-inner {
       position: relative;
       z-index: 2;
       max-width: 820px;
     }
+
     .hero-label {
       font-size: 12px;
       letter-spacing: 3px;
@@ -361,20 +422,24 @@
       margin-bottom: 20px;
       font-weight: 600;
     }
+
     .hero p {
       color: rgba(253,250,245,0.85);
     }
+
     .hero-buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
       margin-top: 36px;
     }
+
     .hero-note {
       margin-top: 18px;
       font-size: 13px;
       color: rgba(253,250,245,0.7);
     }
+
     .leaf-line {
       position: absolute;
       left: 0;
@@ -386,17 +451,20 @@
       opacity: 0.75;
       pointer-events: none;
     }
+
     .credibility-bar {
       padding: 24px 0;
       background: var(--cream);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
+
     .credibility-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 0;
     }
+
     .cred-item {
       text-align: center;
       padding: 8px 20px;
@@ -406,31 +474,37 @@
       text-transform: uppercase;
       border-left: 1px solid rgba(27,67,50,0.12);
     }
+
     .cred-item:first-child {
       border-left: none;
     }
+
     .two-col {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 60px;
       align-items: start;
     }
+
     .symptom-list {
       display: grid;
       gap: 14px;
     }
+
     .symptom-item {
       border-left: 2px solid var(--green);
       padding: 8px 0 8px 18px;
       color: var(--text-medium);
       background: rgba(82,183,136,0.03);
     }
+
     .timeline {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 28px;
       margin-bottom: 40px;
     }
+
     .timeline-card {
       padding: 26px 24px;
       border: 1px solid var(--border);
@@ -438,17 +512,20 @@
       background: rgba(255,255,255,0.55);
       border-radius: var(--radius);
     }
+
     .year {
       font-size: 34px;
       line-height: 1;
       margin-bottom: 14px;
       color: var(--forest);
     }
+
     .quote-wrap {
       margin-top: 36px;
       padding-top: 24px;
       border-top: 1px solid rgba(0,0,0,0.08);
     }
+
     .quote {
       font-size: 24px;
       line-height: 1.6;
@@ -456,17 +533,20 @@
       font-style: italic;
       max-width: 840px;
     }
+
     .quote-source {
       margin-top: 14px;
       font-size: 14px;
       color: var(--text-light);
     }
+
     .feature-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
       margin-top: 10px;
     }
+
     .feature-card {
       position: relative;
       padding: 28px 24px 24px;
@@ -478,6 +558,7 @@
       min-height: 248px;
       overflow: hidden;
     }
+
     .feature-number {
       position: absolute;
       top: 16px;
@@ -488,6 +569,7 @@
       color: rgba(82,183,136,0.14);
       pointer-events: none;
     }
+
     .feature-title {
       font-size: 20px;
       font-weight: 600;
@@ -497,17 +579,20 @@
       position: relative;
       z-index: 2;
     }
+
     .feature-card p {
       position: relative;
       z-index: 2;
       margin-bottom: 0;
     }
+
     .plants-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 36px;
       align-items: start;
     }
+
     .plants-col h3 {
       color: var(--gold);
       font-size: 14px;
@@ -517,9 +602,11 @@
       font-weight: 600;
       margin-bottom: 22px;
     }
+
     .plant-list {
       border-top: 1px solid rgba(255,255,255,0.18);
     }
+
     .plant-item {
       padding: 14px 0;
       border-bottom: 1px solid rgba(255,255,255,0.12);
@@ -527,26 +614,31 @@
       font-size: 16px;
       line-height: 1.7;
     }
+
     .plant-item strong {
       color: #fff;
       font-weight: 600;
     }
+
     .plants-note {
       margin-top: 12px;
       color: rgba(255,255,255,0.7);
       font-size: 14px;
     }
+
     .phase-diagram {
       margin-top: 34px;
       display: grid;
       gap: 16px;
     }
+
     .phase-bars {
       display: grid;
       grid-template-columns: 1fr 1.2fr 1fr;
       gap: 12px;
       align-items: center;
     }
+
     .phase {
       min-height: 82px;
       display: flex;
@@ -561,18 +653,22 @@
       line-height: 1.5;
       box-shadow: var(--shadow);
     }
+
     .phase-1 {
       background: rgba(177,72,72,0.10);
       color: #6e2b2b;
     }
+
     .phase-2 {
       background: rgba(82,183,136,0.12);
       color: var(--forest);
     }
+
     .phase-3 {
       background: #2a2a2a;
       color: rgba(255,255,255,0.92);
     }
+
     .adaptogen-arrow-wrap {
       display: flex;
       align-items: center;
@@ -584,12 +680,14 @@
       text-align: center;
       flex-wrap: wrap;
     }
+
     .adaptogen-arrow {
       width: 170px;
       height: 1px;
       background: var(--gold);
       position: relative;
     }
+
     .adaptogen-arrow::after {
       content: "";
       position: absolute;
@@ -599,12 +697,14 @@
       border-bottom: 4px solid transparent;
       border-left: 8px solid var(--gold);
     }
+
     .for-whom {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 34px;
       margin-top: 20px;
     }
+
     .list-box {
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -612,9 +712,11 @@
       box-shadow: var(--shadow);
       background: #fff;
     }
+
     .list-box h4 {
       margin-bottom: 14px;
     }
+
     .clean-list {
       margin: 0;
       padding: 0;
@@ -622,11 +724,13 @@
       display: grid;
       gap: 10px;
     }
+
     .clean-list li {
       color: var(--text-medium);
       position: relative;
       padding-left: 18px;
     }
+
     .clean-list li::before {
       content: "—";
       position: absolute;
@@ -635,15 +739,18 @@
       color: var(--green);
       font-weight: 600;
     }
+
     .clean-list.neutral li::before {
       color: #8a8a8a;
     }
+
     .recipe-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
       margin-top: 24px;
     }
+
     .recipe-card {
       background: #fff;
       border: 1px solid var(--border);
@@ -651,6 +758,7 @@
       padding: 28px 24px;
       box-shadow: var(--shadow);
     }
+
     .recipe-title {
       font-family: 'Playfair Display', serif;
       font-size: 28px;
@@ -658,11 +766,13 @@
       margin-bottom: 12px;
       color: var(--forest);
     }
+
     .purchase-card-wrap {
       display: flex;
       justify-content: center;
       margin-top: 18px;
     }
+
     .purchase-card {
       width: 100%;
       max-width: 480px;
@@ -672,45 +782,54 @@
       overflow: hidden;
       background: #fff;
     }
+
     .purchase-top {
       background: var(--cream);
       padding: 34px 28px 28px;
       text-align: center;
     }
+
     .old-price {
       color: var(--text-light);
       font-size: 20px;
       text-decoration: line-through;
       margin-bottom: 8px;
     }
+
     .price-main {
       font-size: 52px;
       line-height: 1;
       color: var(--forest);
       margin-bottom: 10px;
     }
+
     .purchase-middle,
     .purchase-bottom {
       padding: 28px;
     }
+
     .purchase-lines {
       display: grid;
       gap: 10px;
       text-align: center;
       color: var(--text-medium);
     }
+
     .purchase-lines div {
       padding-bottom: 10px;
       border-bottom: 1px solid rgba(0,0,0,0.05);
     }
+
     .purchase-lines div:last-child {
       border-bottom: none;
       padding-bottom: 0;
     }
+
     .purchase-button {
       width: 100%;
       justify-content: center;
     }
+
     .pay-note {
       text-align: center;
       font-size: 12px;
@@ -718,11 +837,13 @@
       margin-top: 14px;
       line-height: 1.7;
     }
+
     .faq-list {
       display: grid;
       gap: 14px;
       margin-top: 24px;
     }
+
     .faq-item {
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -730,21 +851,25 @@
       box-shadow: var(--shadow);
       overflow: hidden;
     }
+
     .faq-item summary {
       list-style: none;
       cursor: pointer;
       padding: 22px 24px;
       position: relative;
     }
+
     .faq-item summary::-webkit-details-marker {
       display: none;
     }
+
     .faq-title {
       font-size: 20px;
       line-height: 1.4;
       color: var(--text);
       padding-right: 26px;
     }
+
     .faq-item summary::after {
       content: "+";
       position: absolute;
@@ -755,41 +880,49 @@
       color: var(--forest);
       transition: transform 0.2s ease;
     }
+
     .faq-item[open] summary::after {
       transform: rotate(45deg);
     }
+
     .faq-answer {
       padding: 0 24px 22px 40px;
       color: var(--text-medium);
       font-size: 16px;
     }
+
     .final-cta {
       text-align: center;
       padding: 110px 0;
       border-top: 1px solid rgba(255,255,255,0.12);
     }
+
     .final-cta-title {
       font-size: 44px;
       line-height: 1.2;
       color: #fff;
       margin-bottom: 16px;
     }
+
     .final-cta-sub {
       font-size: 18px;
       color: var(--sage);
       margin-bottom: 28px;
     }
+
     .final-meta {
       margin-top: 20px;
       color: rgba(255,255,255,0.72);
       font-size: 15px;
     }
+
     footer {
       background: #1A1A1A;
       color: rgba(255,255,255,0.95);
       padding: 28px 0 24px;
       font-size: 13px;
     }
+
     .footer-top {
       display: grid;
       grid-template-columns: 1fr auto 1fr;
@@ -798,38 +931,46 @@
       padding-bottom: 18px;
       border-bottom: 1px solid rgba(255,255,255,0.1);
     }
+
     .footer-top > div:nth-child(2) {
       text-align: center;
     }
+
     .footer-top > div:nth-child(3) {
       text-align: right;
     }
+
     .footer-links {
       display: inline-flex;
       gap: 12px;
       flex-wrap: wrap;
       justify-content: center;
     }
+
     .footer-links a {
       color: rgba(255,255,255,0.9);
     }
+
     .footer-disclaimer {
       margin-top: 18px;
       opacity: 0.5;
       line-height: 1.8;
     }
+
     .impressum-wrap {
       margin-top: 18px;
       border-top: 1px solid rgba(255,255,255,0.08);
       padding-top: 18px;
       scroll-margin-top: 100px;
     }
+
     .impressum details {
       border: 1px solid rgba(255,255,255,0.12);
       border-radius: var(--radius-sm);
       background: rgba(255,255,255,0.03);
       overflow: hidden;
     }
+
     .impressum summary {
       list-style: none;
       cursor: pointer;
@@ -837,9 +978,11 @@
       position: relative;
       font-weight: 600;
     }
+
     .impressum summary::-webkit-details-marker {
       display: none;
     }
+
     .impressum summary::after {
       content: "+";
       position: absolute;
@@ -847,14 +990,17 @@
       top: 10px;
       font-size: 20px;
     }
+
     .impressum details[open] summary::after {
       content: "–";
     }
+
     .impressum-content {
       padding: 0 16px 16px;
       opacity: 0.9;
       line-height: 1.9;
     }
+
     .mobile-buy-bar {
       display: none;
       position: fixed;
@@ -868,35 +1014,42 @@
       box-shadow: 0 -6px 18px rgba(0,0,0,0.06);
       padding: 10px 14px;
     }
+
     .mobile-buy-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
     }
+
     .mobile-price {
       line-height: 1.2;
     }
+
     .mobile-price strong {
       display: block;
       font-family: 'Playfair Display', serif;
       color: var(--forest);
       font-size: 26px;
     }
+
     .mobile-price span {
       font-size: 12px;
       color: var(--text-light);
       text-decoration: line-through;
     }
+
     .reveal {
       opacity: 0;
       transform: translateY(24px);
       transition: opacity 0.8s ease, transform 0.8s ease;
     }
+
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
+
     @media (max-width: 1024px) {
       h1 { font-size: 48px; }
       h2 { font-size: 36px; }
@@ -928,56 +1081,72 @@
         text-align: center;
       }
     }
+
     @media (max-width: 768px) {
       :root {
         --nav-height: 74px;
       }
+
       .section {
         padding: 72px 0;
       }
+
       .container {
         width: min(calc(100% - 28px), var(--max));
       }
+
       h1 {
         font-size: 38px;
       }
+
       h2 {
         font-size: 30px;
       }
+
       h3 {
         font-size: 24px;
       }
+
       h4,
       .faq-title {
         font-size: 18px;
       }
+
       body {
         font-size: 16px;
       }
+
       .lead {
         font-size: 17px;
       }
+
       .nav-links,
       .nav-buy {
         display: none;
       }
+
       .hamburger {
         display: inline-block;
       }
+
       .mobile-menu.show {
         display: block;
       }
+
       .hero {
         padding-top: 92px;
         padding-bottom: 86px;
       }
+
       .hero-buttons {
         flex-direction: column;
         align-items: stretch;
       }
+
       .hero-buttons .btn {
         width: 100%;
       }
+
       .credibility-grid,
       .timeline,
       .feature-grid,
@@ -986,16 +1155,20 @@
       .phase-bars {
         grid-template-columns: 1fr;
       }
+
       .plants-grid .plants-col:last-child {
         grid-column: auto;
       }
+
       .cred-item {
         border-left: none;
         border-top: 1px solid rgba(27,67,50,0.12);
       }
+
       .cred-item:first-child {
         border-top: none;
       }
+
       .purchase-top,
       .purchase-middle,
       .purchase-bottom,
@@ -1006,19 +1179,24 @@
         padding-left: 20px;
         padding-right: 20px;
       }
+
       .phase {
         min-height: 72px;
       }
+
       .faq-answer {
         padding-left: 24px;
       }
+
       .mobile-buy-bar {
         display: block;
       }
+
       body {
         padding-bottom: 82px;
       }
     }
+
     @media print {
       .sticky-nav,
       .mobile-buy-bar,
@@ -1026,16 +1204,19 @@
       .mobile-menu {
         display: none !important;
       }
+
       body {
         background: #fff;
         color: #000;
         padding-bottom: 0;
       }
+
       .section,
       .credibility-bar,
       footer {
         break-inside: avoid;
       }
+
       a {
         text-decoration: none;
       }
@@ -1046,65 +1227,77 @@
   <header class="sticky-nav" id="siteNav">
     <div class="container nav-inner">
       <a href="#top" class="brand">NEUROFUEL</a>
+
       <div class="nav-right">
         <nav class="nav-links" aria-label="Hauptnavigation">
           <a href="#wirkung">Wirkung</a>
-          <a href="#system">Das Bundle</a>
-          <a href="#kaufen">Jetzt kaufen</a>
+          <a href="#pflanzen">Pflanzen</a>
+          <a href="#rezepte">Rezepte</a>
         </nav>
+
         <a class="nav-buy" href="https://www.digistore24.com/product/683961" target="_blank" rel="noopener noreferrer">
-          Bundle sichern — 27 Euro
+          Guide kaufen — 27 Euro
         </a>
+
         <button class="hamburger" id="menuToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu">
           <span></span>
         </button>
       </div>
     </div>
+
     <div class="mobile-menu" id="mobileMenu">
       <div class="container mobile-menu-inner">
         <a href="#wirkung">Wirkung</a>
-        <a href="#system">Das Bundle</a>
-        <a href="#kaufen">Jetzt kaufen</a>
+        <a href="#pflanzen">Pflanzen</a>
+        <a href="#rezepte">Rezepte</a>
         <a
           class="btn btn-primary"
-          href="https://www.digistore24.com/product/683534"
+          href="https://www.digistore24.com/product/683961"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Bundle sichern — 27 Euro
+          Guide kaufen — 27 Euro
         </a>
       </div>
     </div>
   </header>
+
   <main id="top">
     <section class="hero section bg-forest">
       <div class="container">
         <div class="hero-inner">
-          <div class="hero-label">3 PROGRAMME · EIN PREIS · SOFORT-DOWNLOAD</div>
+          <div class="hero-label">WISSENSCHAFTLICH FUNDIERT · TRADITIONELL BEWAHRT</div>
+
           <h1 class="reveal">
-            Chronische Erschöpfung hat ein System.<br />
-            Hier ist es.
+            Ihr Körper kennt die Antwort auf Stress.<br />
+            Die Natur hat sie seit Jahrtausenden.
           </h1>
+
           <div class="divider-gold"></div>
+
           <p class="lead reveal">
-            Das <strong>NeuroFuel Reset Bundle</strong> vereint drei aufeinander aufbauende Programme — vom ersten Reset bis zum vollständigen Advanced System. Alles was du brauchst. Einmalig. Sofort verfügbar.
+            Ein hochwertiger Guide zu Adaptogenen — aufbereitet nach traditionellem Heilwissen und moderner Forschung.
+            Für alle, die ihrem Körper wieder Raum geben wollen.
           </p>
+
           <div class="hero-buttons reveal">
             <a
               class="btn btn-hero-primary"
-              href="https://www.digistore24.com/product/683534"
+              href="https://www.digistore24.com/product/683961"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Zum Protocol — 67 Euro
+              Zum Guide — 27 Euro
             </a>
-            <a class="btn btn-hero-secondary" href="#wirkung">Mehr erfahren</a>
+            <a class="btn btn-hero-secondary" href="#science">Mehr erfahren</a>
           </div>
+
           <div class="hero-note reveal">
             Einmalige Zahlung · Kein Abonnement · Sofort-Download als PDF
           </div>
         </div>
       </div>
+
       <div class="leaf-line" aria-hidden="true">
         <svg width="320" height="52" viewBox="0 0 320 52" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M10 26H130" stroke="#F9F3E8" stroke-opacity="0.55"/>
@@ -1118,406 +1311,356 @@
         </svg>
       </div>
     </section>
+
     <section class="credibility-bar">
       <div class="container">
         <div class="credibility-grid">
-          <div class="cred-item">3 Programme — ein aufeinander aufbauendes System</div>
-          <div class="cred-item">37 Tage vom Reset zur Hochleistung</div>
-          <div class="cred-item">Biochemie · Ernährung · Training · Mindset</div>
-          <div class="cred-item">Einmalig 27 Euro · Sofort-Download als PDF</div>
+          <div class="cred-item">Basiert auf traditionellem Heilwissen und moderner Forschung</div>
+          <div class="cred-item">17 Heilpflanzen strukturiert aufbereitet</div>
+          <div class="cred-item">Wissenschaftlich fundiert und verständlich erklärt</div>
+          <div class="cred-item">Ayurveda &amp; TCM als Wissensgrundlage</div>
         </div>
       </div>
     </section>
+
     <section class="section bg-white" id="wirkung">
       <div class="container">
-        <div class="eyebrow reveal">WARUM EIN SYSTEM MEHR IST ALS EIN TIPP</div>
-        <h2 class="reveal">Chronische Erschöpfung braucht ein vollständiges System.</h2>
+        <div class="eyebrow reveal">WARUM SIE DIESEN GUIDE BRAUCHEN</div>
+        <h2 class="reveal">Ihr Nervensystem wurde nicht für diese Zeit gebaut.</h2>
+
         <div class="two-col">
           <div>
             <p class="reveal">
-              Die meisten Menschen suchen einen Tipp — eine Übung, ein Supplement, eine Routine. Das Problem ist: Chronische Erschöpfung sitzt auf mehreren Ebenen gleichzeitig. Im Nervensystem. In der Biochemie. In der Ernährung. Im Geist. Ein einziger Ansatz reicht nicht aus. Du brauchst ein System, das alle Ebenen gleichzeitig adressiert — strukturiert, aufbauend, ohne Überforderung.
+              Die moderne Welt fordert von unserem System etwas, wofür es nie konzipiert wurde:
+              permanente Alarmbereitschaft. Cortisol, das Stresshormon, das einst Leben rettete,
+              arbeitet heute gegen uns. Die HPA-Achse — das zentrale Kommunikationssystem zwischen
+              Hypothalamus, Hypophyse und Nebennierenrinde — gerät aus dem Gleichgewicht.
+              Die Folgen sind bekannt.
             </p>
           </div>
+
           <div class="symptom-list">
-            <div class="symptom-item">Nervensystem beruhigen — 7-Day Reset</div>
-            <div class="symptom-item">Biochemie optimieren — Kreatin, Magnesium, Ashwagandha</div>
-            <div class="symptom-item">Ernährung systematisieren — Keto, Refeed, Supplement-Plan</div>
-            <div class="symptom-item">Körper aktivieren — Kaltdusche, Boxen, Sauna</div>
-            <div class="symptom-item">Mindset programmieren — Dankbarkeit, Fokus, Konsistenz</div>
-            <div class="symptom-item">30-Tage Fahrplan in 4 aufbauenden Phasen</div>
+            <div class="symptom-item">Chronische Erschöpfung trotz ausreichend Schlaf</div>
+            <div class="symptom-item">Konzentrationsschwäche und mentaler Nebel</div>
+            <div class="symptom-item">Nachmittäglicher Energieeinbruch</div>
+            <div class="symptom-item">Innere Unruhe und Schlafstörungen</div>
+            <div class="symptom-item">Geschwächtes Immunsystem</div>
+            <div class="symptom-item">Hormonelles Ungleichgewicht</div>
           </div>
         </div>
       </div>
     </section>
+
     <section class="section bg-cream" id="science">
       <div class="container">
-        <div class="eyebrow reveal">DER ANSATZ</div>
-        <h2 class="reveal">Drei Programme. 37 Tage. Ein anderes Leben.</h2>
+        <div class="eyebrow reveal">DIE WISSENSCHAFT DAHINTER</div>
+        <h2 class="reveal">Adaptogene. Der Begriff, der alles verändert hat.</h2>
+
         <div class="timeline">
           <div class="timeline-card">
-            <div class="year">Tage 1–7</div>
-            <p>7-Day Reset — Nervensystem beruhigen, Schlaf optimieren, erste Energie zurückgewinnen</p>
+            <div class="year">1947</div>
+            <p>Der Begriff „Adaptogen“ entsteht</p>
           </div>
           <div class="timeline-card">
-            <div class="year">Tage 8–28</div>
-            <p>Körper-Aktivierung — progressive Morgenroutine, Keto-Ernährung, Supplement-Plan, Refeed-Strategie</p>
+            <div class="year">Moderne Forschung</div>
+            <p>Adaptogene rücken zunehmend in den wissenschaftlichen Fokus</p>
           </div>
           <div class="timeline-card">
-            <div class="year">Tage 29–58</div>
-            <p>NeuroFuel Protocol — Biochemie, Training, Sauna, Mindset-System, 30-Tage Fahrplan</p>
+            <div class="year">Heute</div>
+            <p>Traditionelles Wissen wird systematisch aufbereitet und zugänglich gemacht</p>
           </div>
         </div>
+
         <div class="quote-wrap">
           <div class="quote">
-            Drei Programme, die aufeinander aufbauen — jede Phase schafft die Voraussetzung für die nächste. Das ist kein Sammelsurium. Das ist ein System.
+            Ein strukturierter Überblick über pflanzliche Strategien zur Unterstützung von Stressresistenz, Energie und Regeneration.
           </div>
           <div class="quote-source">
-            neurofuel.de · NeuroFuel Reset Bundle
+            Basierend auf traditioneller Anwendung und moderner Forschung
           </div>
         </div>
       </div>
     </section>
-    <section class="section bg-white" id="system">
+
+    <section class="section bg-white" id="guide">
       <div class="container">
-        <div class="eyebrow reveal">WAS IM BUNDLE ENTHALTEN IST</div>
-        <h2 class="reveal">Drei Programme. Alles was du brauchst.</h2>
+        <div class="eyebrow reveal">INHALT DES GUIDES</div>
+        <h2 class="reveal">Alles, was Sie für den Start brauchen.</h2>
+
         <div class="feature-grid">
           <article class="feature-card">
             <div class="feature-number">01</div>
-            <div class="feature-title">Morgendliches Aktivierungsprotokoll</div>
-            <p>Kaltdusche, Nelkenöl-Honig-Wasser und 1 Liter mit Kreatin &amp; L-Glutamin — strukturiert für maximalen Start in den Tag.</p>
+            <div class="feature-title">17 ausgewählte Pflanzenprofile</div>
+            <p>Ein klarer Überblick über zentrale Adaptogene und ihre traditionellen Einsatzbereiche.</p>
           </article>
+
           <article class="feature-card">
             <div class="feature-number">02</div>
-            <div class="feature-title">Pflicht-Abendprotokoll</div>
-            <p>Magnesium Glycinat und Ashwagandha ESN täglich — die zwei Supplements, die deinen Schlaf und deine Regeneration transformieren.</p>
+            <div class="feature-title">Praktische Einnahmehinweise</div>
+            <p>Einfach verständlich aufbereitet für einen strukturierten Einstieg.</p>
           </article>
+
           <article class="feature-card">
             <div class="feature-number">03</div>
-            <div class="feature-title">NeuroFuel Ernährungsprotokoll</div>
-            <p>Organe, Reis, fermentierte Lebensmittel — echte Nahrung für echte Energie. Kein Fastfood, kein Weizen, keine Kompromisse.</p>
+            <div class="feature-title">Wichtige Sicherheitsinformationen</div>
+            <p>Orientierung zu sensiblen Punkten, die vor der Anwendung beachtet werden sollten.</p>
           </article>
+
           <article class="feature-card">
             <div class="feature-number">04</div>
-            <div class="feature-title">Kälte, Hitze &amp; Training</div>
-            <p>Boxen 3× pro Woche, Sauna 1× pro Woche, tägliche Kaltdusche — und die NeuroFuel Sauna-Elektrolyt-Formel.</p>
+            <div class="feature-title">Ein klarer Einstiegsplan</div>
+            <p>Schritt für Schritt aufgebaut für eine strukturierte Umsetzung.</p>
           </article>
+
           <article class="feature-card">
             <div class="feature-number">05</div>
-            <div class="feature-title">Mindset-System</div>
-            <p>Radikale Dankbarkeit, selektive Aufmerksamkeit und das Prinzip, das Beste aus allem zu machen — täglich in 5 Minuten.</p>
+            <div class="feature-title">Alltagstaugliche Rezeptideen</div>
+            <p>Einfache Möglichkeiten zur Integration in den Alltag.</p>
           </article>
+
           <article class="feature-card">
             <div class="feature-number">06</div>
-            <div class="feature-title">30-Tage Fahrplan &amp; Checklisten</div>
-            <p>Vier aufbauende Phasen mit täglichen Checklisten für Morgen- und Abendroutine — kein Rätselraten, nur Umsetzung.</p>
+            <div class="feature-title">Fundierte Hintergrundinformationen</div>
+            <p>Wissenschaftlich inspirierte Einordnung ohne unnötige Komplexität.</p>
           </article>
         </div>
       </div>
     </section>
+
     <section class="section bg-forest" id="pflanzen">
       <div class="container">
-        <div class="eyebrow light reveal">DIE 5 SÄULEN</div>
-        <h2 class="reveal">Fünf Säulen. Ein System. Dauerhafte Energie.</h2>
+        <div class="eyebrow light reveal">DIE HEILPFLANZEN</div>
+        <h2 class="reveal">Siebzehn Pflanzen. Jahrtausende Heilwissen. Ein Guide.</h2>
+
         <div class="plants-grid">
           <div class="plants-col">
-            <h3>KÖRPER &amp; BIOCHEMIE</h3>
+            <h3>PRIMÄRE ADAPTOGENE</h3>
             <div class="plant-list">
-              <div class="plant-item"><strong>Morgendliche Aktivierung</strong> — Kaltdusche, Nelkenöl, Honig, Kreatin, L-Glutamin</div>
-              <div class="plant-item"><strong>Abendliche Regeneration</strong> — Magnesium Glycinat, Ashwagandha ESN, Schlafvorbereitung</div>
-              <div class="plant-item"><strong>Sauna-Elektrolyt-Formel</strong> — Zitrone, Himalaya-Salz, Magnesium-Citrat</div>
+              <div class="plant-item"><strong>Primäre Adaptogene</strong> — Ashwagandha, Rosenwurz, Ginseng und weitere</div>
             </div>
           </div>
+
           <div class="plants-col">
-            <h3>ERNÄHRUNG &amp; TRAINING</h3>
+            <h3>SEKUNDÄRE ADAPTOGENE</h3>
             <div class="plant-list">
-              <div class="plant-item"><strong>Tierische Protein-Quellen</strong> — Hühnchen, Leber, Herzen, Steak, Lammrücken, Lammkoteletts</div>
-              <div class="plant-item"><strong>Mikronährstoffe</strong> — Grünkohl, Rosenkohl, fermentierte Lebensmittel, Sauerkraut</div>
-              <div class="plant-item"><strong>Bewegung</strong> — Kampfsport 3× pro Woche, Sauna 1× pro Woche</div>
+              <div class="plant-item"><strong>Sekundäre Adaptogene</strong> — Cordyceps, Hericium, Kurkuma und weitere</div>
             </div>
           </div>
+
           <div class="plants-col">
-            <h3>MINDSET &amp; SYSTEM</h3>
+            <h3>ADAPTOGENE BEGLEITER</h3>
             <div class="plant-list">
-              <div class="plant-item"><strong>Radikale Dankbarkeit</strong> — täglich, morgens, bevor das Handy in die Hand genommen wird</div>
-              <div class="plant-item"><strong>Selektive Aufmerksamkeit</strong> — Energie auf das richten, was vorwärtsbringt</div>
-              <div class="plant-item"><strong>30-Tage Fahrplan</strong> — vier Phasen, zwei Checklisten, ein klares System</div>
+              <div class="plant-item"><strong>Adaptogene Begleiter</strong> — Ginkgo, Lavendel, Johanniskraut</div>
             </div>
-            <div class="plants-note">Das vollständige Protocol mit allen Details und Hintergründen findest du im Guide.</div>
+            <div class="plants-note">Die vollständige Auswahl und Einordnung aller Pflanzen finden Sie im Guide.</div>
           </div>
         </div>
       </div>
     </section>
+
     <section class="section bg-cream">
       <div class="container">
-        <div class="eyebrow reveal">WARUM DAS SYSTEM FUNKTIONIERT</div>
-        <h2 class="reveal">Vom Nervensystem-Reset zur dauerhaften Hochleistung.</h2>
+        <div class="eyebrow reveal">WARUM ADAPTOGENE WIRKEN</div>
+        <h2 class="reveal">Hans Selye und das Allgemeine Anpassungssyndrom.</h2>
+
         <div class="phase-diagram">
           <div class="phase-bars">
-            <div class="phase phase-1">Chronische Erschöpfung — Dauerstress, kein Abschalten</div>
-            <div class="phase phase-2">NeuroFuel Protocol — Biochemie, Körper &amp; Geist als System</div>
-            <div class="phase phase-3">Dauerhafte Energie — Fokus, Schlaf, Stärke</div>
+            <div class="phase phase-1">Alarmphase — Kampf oder Flucht</div>
+            <div class="phase phase-2">Widerstandsphase — Anpassung</div>
+            <div class="phase phase-3">Erschöpfungsphase — Burnout</div>
           </div>
+
           <div class="adaptogen-arrow-wrap">
-            <span>Das Protocol verlängert den Aufbau</span>
+            <span>Adaptogene verlängern die Widerstandsphase</span>
             <div class="adaptogen-arrow"></div>
-            <span>und verhindert den Rückfall in Erschöpfung.</span>
+            <span>und verhindern den Übergang zur Erschöpfung.</span>
           </div>
+
           <p>
-            Chronische Erschöpfung entsteht auf mehreren Ebenen gleichzeitig. Das NeuroFuel Protocol
-            adressiert alle davon — strukturiert, aufbauend und ohne Überforderung.
+            Adaptogene werden traditionell dafür geschätzt, den Körper in Belastungsphasen zu unterstützen und Erschöpfungstendenzen besser abzufedern.
           </p>
+
           <div class="small muted">
-            Das direkte Upgrade zum 7-Day Nervensystem Reset · neurofuel.de
+            Nach Selye, H. (1951). Journal of Clinical Endocrinology
           </div>
         </div>
       </div>
     </section>
+
     <section class="section bg-white">
       <div class="container">
-        <h2 class="reveal">Für wen ist das Bundle?</h2>
+        <h2 class="reveal">Für wen ist dieser Guide?</h2>
+
         <div class="for-whom">
           <div class="list-box">
             <h4>Geeignet für</h4>
             <ul class="clean-list">
               <li>Menschen mit chronischer Erschöpfung und Energiemangel</li>
-              <li>Alle, die ein vollständiges System statt einzelner Tipps suchen</li>
-              <li>Personen, die Ernährung, Training und Mindset zusammendenken wollen</li>
-              <li>Wer bereit ist, 37 Tage konsequent zu investieren</li>
-              <li>Alle, die dauerhaft von einer Position der Stärke starten möchten</li>
-              <li>Wer aufgehört hat, nach dem nächsten Quick-Fix zu suchen</li>
+              <li>Personen in stressreichen Berufs- oder Lebensphasen</li>
+              <li>Alle mit Interesse an pflanzlicher Naturheilkunde</li>
+              <li>Menschen die Schlafqualität und Fokus verbessern möchten</li>
+              <li>Frauen in hormonellen Übergangsphasen</li>
+              <li>Sportler die natürliche Leistungsunterstützung suchen</li>
             </ul>
           </div>
+
           <div class="list-box">
             <h4>Nicht gedacht für</h4>
             <ul class="clean-list neutral">
-              <li>Personen, die medizinische Behandlung ersetzen möchten</li>
-              <li>Menschen mit schweren Erkrankungen ohne ärztliche Absprache</li>
+              <li>Personen die medizinische Behandlung ersetzen möchten</li>
+              <li>Menschen mit schweren Erkrankungen ohne Arztabsprache</li>
               <li>Wer sofortige Ergebnisse ohne Konsistenz erwartet</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-    <section class="section bg-mint" id="protokoll">
+
+    <section class="section bg-mint" id="rezepte">
       <div class="container">
-        <div class="eyebrow reveal">AUS DEM BUNDLE</div>
-        <h2 class="reveal" style="color: var(--forest);">Drei Rezepte. Täglich umsetzbar.</h2>
+        <div class="eyebrow reveal">AUS DEM GUIDE</div>
+        <h2 class="reveal" style="color: var(--forest);">Die Küche als Apotheke.</h2>
         <p class="lead reveal" style="max-width: 760px;">
-          Das Bundle enthält konkrete Rezepte, die sich sofort in den Alltag integrieren lassen — ohne Aufwand, ohne Komplexität.
+          Adaptogene müssen keine Kapseln sein. Ausgewählte Rezeptideen zeigen, wie einfach die Integration gelingen kann.
         </p>
+
         <div class="recipe-grid">
           <article class="recipe-card">
-            <div class="recipe-title">Ashwagandha Golden Milk</div>
-            <p>Mandelmilch, Kurkuma, Ingwer, schwarzer Pfeffer, Honig und Ashwagandha-Extrakt — das perfekte Abend-Ritual für tiefen Schlaf.</p>
+            <div class="recipe-title">Ginseng-Hühnersuppe</div>
+            <p>Ein wärmendes Rezept aus der traditionellen Pflanzenküche.</p>
           </article>
+
           <article class="recipe-card">
-            <div class="recipe-title">NeuroFuel Morgen-Smoothie</div>
-            <p>Banane, Spinat, Mandelbutter, Mandelmilch und optional Cordyceps-Extrakt — der Energie-Start für den Tag.</p>
+            <div class="recipe-title">Löwenzahn-Kurkuma-Latte</div>
+            <p>Eine wohltuende Alternative für den Nachmittag.</p>
           </article>
+
           <article class="recipe-card">
-            <div class="recipe-title">Sauna Elektrolyt-Drink</div>
-            <p>Frisch gepresste Zitrone, Himalaya-Salz, Magnesium-Citrat und stilles Wasser — maximale Regeneration nach der Hitze.</p>
+            <div class="recipe-title">Adaptogen-Morgen-Tinktur</div>
+            <p>Eine kompakte Routine für den strukturierten Start in den Tag.</p>
           </article>
         </div>
       </div>
     </section>
+
     <section class="section bg-white" id="kaufen">
-      <div class="container">
-        <div class="eyebrow reveal center">DEIN EINSTIEG</div>
-        <h2 class="reveal center">Drei Programme. Ein Preis.</h2>
+      <div class="container center">
+        <div class="eyebrow reveal">IHR EINSTIEG</div>
+        <h2 class="reveal">Der Adaptogen Reset Starter</h2>
 
-        <!-- URGENCY BANNER -->
-        <div style="background:var(--forest);border-radius:8px;padding:14px 24px;display:flex;align-items:center;justify-content:center;gap:12px;margin:32px 0 28px;position:relative;overflow:hidden;">
-          <div style="width:8px;height:8px;background:#4ade80;border-radius:50%;box-shadow:0 0 0 4px rgba(74,222,128,0.2);animation:pulse2 2s infinite;flex-shrink:0;"></div>
-          <p style="color:rgba(255,255,255,0.9);font-size:14px;font-weight:500;margin:0;">⏱ Sonderpreis aktiv — <strong style="color:#4ade80;">spare 94 Euro</strong> gegenüber dem Einzelkauf. Angebot nur für kurze Zeit.</p>
-        </div>
-        <style>@keyframes pulse2{0%,100%{box-shadow:0 0 0 4px rgba(74,222,128,0.2);}50%{box-shadow:0 0 0 8px rgba(74,222,128,0.08);}}</style>
+        <div class="purchase-card-wrap">
+          <div class="purchase-card">
+            <div class="purchase-top">
+              <div class="old-price">37 Euro</div>
+              <div class="price-main">27 Euro</div>
+              <div class="small muted">Einmalige Zahlung · Mehrwertsteuer inklusive</div>
+            </div>
 
-        <!-- INDIVIDUAL PRICES -->
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px;opacity:0.65;">
-          <div style="background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:20px 18px;position:relative;overflow:hidden;">
-            <div style="position:absolute;top:50%;left:0;right:0;height:1.5px;background:#c0392b;transform:rotate(-2deg);opacity:0.5;"></div>
-            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);font-weight:600;margin-bottom:6px;">Programm 01</div>
-            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--text-medium);margin-bottom:8px;">7-Day Nervensystem Reset</div>
-            <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--text-light);text-decoration:line-through;text-decoration-color:#c0392b;">27 €</div>
-            <div style="font-size:11.5px;color:var(--text-light);margin-top:4px;">7-Tage Reset · Adaptogene · Atemübungen</div>
-          </div>
-          <div style="background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:20px 18px;position:relative;overflow:hidden;">
-            <div style="position:absolute;top:50%;left:0;right:0;height:1.5px;background:#c0392b;transform:rotate(-2deg);opacity:0.5;"></div>
-            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);font-weight:600;margin-bottom:6px;">Programm 02</div>
-            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--text-medium);margin-bottom:8px;">NeuroFuel Protocol</div>
-            <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--text-light);text-decoration:line-through;text-decoration-color:#c0392b;">67 €</div>
-            <div style="font-size:11.5px;color:var(--text-light);margin-top:4px;">30-Tage System · 5 Säulen · Fahrplan</div>
-          </div>
-          <div style="background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:20px 18px;position:relative;overflow:hidden;">
-            <div style="position:absolute;top:50%;left:0;right:0;height:1.5px;background:#c0392b;transform:rotate(-2deg);opacity:0.5;"></div>
-            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);font-weight:600;margin-bottom:6px;">Programm 03</div>
-            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--text-medium);margin-bottom:8px;">Keto &amp; Refeed Ernährungsplan</div>
-            <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--text-light);text-decoration:line-through;text-decoration-color:#c0392b;">27 €</div>
-            <div style="font-size:11.5px;color:var(--text-light);margin-top:4px;">Tagesplan · Supplements · Refeed-Strategie</div>
-          </div>
-        </div>
+            <div class="rule" style="margin: 0;"></div>
 
-        <!-- ARROW -->
-        <div style="text-align:center;padding:8px 0 20px;display:flex;flex-direction:column;align-items:center;gap:6px;">
-          <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;">Jetzt als Bundle</div>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
-        </div>
-
-        <!-- BUNDLE CARD -->
-        <div style="background:var(--forest);border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.15);position:relative;border:1px solid rgba(255,255,255,0.08);max-width:800px;margin:0 auto;">
-          <!-- Ribbon -->
-          <div style="position:absolute;top:22px;right:-32px;background:var(--gold);color:#fff;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 46px;transform:rotate(45deg);z-index:2;">Bestseller</div>
-
-          <div style="display:grid;grid-template-columns:1fr 1fr;">
-            <!-- LEFT -->
-            <div style="padding:40px 36px;border-right:1px solid rgba(255,255,255,0.08);">
-              <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(82,183,136,0.15);border:1px solid rgba(82,183,136,0.3);border-radius:40px;padding:5px 14px;margin-bottom:18px;">
-                <div style="width:6px;height:6px;background:#52B788;border-radius:50%;"></div>
-                <div style="font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#74c69d;">Complete Bundle</div>
-              </div>
-              <h3 style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:#fff;line-height:1.1;margin-bottom:6px;letter-spacing:-0.02em;">NeuroFuel<br/><em style="font-style:italic;color:#e2c06e;">Reset Bundle</em></h3>
-              <p style="font-size:13.5px;color:rgba(255,255,255,0.45);margin-bottom:24px;">Das komplette 37-Tage System. Alles in einem Paket.</p>
-
-              <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:10px;margin-bottom:28px;">
-                <li style="display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:rgba(255,255,255,0.8);line-height:1.5;">
-                  <div style="width:18px;height:18px;background:rgba(82,183,136,0.2);border:1px solid rgba(82,183,136,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;font-size:9px;font-weight:700;color:#74c69d;">✓</div>
-                  <div><strong style="color:#fff;">7-Day Nervensystem Reset</strong><br/><span style="color:rgba(255,255,255,0.4);font-size:12px;">7-Tage Reset · Adaptogene · Atemübungen · Tagesplan</span></div>
-                </li>
-                <li style="display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:rgba(255,255,255,0.8);line-height:1.5;">
-                  <div style="width:18px;height:18px;background:rgba(82,183,136,0.2);border:1px solid rgba(82,183,136,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;font-size:9px;font-weight:700;color:#74c69d;">✓</div>
-                  <div><strong style="color:#fff;">NeuroFuel Protocol — 30 Tage</strong><br/><span style="color:rgba(255,255,255,0.4);font-size:12px;">Biochemie · Ernährung · Training · Kälte &amp; Hitze · Mindset</span></div>
-                </li>
-                <li style="display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:rgba(255,255,255,0.8);line-height:1.5;">
-                  <div style="width:18px;height:18px;background:rgba(82,183,136,0.2);border:1px solid rgba(82,183,136,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;font-size:9px;font-weight:700;color:#74c69d;">✓</div>
-                  <div><strong style="color:#fff;">Keto &amp; Refeed Ernährungsplan</strong><br/><span style="color:rgba(255,255,255,0.4);font-size:12px;">Tagesplan · Supplementplan · Refeed-Strategie · Schlafregeln</span></div>
-                </li>
-                <li style="display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:rgba(255,255,255,0.8);line-height:1.5;">
-                  <div style="width:18px;height:18px;background:rgba(82,183,136,0.2);border:1px solid rgba(82,183,136,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;font-size:9px;font-weight:700;color:#74c69d;">✓</div>
-                  <div><strong style="color:#fff;">Sofort-Download als PDF</strong><br/><span style="color:rgba(255,255,255,0.4);font-size:12px;">Alle 3 Dokumente · Lebenslanger Zugriff · Alle Geräte</span></div>
-                </li>
-              </ul>
-
-              <div style="height:1px;background:rgba(255,255,255,0.08);margin-bottom:20px;"></div>
-              <div style="display:flex;align-items:flex-start;gap:10px;">
-                <div style="font-size:20px;flex-shrink:0;">🔒</div>
-                <div style="font-size:12.5px;color:rgba(255,255,255,0.35);line-height:1.6;"><strong style="color:rgba(255,255,255,0.65);display:block;margin-bottom:2px;">Sichere Zahlung über Digistore24</strong>Kreditkarte · PayPal · Apple Pay · Google Pay. Einmalige Zahlung ohne Abonnement.</div>
+            <div class="purchase-middle">
+              <div class="purchase-lines">
+                <div>Ausgewählte Adaptogen-Profile</div>
+                <div>Praktische Einnahmehinweise</div>
+                <div>Sicherheits- und Hintergrundwissen</div>
+                <div>Klarer Einstiegsplan</div>
+                <div>Rezeptideen für den Alltag</div>
+                <div>Sofortiger PDF-Download nach Zahlung</div>
               </div>
             </div>
 
-            <!-- RIGHT -->
-            <div style="padding:40px 36px;display:flex;flex-direction:column;justify-content:center;">
-              <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.35);border-radius:40px;padding:5px 14px;margin-bottom:18px;width:fit-content;">
-                <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#e2c06e;">🔥 Du sparst 94 Euro</div>
-              </div>
+            <div class="rule" style="margin: 0;"></div>
 
-              <div style="font-size:15px;color:rgba(255,255,255,0.25);text-decoration:line-through;text-decoration-color:#c0392b;margin-bottom:2px;">121 €&nbsp;&nbsp;<span style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.15);text-decoration:none;">Einzelkauf</span></div>
-              <div style="font-size:19px;color:rgba(255,255,255,0.3);text-decoration:line-through;text-decoration-color:#c0392b;margin-bottom:6px;font-family:'Playfair Display',serif;font-weight:600;">29 €&nbsp;&nbsp;<span style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.18);text-decoration:none;font-family:Inter,sans-serif;">Normaler Bundle-Preis</span></div>
-              <div style="font-family:'Playfair Display',serif;font-size:68px;font-weight:700;color:#fff;line-height:1;letter-spacing:-0.03em;margin-bottom:4px;display:flex;align-items:flex-start;gap:4px;"><span style="font-size:0.4em;margin-top:16px;color:#e2c06e;font-weight:600;">€</span>27</div>
-              <div style="font-size:11.5px;color:rgba(255,255,255,0.3);margin-bottom:24px;">Einmalige Zahlung · MwSt. inkl.</div>
-
-              <!-- Savings calc -->
-              <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px;margin-bottom:20px;">
-                <div style="display:flex;justify-content:space-between;align-items:center;font-size:12.5px;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:4px;"><span style="color:rgba(255,255,255,0.4);">7-Day Reset</span><span style="color:rgba(255,255,255,0.4);text-decoration:line-through;">27 €</span></div>
-                <div style="display:flex;justify-content:space-between;align-items:center;font-size:12.5px;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:4px;"><span style="color:rgba(255,255,255,0.4);">NeuroFuel Protocol</span><span style="color:rgba(255,255,255,0.4);text-decoration:line-through;">67 €</span></div>
-                <div style="display:flex;justify-content:space-between;align-items:center;font-size:12.5px;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:6px;"><span style="color:rgba(255,255,255,0.4);">Ernährungsplan</span><span style="color:rgba(255,255,255,0.4);text-decoration:line-through;">27 €</span></div>
-                <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:4px;"><span style="color:rgba(255,255,255,0.8);font-weight:600;">Bundle heute</span><span style="color:#74c69d;font-weight:700;">27 €</span></div>
-                <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;padding:4px 0;"><span style="color:#e2c06e;">✦ Deine Ersparnis</span><span style="color:#e2c06e;font-weight:700;">– 94 €</span></div>
-              </div>
-
-              <a class="btn btn-primary" href="https://www.digistore24.com/product/683961" target="_blank" rel="noopener noreferrer" style="justify-content:center;font-size:16px;padding:18px;background:var(--sage);border-color:var(--sage);box-shadow:0 4px 20px rgba(82,183,136,0.35);transition:transform 0.2s,box-shadow 0.2s;">
-                Bundle jetzt sichern — 27 Euro →
+            <div class="purchase-bottom">
+              <a
+                class="btn btn-primary purchase-button"
+                href="https://www.digistore24.com/product/683961"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Jetzt kaufen — 27 Euro
               </a>
-              <div class="pay-note">🔐 256-bit SSL · Sichere Zahlung über Digistore24</div>
+
+              <div class="pay-note">
+                Sichere Zahlung über Digistore24 ·<br />
+                Kreditkarte · PayPal · Apple Pay · Google Pay
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- PSYCH BOXES -->
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px;">
-          <div style="background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:24px 20px;border-top:3px solid #c0392b;">
-            <div style="font-size:24px;margin-bottom:10px;">⏳</div>
-            <h4 style="font-size:18px;margin-bottom:8px;">Nur für kurze Zeit</h4>
-            <p style="font-size:13.5px;color:var(--text-medium);line-height:1.65;">Der Bundle-Preis von <strong>27€ ist ein Einführungsangebot</strong>. Sobald alle Programme einzeln genehmigt sind, wird der Preis deutlich angehoben. Wer jetzt kauft, sichert sich den Vorzugspreis dauerhaft.</p>
-          </div>
-          <div style="background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:24px 20px;border-top:3px solid var(--sage);">
-            <div style="font-size:24px;margin-bottom:10px;">💡</div>
-            <h4 style="font-size:18px;margin-bottom:8px;">Warum das Bundle?</h4>
-            <p style="font-size:13.5px;color:var(--text-medium);line-height:1.65;">Jedes Programm funktioniert alleine — aber zusammen entfalten sie ihre volle Wirkung. <strong>Phase 1 bereitet Phase 2 vor. Phase 2 macht Phase 3 erst möglich.</strong> Das ist kein Zufall. Das ist System.</p>
-          </div>
-          <div style="background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:24px 20px;border-top:3px solid var(--gold);">
-            <div style="font-size:24px;margin-bottom:10px;">🎯</div>
-            <h4 style="font-size:18px;margin-bottom:8px;">Aus eigener Praxis</h4>
-            <p style="font-size:13.5px;color:var(--text-medium);line-height:1.65;">Kein theoretisches Konzept. Kaltdusche, Organe, Boxen, Sauna, Magnesium, Dankbarkeit. <strong>Was funktioniert, kommt rein. Was nicht, fliegt raus.</strong> Entwickelt aus gelebter Erfahrung.</p>
-          </div>
-        </div>
-
       </div>
     </section>
+
     <section class="section bg-cream">
       <div class="container">
         <div class="eyebrow reveal">HÄUFIGE FRAGEN</div>
-        <h2 class="reveal">Was du wissen solltest.</h2>
+        <h2 class="reveal">Was Sie wissen sollten.</h2>
+
         <div class="faq-list">
           <details class="faq-item">
-            <summary><div class="faq-title">Wie erhalte ich das Bundle nach dem Kauf?</div></summary>
+            <summary><div class="faq-title">Wie erhalte ich den Guide nach dem Kauf?</div></summary>
             <div class="faq-answer">
-              Unmittelbar nach Zahlungseingang erhältst du eine E-Mail von Digistore24 mit deinem persönlichen Download-Link.
+              Unmittelbar nach Zahlungseingang erhalten Sie eine E-Mail von Digistore24 mit Ihrem persönlichen Download-Link.
               Das PDF steht auf allen Geräten zur Verfügung.
             </div>
           </details>
+
           <details class="faq-item">
             <summary><div class="faq-title">Handelt es sich um ein Abonnement?</div></summary>
             <div class="faq-answer">
-              Nein. Es handelt sich um eine einmalige Zahlung von 67 Euro ohne automatische Verlängerung oder versteckte Folgekosten.
+              Nein. Es handelt sich um eine einmalige Zahlung von 27 Euro ohne automatische Verlängerung oder versteckte Folgekosten.
             </div>
           </details>
-          <details class="faq-item">
-            <summary><div class="faq-title">Was genau ist im Bundle enthalten?</div></summary>
-            <div class="faq-answer">
-              Das Bundle enthält alle drei Programme als sofortiger PDF-Download: den 7-Day Nervensystem Reset, das NeuroFuel Protocol (30 Tage) und den Keto &amp; Refeed Ernährungsplan. Du bekommst alles in einer Bestellung.
-            </div>
-          </details>
+
           <details class="faq-item">
             <summary><div class="faq-title">Wie schnell sind erste Veränderungen spürbar?</div></summary>
             <div class="faq-answer">
-              Bereits in der ersten Woche berichten viele von besserem Schlaf und mehr Energie. Echte, dauerhafte Veränderungen entstehen durch Konsistenz über die vollen 37 Tage des kompletten Systems.
+              Die Wirkung pflanzlicher Routinen entfaltet sich individuell. Entscheidend sind Qualität, Regelmäßigkeit und ein bewusster Umgang über mehrere Wochen.
             </div>
           </details>
+
           <details class="faq-item">
-            <summary><div class="faq-title">Ersetzt das Bundle ärztliche Beratung?</div></summary>
+            <summary><div class="faq-title">Ersetzt der Guide ärztliche Beratung?</div></summary>
             <div class="faq-answer">
-              Nein. Das Bundle dient ausschließlich der Information und Bildung. Bei bestehenden Erkrankungen oder Medikamenteneinnahme
-              empfehlen wir ärztliche Rücksprache vor der Einnahme von Supplements wie Kreatin, Magnesium oder Ashwagandha.
+              Nein. Der Guide dient ausschließlich der Information und Bildung. Bei bestehenden Erkrankungen oder Medikamenteneinnahme
+              empfehlen wir ärztliche Rücksprache vor der Einnahme von Adaptogenen.
             </div>
           </details>
+
           <details class="faq-item">
-            <summary><div class="faq-title">Wo beziehe ich die empfohlenen Supplements?</div></summary>
+            <summary><div class="faq-title">Kann ich mehrere Adaptogene kombinieren?</div></summary>
             <div class="faq-answer">
-              Das Protocol enthält konkrete Hinweise zu Qualitätskriterien und Dosierungen. Ashwagandha wird explizit in der
-              ESN-Formulierung mit KSM-66 Extrakt empfohlen — erhältlich in den meisten Supplement-Shops.
+              Ja. Der Guide gibt hierzu eine grundlegende Orientierung für den Einstieg.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary><div class="faq-title">Wo beziehe ich die Adaptogene?</div></summary>
+            <div class="faq-answer">
+              Der Guide enthält Hinweise zu Qualitätskriterien beim Kauf. Empfohlen werden sorgfältig ausgewählte Anbieter mit nachvollziehbaren Standards.
             </div>
           </details>
         </div>
       </div>
     </section>
+
     <section class="final-cta bg-forest">
       <div class="container">
-        <div class="final-cta-title">Drei Programme. Ein Preis.<br/>Dein System wartet.</div>
-        <div class="final-cta-sub">27 Euro. Einmalig. Alle 3 Programme sofort verfügbar.</div>
+        <div class="final-cta-title">Ihr Reset beginnt mit einem einzigen Schritt.</div>
+        <div class="final-cta-sub">27 Euro. Einmalig. Sofort verfügbar.</div>
         <a
           class="btn btn-light"
-          href="https://www.digistore24.com/product/683534"
+          href="https://www.digistore24.com/product/683961"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Jetzt Protocol erhalten
+          Jetzt Guide erhalten
         </a>
-        <div class="final-meta"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a0c9cec6cfe0d0cfd7c5d2d0d2cfcd8ec4c5">[email&#160;protected]</a> · Frankfurt am Main</div>
+        <div class="final-meta">info@powerprom.de · Frankfurt am Main</div>
       </div>
     </section>
   </main>
+
   <footer>
     <div class="container">
       <div class="footer-top">
@@ -1525,15 +1668,17 @@
         <div class="footer-links">
           <a href="#impressum">Impressum</a>
           <a href="#datenschutz">Datenschutz</a>
-          <a href="/cdn-cgi/l/email-protection#5e373038311e2e31293b2c2e2c3133703a3b">Kontakt</a>
+          <a href="mailto:info@powerprom.de">Kontakt</a>
         </div>
-        <div>© 2026 Alle Rechte vorbehalten</div>
+        <div>© 2025 Alle Rechte vorbehalten</div>
       </div>
+
       <div class="footer-disclaimer">
-        Dieses Bundle ist keine medizinische Beratung und ersetzt keinen Arztbesuch. Die beschriebenen Wirkungen beziehen sich
-        auf allgemeine Ernährungs- und Bewegungsempfehlungen sowie traditionelles Erfahrungswissen. Individuelle Ergebnisse können variieren.
+        Dieser Guide ist keine medizinische Beratung und ersetzt keinen Arztbesuch. Die beschriebenen Wirkungen beziehen sich
+        auf traditionelle Anwendung und Forschungsliteratur. Individuelle Ergebnisse können variieren.
         Nahrungsergänzungsmittel sind kein Ersatz für eine ausgewogene Ernährung.
       </div>
+
       <div class="impressum-wrap" id="impressum">
         <div class="impressum">
           <details>
@@ -1544,13 +1689,14 @@
               Große Gallusstraße 16<br />
               60312 Frankfurt am Main<br />
               Deutschland<br />
-              E-Mail: <a href="/cdn-cgi/l/email-protection#a7cec9c1c8e7d7c8d0c2d5d7d5c8ca89c3c2"><span class="__cf_email__" data-cfemail="f49d9a929bb4849b83918684869b99da9091">[email&#160;protected]</span></a><br />
+              E-Mail: <a href="mailto:info@powerprom.de">info@powerprom.de</a><br />
               USt-IdNr: DE329889793<br />
               Verantwortlich: David Arianfar
             </div>
           </details>
         </div>
       </div>
+
       <div class="impressum-wrap" id="datenschutz">
         <div class="impressum">
           <details>
@@ -1559,23 +1705,27 @@
               <strong>1. Allgemeine Hinweise</strong><br />
               Diese Website dient der Bereitstellung von Informationen zu einem digitalen Produkt.
               Personenbezogene Daten werden nur im technisch erforderlichen Umfang verarbeitet.<br /><br />
+
               <strong>2. Hosting</strong><br />
               Diese Website wird über GitHub Pages bereitgestellt. Beim Aufruf der Website können technisch notwendige Verbindungsdaten verarbeitet werden.<br /><br />
+
               <strong>3. Kaufabwicklung</strong><br />
               Die Zahlungsabwicklung erfolgt über Digistore24. Es gelten die Datenschutzbestimmungen von Digistore24.<br /><br />
+
               <strong>4. Kontakt</strong><br />
               Bei Fragen zum Datenschutz erreichen Sie uns unter:
-              <a href="/cdn-cgi/l/email-protection#7910171f163909160e1c0b090b1614571d1c"><span class="__cf_email__" data-cfemail="3e575058517e4e51495b4c4e4c5153105a5b">[email&#160;protected]</span></a>
+              <a href="mailto:info@powerprom.de">info@powerprom.de</a>
             </div>
           </details>
         </div>
       </div>
     </div>
   </footer>
+
   <div class="mobile-buy-bar" aria-label="Mobiler Kaufbereich">
     <div class="mobile-buy-inner">
       <div class="mobile-price">
-        <span>121 Euro</span>
+        <span>37 Euro</span>
         <strong>27 Euro</strong>
       </div>
       <a
@@ -1584,14 +1734,16 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        Bundle sichern
+        Jetzt kaufen
       </a>
     </div>
   </div>
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+  <script>
     const nav = document.getElementById('siteNav');
     const toggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
+
     function updateNavShadow() {
       if (window.scrollY > 8) {
         nav.classList.add('scrolled');
@@ -1599,14 +1751,17 @@
         nav.classList.remove('scrolled');
       }
     }
+
     updateNavShadow();
     window.addEventListener('scroll', updateNavShadow);
+
     toggle.addEventListener('click', () => {
       const expanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!expanded));
       toggle.classList.toggle('active');
       mobileMenu.classList.toggle('show');
     });
+
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         toggle.setAttribute('aria-expanded', 'false');
@@ -1614,10 +1769,30 @@
         mobileMenu.classList.remove('show');
       });
     });
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
         }
       });
-    }, { threshold: 0.12 })
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    function openDetailsFromHash() {
+      const hash = window.location.hash;
+      if (!hash) return;
+      const target = document.querySelector(hash);
+      if (!target) return;
+      const details = target.querySelector('details');
+      if (details) {
+        details.open = true;
+      }
+    }
+
+    window.addEventListener('load', openDetailsFromHash);
+    window.addEventListener('hashchange', openDetailsFromHash);
+  </script>
+</body>
+</html>
