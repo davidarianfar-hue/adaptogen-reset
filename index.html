@@ -10,13 +10,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
   <style>
-    /* ===== ORIGINAL CSS (komplett unverändert) ===== */
     :root {
       --forest: #1B4332; --green: #2D6A4F; --sage: #52B788; --mint: #D8F3DC;
       --cream: #F9F3E8; --warm-white: #FDFAF5; --text: #1A1A1A;
       --text-medium: #4A4A4A; --text-light: #888888; --gold: #C9A84C;
       --border: rgba(0,0,0,0.08); --shadow: 0 4px 20px rgba(0,0,0,0.06);
       --max: 1100px; --radius-sm: 4px; --radius: 8px; --nav-height: 82px;
+      --forest-deep: #0f2a1f; --sage-light: #74c69d; --cream-dark: #f0e8d4;
+      --gold-light: #e2c06e; --red-strike: #c0392b;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -50,7 +51,9 @@
     .btn-light { background: #fff; color: var(--forest); }
     .btn-light:hover { background: #f5f5f5; }
     .muted { color: var(--text-light); } .small { font-size: 13px; } .center { text-align: center; }
-    .sticky-nav { position: sticky; top: 0; z-index: 999; height: var(--nav-height); background: rgba(253,250,245,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); transition: box-shadow 0.2s ease, background-color 0.2s ease; }
+
+    /* NAV */
+    .sticky-nav { position: sticky; top: 0; z-index: 999; height: var(--nav-height); background: rgba(253,250,245,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); transition: box-shadow 0.2s ease; }
     .sticky-nav.scrolled { box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
     .nav-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .brand { color: var(--forest); letter-spacing: 4px; font-size: 24px; font-weight: 700; white-space: nowrap; }
@@ -59,8 +62,10 @@
     .nav-links a { position: relative; }
     .nav-links a::after { content: ""; position: absolute; left: 0; bottom: -4px; width: 0; height: 1px; background: var(--forest); transition: width 0.2s ease; }
     .nav-links a:hover::after { width: 100%; }
-    .nav-buy { background: var(--forest); color: #fff; padding: 13px 18px; border-radius: var(--radius-sm); border: 1px solid var(--forest); font-size: 17px; line-height: 1.2; white-space: nowrap; box-shadow: var(--shadow); }
+    .nav-buy { background: var(--forest); color: #fff; padding: 10px 16px; border-radius: var(--radius-sm); border: 1px solid var(--forest); font-size: 15px; line-height: 1.3; white-space: nowrap; box-shadow: var(--shadow); text-align: center; }
     .nav-buy:hover { background: #163829; }
+    .nav-buy-orig { display: block; font-size: 11px; text-decoration: line-through; opacity: 0.55; font-family: 'Inter', sans-serif; font-weight: 400; }
+    .nav-buy-price { display: block; font-size: 17px; }
     .hamburger { display: none; width: 46px; height: 46px; background: transparent; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0; position: relative; cursor: pointer; }
     .hamburger span, .hamburger::before, .hamburger::after { content: ""; position: absolute; left: 11px; right: 11px; height: 1.5px; background: var(--forest); transition: transform 0.2s ease, top 0.2s ease, opacity 0.2s ease; }
     .hamburger span { top: 22px; } .hamburger::before { top: 15px; } .hamburger::after { top: 29px; }
@@ -71,6 +76,8 @@
     .mobile-menu-inner { padding: 16px 0 22px; display: grid; gap: 12px; }
     .mobile-menu a { padding: 10px 0; color: var(--text-medium); font-size: 16px; }
     .mobile-menu .btn { width: 100%; margin-top: 8px; }
+
+    /* HERO */
     .hero { background: var(--forest); color: #fff; position: relative; overflow: hidden; border-top: none; padding-top: 120px; padding-bottom: 110px; }
     .hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(45deg, rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(-45deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 60px 60px, 60px 60px, 120px 120px, 120px 120px; pointer-events: none; opacity: 0.55; }
     .hero::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 10% 20%, rgba(216,243,220,0.06), transparent 28%), radial-gradient(circle at 80% 15%, rgba(201,168,76,0.05), transparent 24%), radial-gradient(circle at 60% 80%, rgba(216,243,220,0.04), transparent 28%); pointer-events: none; }
@@ -80,10 +87,127 @@
     .hero-buttons { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
     .hero-note { margin-top: 18px; font-size: 13px; color: rgba(253,250,245,0.7); }
     .leaf-line { position: absolute; left: 0; right: 0; bottom: 18px; display: flex; justify-content: center; z-index: 2; opacity: 0.75; pointer-events: none; }
+
+    /* HERO SOCIAL PROOF */
+    .hero-social-proof { display: flex; align-items: center; gap: 0; margin: 28px 0 0; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 16px 24px; width: fit-content; }
+    .hsp-item { text-align: center; padding: 0 24px; }
+    .hsp-item:first-child { padding-left: 0; }
+    .hsp-number { display: block; font-family: 'Playfair Display', serif; font-size: 22px; color: #fff; font-weight: 700; line-height: 1.1; }
+    .hsp-label { display: block; font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 1px; text-transform: uppercase; margin-top: 3px; }
+    .hsp-divider { width: 1px; height: 36px; background: rgba(255,255,255,0.15); flex-shrink: 0; }
+
+    /* COUPON WIDGET — HERO (dark) */
+    .coupon-hero {
+      margin: 22px 0 0;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      background: rgba(201,168,76,0.10);
+      border: 1.5px dashed rgba(201,168,76,0.55);
+      border-radius: 10px;
+      padding: 16px 22px;
+      width: fit-content;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .coupon-hero-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .coupon-hero-code-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .coupon-hero-code {
+      font-family: 'Courier New', monospace;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 5px;
+      padding: 6px 14px;
+      letter-spacing: 4px;
+    }
+    .coupon-copy-btn {
+      background: var(--gold);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 7px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .coupon-copy-btn:hover { background: #b8912e; transform: translateY(-1px); }
+    .coupon-copy-btn.copied { background: var(--sage); }
+    .coupon-hero-savings {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      white-space: nowrap;
+    }
+    .coupon-hero-savings strong { color: var(--gold-light); }
+
+    /* COUPON WIDGET — LIGHT (pricing section) */
+    .coupon-light {
+      background: linear-gradient(135deg, rgba(201,168,76,0.07) 0%, rgba(201,168,76,0.03) 100%);
+      border: 1.5px dashed rgba(201,168,76,0.45);
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin: 40px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .coupon-light-left { flex: 1; min-width: 200px; }
+    .coupon-light-eyebrow { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+    .coupon-light-eyebrow::before { content: '🏷️'; font-style: normal; letter-spacing: 0; }
+    .coupon-light-title { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--forest-deep); font-weight: 700; margin-bottom: 4px; }
+    .coupon-light-sub { font-size: 14px; color: var(--text-light); }
+    .coupon-light-sub s { color: var(--red-strike); }
+    .coupon-light-right { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .coupon-light-code {
+      font-family: 'Courier New', monospace;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--forest-deep);
+      background: #fff;
+      border: 1.5px solid var(--gold);
+      border-radius: 6px;
+      padding: 10px 20px;
+      letter-spacing: 5px;
+      box-shadow: 0 2px 10px rgba(201,168,76,0.15);
+    }
+    .coupon-light-copy {
+      background: var(--forest);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .coupon-light-copy:hover { background: #163829; transform: translateY(-1px); }
+    .coupon-light-copy.copied { background: var(--sage); }
+
+    /* CREDIBILITY */
     .credibility-bar { padding: 24px 0; background: var(--cream); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .credibility-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
     .cred-item { text-align: center; padding: 8px 20px; color: var(--forest); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; border-left: 1px solid rgba(27,67,50,0.12); }
     .cred-item:first-child { border-left: none; }
+
     .two-col { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: start; }
     .symptom-list { display: grid; gap: 14px; }
     .symptom-item { border-left: 2px solid var(--green); padding: 8px 0 8px 18px; color: var(--text-medium); background: rgba(82,183,136,0.03); }
@@ -149,128 +273,38 @@
     .impressum summary::after { content: "+"; position: absolute; right: 16px; top: 10px; font-size: 20px; }
     .impressum details[open] summary::after { content: "–"; }
     .impressum-content { padding: 0 16px 16px; opacity: 0.9; line-height: 1.9; }
+
+    /* MOBILE BUY BAR */
     .mobile-buy-bar { display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 999; background: rgba(253,250,245,0.98); backdrop-filter: blur(10px); border-top: 1px solid var(--border); box-shadow: 0 -6px 18px rgba(0,0,0,0.06); padding: 10px 14px; }
     .mobile-buy-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
     .mobile-price { line-height: 1.2; }
     .mobile-price strong { display: block; font-family: 'Playfair Display', serif; color: var(--forest); font-size: 26px; }
     .mobile-price span { font-size: 12px; color: var(--text-light); text-decoration: line-through; }
+    .mobile-code { font-size: 11px; color: var(--text-light); margin-top: 1px; }
+    .mobile-code b { color: var(--green); }
+
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* Hero social proof bar */
-    .hero-social-proof {
-      display: flex;
-      align-items: center;
-      gap: 0;
-      margin: 28px 0 32px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 8px;
-      padding: 16px 24px;
-      width: fit-content;
-    }
-    .hsp-item { text-align: center; padding: 0 24px; }
-    .hsp-item:first-child { padding-left: 0; }
-    .hsp-number { display: block; font-family: 'Playfair Display', serif; font-size: 22px; color: #fff; font-weight: 700; line-height: 1.1; }
-    .hsp-label { display: block; font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 1px; text-transform: uppercase; margin-top: 3px; }
-    .hsp-divider { width: 1px; height: 36px; background: rgba(255,255,255,0.15); flex-shrink: 0; }
+    /* Wirkung hook lines */
+    .wirkung-hook { margin-top: 20px; display: grid; gap: 12px; }
+    .wirkung-hook-line { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--forest); line-height: 1.6; }
+    .whook-icon { color: var(--gold); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
 
     /* Hero curiosity hook */
-    .hero-hook {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 22px;
-      font-size: 14px;
-      color: rgba(255,255,255,0.55);
-      font-style: italic;
-    }
-    .hero-hook-dot {
-      width: 6px;
-      height: 6px;
-      background: var(--gold);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
+    .hero-hook { display: flex; align-items: center; gap: 10px; margin-top: 22px; font-size: 14px; color: rgba(255,255,255,0.55); font-style: italic; }
+    .hero-hook-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
 
-    /* Wirkung hook lines */
-    .wirkung-hook {
-      margin-top: 20px;
-      display: grid;
-      gap: 12px;
-    }
-    .wirkung-hook-line {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 15px;
-      color: var(--forest);
-      line-height: 1.6;
-    }
-    .whook-icon {
-      color: var(--gold);
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    @media (max-width: 768px) {
-      .hero-social-proof { flex-direction: column; width: 100%; gap: 12px; }
-      .hsp-divider { width: 80%; height: 1px; }
-      .hsp-item { padding: 0; }
-    }
-    @media (max-width: 1024px) {
-      h1 { font-size: 48px; } h2 { font-size: 36px; }
-      .feature-grid, .recipe-grid, .plants-grid, .timeline { grid-template-columns: 1fr 1fr; }
-      .plants-grid .plants-col:last-child { grid-column: span 2; }
-      .two-col, .for-whom { grid-template-columns: 1fr; gap: 34px; }
-      .credibility-grid { grid-template-columns: 1fr 1fr; }
-      .cred-item:nth-child(3) { border-left: none; }
-      .footer-top { grid-template-columns: 1fr; text-align: center; }
-      .footer-top > div:nth-child(3) { text-align: center; }
-    }
-    @media (max-width: 768px) {
-      :root { --nav-height: 74px; }
-      .section { padding: 72px 0; }
-      .container { width: min(calc(100% - 28px), var(--max)); }
-      h1 { font-size: 38px; } h2 { font-size: 30px; } h3 { font-size: 24px; }
-      h4, .faq-title { font-size: 18px; }
-      body { font-size: 16px; } .lead { font-size: 17px; }
-      .nav-links, .nav-buy { display: none; }
-      .hamburger { display: inline-block; }
-      .mobile-menu.show { display: block; }
-      .hero { padding-top: 92px; padding-bottom: 86px; }
-      .hero-buttons { flex-direction: column; align-items: stretch; }
-      .hero-buttons .btn { width: 100%; }
-      .credibility-grid, .timeline, .feature-grid, .recipe-grid, .plants-grid, .phase-bars { grid-template-columns: 1fr; }
-      .plants-grid .plants-col:last-child { grid-column: auto; }
-      .cred-item { border-left: none; border-top: 1px solid rgba(27,67,50,0.12); }
-      .cred-item:first-child { border-top: none; }
-      .phase { min-height: 72px; }
-      .faq-answer { padding-left: 24px; }
-      .mobile-buy-bar { display: block; }
-      body { padding-bottom: 82px; }
-    }
-    @media print {
-      .sticky-nav, .mobile-buy-bar, .hamburger, .mobile-menu { display: none !important; }
-      body { background: #fff; color: #000; padding-bottom: 0; }
-      a { text-decoration: none; }
-    }
-
-    /* ===== PRICING BLOCK CSS (aus neurofuel-bundle-pricing.html — nur ergänzt) ===== */
-    :root {
-      --forest-deep: #0f2a1f; --sage-light: #74c69d; --cream-dark: #f0e8d4;
-      --gold-light: #e2c06e; --red-strike: #c0392b;
-    }
+    /* ===== PRICING BLOCK CSS ===== */
     .pricing-section { padding: 100px 20px; background: var(--warm-white); position: relative; overflow: hidden; border-top: 1px solid var(--border); }
     .pricing-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
-    .section-header { text-align: center; margin-bottom: 72px; }
+    .section-header { text-align: center; margin-bottom: 56px; }
     .section-eyebrow { display: inline-block; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--green); font-weight: 600; margin-bottom: 16px; position: relative; }
     .section-eyebrow::before, .section-eyebrow::after { content: '—'; color: var(--gold); margin: 0 10px; opacity: 0.7; }
     .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(38px, 5vw, 58px); font-weight: 600; color: var(--forest-deep); line-height: 1.1; margin-bottom: 18px; letter-spacing: -0.02em; }
     .section-title em { font-style: italic; color: var(--green); }
     .section-sub { font-size: 17px; color: var(--text-medium); max-width: 560px; margin: 0 auto; line-height: 1.75; }
-    .urgency-banner { background: var(--forest-deep); border-radius: 8px; padding: 14px 24px; display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 48px; position: relative; overflow: hidden; }
+    .urgency-banner { background: var(--forest-deep); border-radius: 8px; padding: 14px 24px; display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 40px; position: relative; overflow: hidden; }
     .urgency-banner::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255,255,255,0.015) 10px, rgba(255,255,255,0.015) 20px); }
     .urgency-dot { width: 8px; height: 8px; background: #4ade80; border-radius: 50%; box-shadow: 0 0 0 3px rgba(74,222,128,0.25); animation: pulse 2s infinite; flex-shrink: 0; }
     @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 3px rgba(74,222,128,0.25); } 50% { box-shadow: 0 0 0 6px rgba(74,222,128,0.1); } }
@@ -314,10 +348,29 @@
     .savings-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.35); border-radius: 40px; padding: 6px 14px; margin-bottom: 20px; width: fit-content; }
     .savings-badge-text { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold-light); }
     .price-was { font-size: 16px; color: rgba(255,255,255,0.3); text-decoration: line-through; text-decoration-color: var(--red-strike); margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
-    .price-was::after { content: 'normaler Wert'; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.2); text-decoration: none; }
+    .price-was::after { content: 'Normalpreis'; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.2); text-decoration: none; }
     .price-now { font-family: 'Cormorant Garamond', serif; font-size: clamp(54px, 7vw, 78px); font-weight: 700; color: #fff; line-height: 1; letter-spacing: -0.03em; margin-bottom: 4px; display: flex; align-items: flex-start; gap: 4px; }
     .price-now .currency { font-size: 0.45em; margin-top: 12px; color: var(--gold-light); font-weight: 600; }
-    .price-note { font-size: 12px; color: rgba(255,255,255,0.3); margin-bottom: 28px; letter-spacing: 0.5px; }
+    .price-note { font-size: 12px; color: rgba(255,255,255,0.3); margin-bottom: 16px; letter-spacing: 0.5px; }
+
+    /* COUPON INLINE (in bundle-right) */
+    .bundle-coupon {
+      background: rgba(201,168,76,0.1);
+      border: 1px dashed rgba(201,168,76,0.4);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .bc-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-light); font-weight: 700; white-space: nowrap; }
+    .bc-code { font-family: 'Courier New', monospace; font-size: 16px; font-weight: 700; color: #fff; letter-spacing: 3px; background: rgba(255,255,255,0.08); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.15); }
+    .bc-copy { background: transparent; border: 1px solid rgba(201,168,76,0.5); color: var(--gold-light); border-radius: 4px; padding: 4px 10px; font-size: 11px; font-weight: 600; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+    .bc-copy:hover { background: rgba(201,168,76,0.15); }
+    .bc-copy.copied { background: rgba(82,183,136,0.2); border-color: var(--sage); color: var(--sage-light); }
+
     .savings-calc { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 16px; margin-bottom: 24px; }
     .savings-row { display: flex; justify-content: space-between; align-items: center; font-size: 13px; padding: 5px 0; }
     .savings-row:not(:last-child) { border-bottom: 1px solid rgba(255,255,255,0.06); margin-bottom: 5px; }
@@ -333,7 +386,8 @@
     .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(82,183,136,0.45); }
     .cta-arrow { font-size: 18px; transition: transform 0.2s ease; }
     .cta-btn:hover .cta-arrow { transform: translateX(4px); }
-    .cta-secure { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 12px; font-size: 11.5px; color: rgba(255,255,255,0.3); }
+    .cta-note { font-size: 11.5px; color: rgba(255,255,255,0.3); margin-top: 8px; text-align: center; line-height: 1.6; }
+    .cta-secure { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 8px; font-size: 11.5px; color: rgba(255,255,255,0.3); }
     .psych-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 56px; }
     .psych-box { background: #fff; border: 1.5px solid var(--border); border-radius: 12px; padding: 24px 20px; position: relative; overflow: hidden; transition: transform 0.2s ease, box-shadow 0.2s ease; }
     .psych-box:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
@@ -361,7 +415,17 @@
     .cf-bundle { text-align: center; }
     .cf-price { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 700; color: var(--gold-light); }
     .cf-note { font-size: 11px; color: var(--sage-light); display: block; margin-top: 1px; letter-spacing: 0.5px; }
-    @media (max-width: 900px) {
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      h1 { font-size: 48px; } h2 { font-size: 36px; }
+      .feature-grid, .recipe-grid, .plants-grid, .timeline { grid-template-columns: 1fr 1fr; }
+      .plants-grid .plants-col:last-child { grid-column: span 2; }
+      .two-col, .for-whom { grid-template-columns: 1fr; gap: 34px; }
+      .credibility-grid { grid-template-columns: 1fr 1fr; }
+      .cred-item:nth-child(3) { border-left: none; }
+      .footer-top { grid-template-columns: 1fr; text-align: center; }
+      .footer-top > div:nth-child(3) { text-align: center; }
       .bundle-inner { grid-template-columns: 1fr; }
       .bundle-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
       .psych-grid { grid-template-columns: 1fr; }
@@ -369,10 +433,41 @@
       .individual-prices::after { display: none; }
       .compare-header, .compare-row, .compare-footer { grid-template-columns: 1fr 100px 140px; }
     }
-    @media (max-width: 600px) {
-      .pricing-section { padding: 64px 16px; }
-      .bundle-left, .bundle-right { padding: 32px 24px; }
+    @media (max-width: 768px) {
+      :root { --nav-height: 74px; }
+      .section { padding: 72px 0; }
+      .container { width: min(calc(100% - 28px), var(--max)); }
+      h1 { font-size: 38px; } h2 { font-size: 30px; } h3 { font-size: 24px; }
+      h4, .faq-title { font-size: 18px; }
+      body { font-size: 16px; } .lead { font-size: 17px; }
+      .nav-links, .nav-buy { display: none; }
+      .hamburger { display: inline-block; }
+      .mobile-menu.show { display: block; }
+      .hero { padding-top: 92px; padding-bottom: 86px; }
+      .hero-buttons { flex-direction: column; align-items: stretch; }
+      .hero-buttons .btn { width: 100%; }
+      .hero-social-proof { flex-direction: column; width: 100%; gap: 12px; }
+      .hsp-divider { width: 80%; height: 1px; }
+      .hsp-item { padding: 0; }
+      .coupon-hero { width: 100%; }
+      .credibility-grid, .timeline, .feature-grid, .recipe-grid, .plants-grid, .phase-bars { grid-template-columns: 1fr; }
+      .plants-grid .plants-col:last-child { grid-column: auto; }
+      .cred-item { border-left: none; border-top: 1px solid rgba(27,67,50,0.12); }
+      .cred-item:first-child { border-top: none; }
+      .phase { min-height: 72px; }
+      .faq-answer { padding-left: 24px; }
+      .mobile-buy-bar { display: block; }
+      body { padding-bottom: 82px; }
       .bundle-ribbon { display: none; }
+      .bundle-left, .bundle-right { padding: 32px 24px; }
+      .pricing-section { padding: 64px 16px; }
+      .coupon-light { padding: 20px; }
+      .coupon-light-code { font-size: 18px; letter-spacing: 3px; padding: 8px 14px; }
+    }
+    @media print {
+      .sticky-nav, .mobile-buy-bar, .hamburger, .mobile-menu { display: none !important; }
+      body { background: #fff; color: #000; padding-bottom: 0; }
+      a { text-decoration: none; }
     }
   </style>
 </head>
@@ -387,7 +482,8 @@
           <a href="#rezepte">Rezepte</a>
         </nav>
         <a class="nav-buy" href="https://www.digistore24.com/product/683961?coupon=Bundle27" target="_blank" rel="noopener noreferrer">
-          Guide kaufen — 27 Euro
+          <span class="nav-buy-orig">Normalpreis 121 €</span>
+          <span class="nav-buy-price">Bundle — 27 €</span>
         </a>
         <button class="hamburger" id="menuToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu">
           <span></span>
@@ -400,7 +496,7 @@
         <a href="#pflanzen">Programme</a>
         <a href="#rezepte">Rezepte</a>
         <a class="btn btn-primary" href="https://www.digistore24.com/product/683961?coupon=Bundle27" target="_blank" rel="noopener noreferrer">
-          Guide kaufen — 27 Euro
+          Bundle sichern — 27 € (statt 121 €)
         </a>
       </div>
     </div>
@@ -432,12 +528,22 @@
             <div class="hsp-divider"></div>
             <div class="hsp-item">
               <span class="hsp-number">27 €</span>
-              <span class="hsp-label">Einmalig · kein Abo</span>
+              <span class="hsp-label">statt 121 € · kein Abo</span>
             </div>
           </div>
 
+          <!-- Coupon Widget Hero -->
+          <div class="coupon-hero">
+            <span class="coupon-hero-label">🏷️ Ihr Rabattcode</span>
+            <div class="coupon-hero-code-wrap">
+              <span class="coupon-hero-code" id="heroCode">Bundle27</span>
+              <button class="coupon-copy-btn" onclick="copyCode('heroCode', this)">Kopieren</button>
+            </div>
+            <span class="coupon-hero-savings">Normalpreis <strong>121 €</strong> → mit Code nur <strong>27 €</strong></span>
+          </div>
+
           <div class="hero-buttons">
-            <a class="btn btn-hero-primary" href="https://www.digistore24.com/product/683961?coupon=Bundle27" target="_blank" rel="noopener noreferrer">Zum Bundle — 27 Euro</a>
+            <a class="btn btn-hero-primary" href="https://www.digistore24.com/product/683961?coupon=Bundle27" target="_blank" rel="noopener noreferrer">Zum Bundle — 27 Euro (Code wird automatisch angewendet)</a>
             <a class="btn btn-hero-secondary" href="#wirkung">Was steckt dahinter? ↓</a>
           </div>
 
@@ -625,21 +731,32 @@
       </div>
     </section>
 
-    <!-- ============================================================ -->
-    <!-- PRICING BLOCK — 1:1 aus neurofuel-bundle-pricing.html        -->
-    <!-- ============================================================ -->
+    <!-- PRICING SECTION -->
     <section class="pricing-section" id="kaufen">
       <div class="container">
 
         <div class="section-header">
           <div class="section-eyebrow">Exklusives Angebot</div>
           <h2 class="section-title">Drei Programme.<br/><em>Ein unschlagbarer Preis.</em></h2>
-          <p class="section-sub">Statt 121€ einzeln — heute als komplettes Bundle für nur 27€. Nur für kurze Zeit.</p>
+          <p class="section-sub">Statt 121&nbsp;€ einzeln — heute als komplettes Bundle für nur 27&nbsp;€. Ihr persönlicher Rabattcode ist bereits hinterlegt.</p>
         </div>
 
         <div class="urgency-banner">
           <div class="urgency-dot"></div>
-          <div class="urgency-text">⏱ Sonderpreis aktiv — <strong>spare 94€</strong> gegenüber dem Einzelkauf. Angebot endet bald.</div>
+          <div class="urgency-text">⏱ Sonderpreis aktiv — <strong>spare 94&nbsp;€</strong> gegenüber dem Einzelkauf. Angebot endet bald.</div>
+        </div>
+
+        <!-- COUPON LIGHT (Pricing page) -->
+        <div class="coupon-light">
+          <div class="coupon-light-left">
+            <div class="coupon-light-eyebrow">Ihr persönlicher Rabattcode</div>
+            <div class="coupon-light-title">Bundle27</div>
+            <div class="coupon-light-sub">Normalpreis: <s>121&nbsp;€</s> &nbsp;→&nbsp; Mit Code nur <strong style="color: var(--forest);">27&nbsp;€</strong> — Sie sparen 94&nbsp;€</div>
+          </div>
+          <div class="coupon-light-right">
+            <span class="coupon-light-code" id="pricingCode">Bundle27</span>
+            <button class="coupon-light-copy" onclick="copyCode('pricingCode', this)">📋 Code kopieren</button>
+          </div>
         </div>
 
         <div class="individual-prices">
@@ -676,13 +793,13 @@
             <div class="bundle-left">
               <div class="bundle-badge"><div class="bundle-badge-dot"></div><div class="bundle-badge-text">Complete Bundle</div></div>
               <h3 class="bundle-name">NeuroFuel<br/><em>Reset Bundle</em></h3>
-              <p class="bundle-tagline">Das komplette 37-Tage System. Alles was du brauchst — in einem Paket.</p>
+              <p class="bundle-tagline">Das komplette 37-Tage System — drei E-Books als PDF. Alles was du brauchst, in einem Paket.</p>
               <ul class="bundle-includes">
-                <li><div class="include-icon"></div><div class="include-text"><strong>7-Day Nervensystem Reset</strong><br/><span>Nervensystem beruhigen · Schlaf optimieren · Adaptogene</span></div></li>
-                <li><div class="include-icon"></div><div class="include-text"><strong>NeuroFuel Protocol — 30 Tage</strong><br/><span>Biochemie · Ernährung · Training · Kälte &amp; Hitze · Mindset</span></div></li>
-                <li><div class="include-icon"></div><div class="include-text"><strong>Keto &amp; Refeed Ernährungsplan</strong><br/><span>Tagesplan · Supplementplan · Refeed-Strategie · Schlafregeln</span></div></li>
+                <li><div class="include-icon"></div><div class="include-text"><strong>7-Day Nervensystem Reset (E-Book PDF)</strong><br/><span>Nervensystem beruhigen · Schlaf optimieren · Adaptogene</span></div></li>
+                <li><div class="include-icon"></div><div class="include-text"><strong>NeuroFuel Protocol — 30 Tage (E-Book PDF)</strong><br/><span>Biochemie · Ernährung · Training · Kälte &amp; Hitze · Mindset</span></div></li>
+                <li><div class="include-icon"></div><div class="include-text"><strong>Keto &amp; Refeed Ernährungsplan (E-Book PDF)</strong><br/><span>Tagesplan · Supplementplan · Refeed-Strategie · Schlafregeln</span></div></li>
                 <li><div class="include-icon"></div><div class="include-text"><strong>Körper-Aktivierungsplan</strong><br/><span>Progressive Morgenroutine · Liegestützen · Kniebeugen · Dehnen</span></div></li>
-                <li><div class="include-icon"></div><div class="include-text"><strong>Sofort-Download als PDF</strong><br/><span>Alle 3 Dokumente · Auf allen Geräten · Lebenslanger Zugriff</span></div></li>
+                <li><div class="include-icon"></div><div class="include-text"><strong>Sofort-Download nach Kauf</strong><br/><span>Alle 3 Dokumente als PDF · Auf allen Geräten nutzbar · 24/7 Zugriff</span></div></li>
               </ul>
               <div class="bundle-divider"></div>
               <div class="bundle-guarantee">
@@ -693,9 +810,16 @@
             <div class="bundle-right">
               <div class="savings-badge"><div class="savings-badge-text">🔥 Du sparst 94 Euro</div></div>
               <div class="price-was">121 €</div>
-
               <div class="price-now"><span class="currency">€</span>27</div>
-              <div class="price-note">Einmalige Zahlung · MwSt. inkl.</div>
+              <div class="price-note">Mit Rabattcode BUNDLE27 · Einmalige Zahlung · MwSt. inkl.</div>
+
+              <!-- Coupon in bundle-right -->
+              <div class="bundle-coupon">
+                <span class="bc-label">🏷️ Code</span>
+                <span class="bc-code" id="bundleCode">Bundle27</span>
+                <button class="bc-copy" onclick="copyCode('bundleCode', this)">Kopieren</button>
+              </div>
+
               <div class="savings-calc">
                 <div class="savings-row"><span class="sr-label">7-Day Reset</span><span class="sr-val">27 €</span></div>
                 <div class="savings-row"><span class="sr-label">NeuroFuel Protocol</span><span class="sr-val">67 €</span></div>
@@ -706,6 +830,7 @@
               <a href="https://www.digistore24.com/product/683961?coupon=Bundle27" target="_blank" rel="noopener noreferrer" class="cta-btn">
                 Jetzt Bundle sichern <span class="cta-arrow">→</span>
               </a>
+              <div class="cta-note">Rabattcode Bundle27 wird automatisch angewendet</div>
               <div class="cta-secure">🔐 &nbsp;256-bit SSL · Sicher &amp; verschlüsselt</div>
             </div>
           </div>
@@ -715,7 +840,7 @@
           <div class="psych-box scarcity">
             <span class="psych-icon">⏳</span>
             <div class="psych-title">Nur für begrenzte Zeit</div>
-            <p class="psych-body">Der Bundle-Preis von <strong>27€ ist ein Einführungsangebot</strong>. Sobald alle drei Programme einzeln genehmigt sind, wird der Preis auf 121€ angehoben. Wer jetzt kauft, sichert sich den Vorzugspreis dauerhaft.</p>
+            <p class="psych-body">Der Bundle-Preis von <strong>27&nbsp;€ ist ein Einführungsangebot</strong>. Sobald alle drei Programme einzeln freigegeben sind, steigt der Preis auf 121&nbsp;€. Wer jetzt kauft, sichert sich den Vorzugspreis.</p>
           </div>
           <div class="psych-box social">
             <span class="psych-icon">💡</span>
@@ -735,31 +860,30 @@
             <div>Einzeln</div>
             <div style="text-align:center;">Reset Bundle</div>
           </div>
-          <div class="compare-row"><div class="cr-feature">7-Day Nervensystem Reset (PDF)</div><div class="cr-individual">27 €</div><div class="cr-bundle"><span class="cr-check">✓</span></div></div>
-          <div class="compare-row"><div class="cr-feature">NeuroFuel Protocol — 30 Tage (PDF)</div><div class="cr-individual">67 €</div><div class="cr-bundle"><span class="cr-check">✓</span></div></div>
-          <div class="compare-row"><div class="cr-feature">Keto &amp; Refeed Ernährungsplan (PDF)</div><div class="cr-individual">27 €</div><div class="cr-bundle"><span class="cr-check">✓</span></div></div>
+          <div class="compare-row"><div class="cr-feature">7-Day Nervensystem Reset (E-Book PDF)</div><div class="cr-individual">27 €</div><div class="cr-bundle"><span class="cr-check">✓</span></div></div>
+          <div class="compare-row"><div class="cr-feature">NeuroFuel Protocol — 30 Tage (E-Book PDF)</div><div class="cr-individual">67 €</div><div class="cr-bundle"><span class="cr-check">✓</span></div></div>
+          <div class="compare-row"><div class="cr-feature">Keto &amp; Refeed Ernährungsplan (E-Book PDF)</div><div class="cr-individual">27 €</div><div class="cr-bundle"><span class="cr-check">✓</span></div></div>
           <div class="compare-row"><div class="cr-feature">Körper-Aktivierungsplan (integriert)</div><div class="cr-individual">nicht erhältlich</div><div class="cr-bundle"><span class="cr-check">✓</span></div></div>
-          <div class="compare-row"><div class="cr-feature">Sofort-Download · Lebenslanger Zugriff</div><div class="cr-individual">—</div><div class="cr-bundle"><span class="cr-check">✓</span></div></div>
+          <div class="compare-row"><div class="cr-feature">Sofort-Download · 24/7 verfügbar auf allen Geräten</div><div class="cr-individual">—</div><div class="cr-bundle"><span class="cr-check">✓</span></div></div>
           <div class="compare-footer">
             <div class="cf-label">Gesamtpreis</div>
             <div class="cf-individual">121 €</div>
-            <div class="cf-bundle"><div class="cf-price">27 €</div><span class="cf-note">Du sparst 94 €</span></div>
+            <div class="cf-bundle"><div class="cf-price">27 €</div><span class="cf-note">Du sparst 94 € · Code: Bundle27</span></div>
           </div>
         </div>
 
       </div>
     </section>
-    <!-- ============================================================ -->
-    <!-- END PRICING BLOCK                                            -->
-    <!-- ============================================================ -->
 
     <section class="section bg-cream">
       <div class="container">
         <div class="eyebrow reveal">HÄUFIGE FRAGEN</div>
         <h2 class="reveal">Was Sie wissen sollten.</h2>
         <div class="faq-list">
-          <details class="faq-item"><summary><div class="faq-title">Wie erhalte ich den Guide nach dem Kauf?</div></summary><div class="faq-answer">Unmittelbar nach Zahlungseingang erhalten Sie eine E-Mail von Digistore24 mit Ihrem persönlichen Download-Link. Das PDF steht auf allen Geräten zur Verfügung.</div></details>
-          <details class="faq-item"><summary><div class="faq-title">Handelt es sich um ein Abonnement?</div></summary><div class="faq-answer">Nein. Es handelt sich um eine einmalige Zahlung von 27 Euro ohne automatische Verlängerung oder versteckte Folgekosten.</div></details>
+          <details class="faq-item"><summary><div class="faq-title">Wie erhalte ich die E-Books nach dem Kauf?</div></summary><div class="faq-answer">Unmittelbar nach Zahlungseingang erhalten Sie eine E-Mail von Digistore24 mit Ihrem persönlichen Download-Link. Alle drei PDF-Dokumente stehen auf allen Geräten — Smartphone, Tablet und Computer — jederzeit zur Verfügung.</div></details>
+          <details class="faq-item"><summary><div class="faq-title">Was genau kaufe ich? Was ist enthalten?</div></summary><div class="faq-answer">Sie erhalten drei digitale E-Books im PDF-Format: (1) den 7-Day Nervensystem Reset, (2) das NeuroFuel Protocol über 30 Tage und (3) den Keto &amp; Refeed Ernährungsplan. Alle drei Dokumente werden nach Kauf sofort per Download-Link bereitgestellt. Die Dokumente können gespeichert und jederzeit erneut geöffnet werden.</div></details>
+          <details class="faq-item"><summary><div class="faq-title">Wie funktioniert der Rabattcode Bundle27?</div></summary><div class="faq-answer">Wenn Sie auf den Kaufbutton klicken, wird der Code Bundle27 automatisch in das Bestellformular von Digistore24 eingetragen — der reduzierte Preis von 27&nbsp;€ (statt 121&nbsp;€) erscheint sofort. Alternativ können Sie den Code manuell im Gutscheinfeld eintragen. Der Normalpreis des Bundles beträgt 121&nbsp;€.</div></details>
+          <details class="faq-item"><summary><div class="faq-title">Handelt es sich um ein Abonnement?</div></summary><div class="faq-answer">Nein. Es handelt sich um eine einmalige Zahlung von 27&nbsp;Euro ohne automatische Verlängerung oder versteckte Folgekosten.</div></details>
           <details class="faq-item"><summary><div class="faq-title">Wie schnell sind erste Veränderungen spürbar?</div></summary><div class="faq-answer">Die Wirkung pflanzlicher Routinen entfaltet sich individuell. Entscheidend sind Qualität, Regelmäßigkeit und ein bewusster Umgang über mehrere Wochen.</div></details>
           <details class="faq-item"><summary><div class="faq-title">Ersetzt der Guide ärztliche Beratung?</div></summary><div class="faq-answer">Nein. Der Guide dient ausschließlich der Information und Bildung. Bei bestehenden Erkrankungen oder Medikamenteneinnahme empfehlen wir ärztliche Rücksprache vor der Einnahme von Adaptogenen.</div></details>
           <details class="faq-item"><summary><div class="faq-title">Kann ich mehrere Adaptogene kombinieren?</div></summary><div class="faq-answer">Ja. Der Guide gibt hierzu eine grundlegende Orientierung für den Einstieg.</div></details>
@@ -771,9 +895,9 @@
     <section class="final-cta bg-forest">
       <div class="container">
         <div class="final-cta-title">Ihr Reset beginnt mit einem einzigen Schritt.</div>
-        <div class="final-cta-sub">27 Euro. Einmalig. Sofort verfügbar.</div>
-        <a class="btn btn-light" href="https://www.digistore24.com/product/683961?coupon=Bundle27" target="_blank" rel="noopener noreferrer">Jetzt Guide erhalten</a>
-        <div class="final-meta"><a href="/cdn-cgi/l/email-protection#244d4a424b64544b53415654564b490a4041"><span class="__cf_email__" data-cfemail="8ee7e0e8e1cefee1f9ebfcfefce1e3a0eaeb">[email&#160;protected]</span></a> · Frankfurt am Main</div>
+        <div class="final-cta-sub">27 Euro mit Code Bundle27 — Normalpreis 121 €. Einmalig. Sofort verfügbar.</div>
+        <a class="btn btn-light" href="https://www.digistore24.com/product/683961?coupon=Bundle27" target="_blank" rel="noopener noreferrer">Jetzt Bundle sichern — Code automatisch aktiv</a>
+        <div class="final-meta">info@powerpromotion.de · Frankfurt am Main</div>
       </div>
     </section>
   </main>
@@ -785,7 +909,7 @@
         <div class="footer-links">
           <a href="#impressum">Impressum</a>
           <a href="#datenschutz">Datenschutz</a>
-          <a href="/cdn-cgi/l/email-protection#adc4c3cbc2edddc2dac8dfdddfc2c083c9c8">Kontakt</a>
+          <a href="mailto:info@powerpromotion.de">Kontakt</a>
         </div>
         <div>© 2025 Alle Rechte vorbehalten</div>
       </div>
@@ -794,7 +918,7 @@
         <div class="impressum">
           <details>
             <summary>Impressum</summary>
-            <div class="impressum-content">Powerpromotion<br />David Arianfar<br />Große Gallusstraße 16<br />60312 Frankfurt am Main<br />Deutschland<br />E-Mail: <a href="/cdn-cgi/l/email-protection#fc95929a93bc8c938b998e8c8e9391d29899"><span class="__cf_email__" data-cfemail="147d7a727b54647b63716664667b793a7071">[email&#160;protected]</span></a><br />USt-IdNr: DE329889793<br />Verantwortlich: David Arianfar</div>
+            <div class="impressum-content">Powerpromotion<br />David Arianfar<br />Große Gallusstraße 16<br />60312 Frankfurt am Main<br />Deutschland<br />E-Mail: info@powerpromotion.de<br />USt-IdNr: DE329889793<br />Verantwortlich: David Arianfar</div>
           </details>
         </div>
       </div>
@@ -806,7 +930,7 @@
               <strong>1. Allgemeine Hinweise</strong><br />Diese Website dient der Bereitstellung von Informationen zu einem digitalen Produkt. Personenbezogene Daten werden nur im technisch erforderlichen Umfang verarbeitet.<br /><br />
               <strong>2. Hosting</strong><br />Diese Website wird über GitHub Pages bereitgestellt.<br /><br />
               <strong>3. Kaufabwicklung</strong><br />Die Zahlungsabwicklung erfolgt über Digistore24. Es gelten die Datenschutzbestimmungen von Digistore24.<br /><br />
-              <strong>4. Kontakt</strong><br />Bei Fragen zum Datenschutz: <a href="/cdn-cgi/l/email-protection#0e676068614e7e61796b7c7e7c6163206a6b"><span class="__cf_email__" data-cfemail="21484f474e61514e56445351534e4c0f4544">[email&#160;protected]</span></a>
+              <strong>4. Kontakt</strong><br />Bei Fragen zum Datenschutz: info@powerpromotion.de
             </div>
           </details>
         </div>
@@ -817,20 +941,73 @@
   <div class="mobile-buy-bar" aria-label="Mobiler Kaufbereich">
     <div class="mobile-buy-inner">
       <div class="mobile-price">
-        <span>37 Euro</span>
-        <strong>27 Euro</strong>
+        <span>Normalpreis 121 €</span>
+        <strong>27 €</strong>
+        <div class="mobile-code">Code: <b>Bundle27</b> (automatisch aktiv)</div>
       </div>
-      <a class="btn btn-primary" href="https://www.digistore24.com/product/683961?coupon=Bundle27" target="_blank" rel="noopener noreferrer">Jetzt kaufen</a>
+      <a class="btn btn-primary" href="https://www.digistore24.com/product/683961?coupon=Bundle27" target="_blank" rel="noopener noreferrer">Jetzt sichern</a>
     </div>
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
+    // Nav scroll shadow
     const nav = document.getElementById('siteNav');
     const toggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
+
     function updateNavShadow() { nav.classList.toggle('scrolled', window.scrollY > 8); }
     updateNavShadow();
     window.addEventListener('scroll', updateNavShadow);
+
+    // Mobile menu toggle
     toggle.addEventListener('click', () => {
       const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', Stri
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      toggle.classList.toggle('active', !expanded);
+      mobileMenu.classList.toggle('show', !expanded);
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.classList.remove('active');
+        mobileMenu.classList.remove('show');
+      });
+    });
+
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // Copy coupon code
+    function copyCode(elementId, btn) {
+      const text = document.getElementById(elementId).textContent.trim();
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = btn.textContent;
+        btn.textContent = '✓ Kopiert!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = orig;
+          btn.classList.remove('copied');
+        }, 2000);
+      }).catch(() => {
+        // Fallback
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        const orig = btn.textContent;
+        btn.textContent = '✓ Kopiert!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
